@@ -1,7 +1,7 @@
 import knex from '../../sql/connector';
 
 export default class Karma {
-  postsPagination(limit, after) {
+  karmasPagination(limit, after) {
     let where = '';
     if (after > 0) {
       where = `id < ${after}`;

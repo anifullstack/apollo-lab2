@@ -19,7 +19,7 @@ const KarmaView = () => {
     <PageLayout>
       {renderMetaData()}
       <div className="text-center mt-4 mb-4">
-        <p>Hello Karma v0.0.0.10</p>
+        <p>Hello Karma v0.0.0.11</p>
       </div>
     </PageLayout>
   );

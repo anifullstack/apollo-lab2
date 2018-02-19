@@ -1,4 +1,4 @@
-fragment KarmaInfo on Post {
+fragment KarmaInfo on Karma {
     id
     title
     content

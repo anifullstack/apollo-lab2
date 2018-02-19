@@ -1,0 +1,7 @@
+#import "./Karma.graphql"
+
+subscription onKarmaUpdated($id: Int!) {
+    karmaUpdated(id: $id) {
+        ...KarmaInfo
+    }
+}

@@ -1,0 +1,10 @@
+#import "./Karma.graphql"
+
+subscription onKarmasUpdated($endCursor: Int!) {
+    karmasUpdated(endCursor: $endCursor) {
+        mutation
+        node {
+            ...KarmaInfo
+        }
+    }
+}

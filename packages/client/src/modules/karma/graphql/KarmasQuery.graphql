@@ -1,0 +1,17 @@
+#import "./Karma.graphql"
+
+query karmas($limit: Int!, $after: Int) {
+    karmas(limit: $limit, after: $after) {
+        totalCount
+        edges {
+            cursor
+            node {
+                ...KarmaInfo
+            }
+        }
+        pageInfo {
+            endCursor
+            hasNextPage
+        }
+    }
+}

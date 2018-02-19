@@ -2832,7 +2832,7 @@ Object.defineProperty(exports,'__esModule',{value:!0});var _Foundation=__webpack
   type: 'ttf',
   hash: '74c652671225d6ded874a648502e5f0a',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/fonts/Ionicons.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/@expo/vector-icons/fonts/Ionicons.ttf' ],
   fileHashes: [ '74c652671225d6ded874a648502e5f0a' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/@expo/vector-icons/fonts"});
     
@@ -3926,121 +3926,121 @@ __webpack_require__.d(config_namespaceObject, "mailer", function() { return mail
 __webpack_require__.d(config_namespaceObject, "analytics", function() { return analytics; });
 __webpack_require__.d(config_namespaceObject, "subscription", function() { return config_subscription["a" /* default */]; });
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/regenerator/index.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/regenerator/index.js
 var regenerator = __webpack_require__(69);
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/helpers/asyncToGenerator.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/helpers/asyncToGenerator.js
 var asyncToGenerator = __webpack_require__(70);
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/core-js/object/get-prototype-of.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/core-js/object/get-prototype-of.js
 var get_prototype_of = __webpack_require__(37);
 var get_prototype_of_default = /*#__PURE__*/__webpack_require__.n(get_prototype_of);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/helpers/classCallCheck.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/helpers/classCallCheck.js
 var classCallCheck = __webpack_require__(24);
 var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/helpers/createClass.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/helpers/createClass.js
 var createClass = __webpack_require__(25);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/helpers/possibleConstructorReturn.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/helpers/possibleConstructorReturn.js
 var possibleConstructorReturn = __webpack_require__(29);
 var possibleConstructorReturn_default = /*#__PURE__*/__webpack_require__.n(possibleConstructorReturn);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/helpers/inherits.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/helpers/inherits.js
 var inherits = __webpack_require__(30);
 var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/expo/src/Expo.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/expo/src/Expo.js
 var src_Expo = __webpack_require__(207);
 var Expo_default = /*#__PURE__*/__webpack_require__.n(src_Expo);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/react/index.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/react/index.js
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(2);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/react-native/Libraries/react-native/react-native-implementation.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/react-native/Libraries/react-native/react-native-implementation.js
 var react_native_implementation = __webpack_require__(1);
 var react_native_implementation_default = /*#__PURE__*/__webpack_require__.n(react_native_implementation);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/helpers/extends.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/helpers/extends.js
 var helpers_extends = __webpack_require__(47);
 var extends_default = /*#__PURE__*/__webpack_require__.n(helpers_extends);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/graphql/index.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/graphql/index.js
 var graphql = __webpack_require__(1006);
 var graphql_default = /*#__PURE__*/__webpack_require__.n(graphql);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/react-apollo/react-apollo.browser.umd.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/react-apollo/react-apollo.browser.umd.js
 var react_apollo_browser_umd = __webpack_require__(76);
 var react_apollo_browser_umd_default = /*#__PURE__*/__webpack_require__.n(react_apollo_browser_umd);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/redux/lib/index.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/redux/lib/index.js
 var lib = __webpack_require__(455);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/react-redux/lib/index.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/react-redux/lib/index.js
 var react_redux_lib = __webpack_require__(459);
 var react_redux_lib_default = /*#__PURE__*/__webpack_require__.n(react_redux_lib);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/apollo-fetch/dist/bundle.umd.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/apollo-fetch/dist/bundle.umd.js
 var bundle_umd = __webpack_require__(464);
 var bundle_umd_default = /*#__PURE__*/__webpack_require__.n(bundle_umd);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/apollo-link-batch-http/lib/bundle.umd.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/apollo-link-batch-http/lib/bundle.umd.js
 var lib_bundle_umd = __webpack_require__(1043);
 var lib_bundle_umd_default = /*#__PURE__*/__webpack_require__.n(lib_bundle_umd);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/apollo-link/lib/bundle.umd.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/apollo-link/lib/bundle.umd.js
 var apollo_link_lib_bundle_umd = __webpack_require__(77);
 var apollo_link_lib_bundle_umd_default = /*#__PURE__*/__webpack_require__.n(apollo_link_lib_bundle_umd);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/apollo-link-state/lib/bundle.umd.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/apollo-link-state/lib/bundle.umd.js
 var apollo_link_state_lib_bundle_umd = __webpack_require__(1047);
 var apollo_link_state_lib_bundle_umd_default = /*#__PURE__*/__webpack_require__.n(apollo_link_state_lib_bundle_umd);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/apollo-link-ws/lib/bundle.umd.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/apollo-link-ws/lib/bundle.umd.js
 var apollo_link_ws_lib_bundle_umd = __webpack_require__(1049);
 var apollo_link_ws_lib_bundle_umd_default = /*#__PURE__*/__webpack_require__.n(apollo_link_ws_lib_bundle_umd);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/apollo-logger/lib/bundle.umd.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/apollo-logger/lib/bundle.umd.js
 var apollo_logger_lib_bundle_umd = __webpack_require__(1058);
 var apollo_logger_lib_bundle_umd_default = /*#__PURE__*/__webpack_require__.n(apollo_logger_lib_bundle_umd);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/apollo-cache-inmemory/lib/bundle.umd.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/apollo-cache-inmemory/lib/bundle.umd.js
 var apollo_cache_inmemory_lib_bundle_umd = __webpack_require__(1059);
 var apollo_cache_inmemory_lib_bundle_umd_default = /*#__PURE__*/__webpack_require__.n(apollo_cache_inmemory_lib_bundle_umd);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/apollo-client/bundle.umd.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/apollo-client/bundle.umd.js
 var apollo_client_bundle_umd = __webpack_require__(1062);
 var apollo_client_bundle_umd_default = /*#__PURE__*/__webpack_require__.n(apollo_client_bundle_umd);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/url/url.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/url/url.js
 var url = __webpack_require__(1064);
 var url_default = /*#__PURE__*/__webpack_require__.n(url);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/minilog/lib/web/index.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/minilog/lib/web/index.js
 var web = __webpack_require__(1070);
 var web_default = /*#__PURE__*/__webpack_require__.n(web);
 
 // CONCATENATED MODULE: ../common/log.js
 web_default.a.enable();var log='undefined'==typeof window?web_default()('backend'):web_default()('frontend');if(false){var console_log=global.console.log;global.console.log=function(){1==arguments.length&&'string'==typeof arguments[0]&&arguments[0].match(/^\[(HMR|WDS)\]/)?console_log('backend '+arguments[0]):console_log.apply(global.console,arguments)}}/* harmony default export */ var common_log = (log);
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/index.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/@expo/vector-icons/index.js
 var vector_icons = __webpack_require__(109);
 var vector_icons_default = /*#__PURE__*/__webpack_require__.n(vector_icons);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/helpers/objectWithoutProperties.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/helpers/objectWithoutProperties.js
 var objectWithoutProperties = __webpack_require__(117);
 var objectWithoutProperties_default = /*#__PURE__*/__webpack_require__.n(objectWithoutProperties);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/native-base/dist/src/index.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/native-base/dist/src/index.js
 var src = __webpack_require__(118);
 var src_default = /*#__PURE__*/__webpack_require__.n(src);
 
@@ -4054,7 +4054,7 @@ var FormButton=function(_ref){var children=_ref.children,props=objectWithoutProp
 var InputItem=function(_ref){var children=_ref.children,error=_ref.error,props=objectWithoutProperties_default()(_ref,['children','error']);return react_default.a.createElement(src["Item"],{fixedLabel:!0,style:InputItem_styles.item,error:error},react_default.a.createElement(src["Label"],null,children),react_default.a.createElement(src["Input"],props),error&&react_default.a.createElement(src["Icon"],{name:'close-circle'}))};InputItem.propTypes={children:prop_types_default.a.node,error:prop_types_default.a.bool};var InputItem_styles=react_native_implementation["StyleSheet"].create({item:{paddingLeft:10}});/* harmony default export */ var components_InputItem = (InputItem);
 // CONCATENATED MODULE: ../client/src/modules/common/components/native/ui-native-base/components/SwipeAction.jsx
 var SwipeAction=function(_ref){var children=_ref.children,onPress=_ref.onPress,right=_ref.right,props=objectWithoutProperties_default()(_ref,['children','onPress','right']);return react_default.a.createElement(src["SwipeRow"],extends_default()({disableRightSwipe:!0,rightOpenValue:-90},props,{body:react_default.a.createElement(src["Text"],{style:{paddingLeft:10,flex:1},onPress:onPress},children),right:react_default.a.createElement(src["Button"],{danger:!0,onPress:right.onPress},react_default.a.createElement(src["Text"],null,right.text))}))};SwipeAction.propTypes={children:prop_types_default.a.node,right:prop_types_default.a.object,onPress:prop_types_default.a.func};/* harmony default export */ var components_SwipeAction = (SwipeAction);
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/antd-mobile/lib/list/index.native.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/antd-mobile/lib/list/index.native.js
 var index_native = __webpack_require__(1183);
 var index_native_default = /*#__PURE__*/__webpack_require__.n(index_native);
 
@@ -4068,7 +4068,7 @@ var RenderField=function(_ref){var input=_ref.input,label=_ref.label,_ref$meta=_
 var createTabBarIconWrapper=function(TabBarIconComponent,defaultProps){return function(props){return react_default.a.createElement(TabBarIconComponent,extends_default()({},defaultProps,{color:props.tintColor}))}};/* harmony default export */ var native_createTabBarIconWrapper = (createTabBarIconWrapper);
 // CONCATENATED MODULE: ../client/src/modules/common/components/native/index.js
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/immutability-helper/index.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/immutability-helper/index.js
 var immutability_helper = __webpack_require__(180);
 var immutability_helper_default = /*#__PURE__*/__webpack_require__.n(immutability_helper);
 
@@ -4108,15 +4108,15 @@ var _class,Counter__temp;var Counter_Counter=(Counter__temp=_class=function(_Rea
 var defaultState={reduxCount:1};/* harmony default export */ var reducers = (function(){var state=0<arguments.length&&arguments[0]!==void 0?arguments[0]:defaultState,action=arguments[1];switch(action.type){case'COUNTER_INCREMENT':return extends_default()({},state,{reduxCount:state.reduxCount+action.value});default:return state;}});
 // CONCATENATED MODULE: ../client/src/modules/counter/resolvers/index.js
 var resolvers__this=this;var TYPE_NAME='CounterState',defaults={counterState:{counter:1,__typename:TYPE_NAME}},resolvers={Query:{counterState:function counterState(_,args,_ref){var cache=_ref.cache,_cache$readQuery=cache.readQuery({query:CounterQuery_client_graphql_default.a}),counter=_cache$readQuery.counterState.counter;return{counter:counter,__typename:TYPE_NAME}}},Mutation:{addCounterState:function(){var _ref2=asyncToGenerator_default()(regenerator_default.a.mark(function _callee(_,_ref3,_ref4){var _cache$readQuery2,counter,newAmount,amount=_ref3.amount,cache=_ref4.cache;return regenerator_default.a.wrap(function(_context){for(;;)switch(_context.prev=_context.next){case 0:return _cache$readQuery2=cache.readQuery({query:CounterQuery_client_graphql_default.a}),counter=_cache$readQuery2.counterState.counter,newAmount=amount+counter,_context.next=4,cache.writeData({data:{counterState:{counter:newAmount,__typename:TYPE_NAME}}});case 4:return _context.abrupt('return',null);case 5:case'end':return _context.stop();}},_callee,resolvers__this)}));return function addCounterState(){return _ref2.apply(this,arguments)}}()}};/* harmony default export */ var counter_resolvers = ({defaults:defaults,resolvers:resolvers});
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/core-js/object/keys.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/core-js/object/keys.js
 var keys = __webpack_require__(480);
 var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/helpers/toConsumableArray.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/helpers/toConsumableArray.js
 var toConsumableArray = __webpack_require__(481);
 var toConsumableArray_default = /*#__PURE__*/__webpack_require__.n(toConsumableArray);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/lodash/lodash.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/lodash/lodash.js
 var lodash = __webpack_require__(19);
 var lodash_default = /*#__PURE__*/__webpack_require__.n(lodash);
 
@@ -4124,7 +4124,7 @@ var lodash_default = /*#__PURE__*/__webpack_require__.n(lodash);
 var combine=function(features,extractor){return Object(lodash["without"])(lodash["union"].apply(void 0,toConsumableArray_default()(Object(lodash["map"])(features,function(res){return Object(lodash["castArray"])(extractor(res))}))),void 0)};var featureCatalog={};var connector__default=function(){function _default(_ref){for(var _len=arguments.length,features=Array(1<_len?_len-1:0),_key=1;_key<_len;_key++)features[_key-1]=arguments[_key];var route=_ref.route,navItem=_ref.navItem,reducer=_ref.reducer,resolver=_ref.resolver,catalogInfo=_ref.catalogInfo;classCallCheck_default()(this,_default),combine(arguments,function(arg){return arg.catalogInfo}).forEach(function(info){return keys_default()(info).forEach(function(key){return featureCatalog[key]=info[key]})}),this.tabItem=combine(arguments,function(arg){return arg.tabItem}),this.reducer=combine(arguments,function(arg){return arg.reducer}),this.resolver=combine(arguments,function(arg){return arg.resolver})}return createClass_default()(_default,[{key:'tabItems',get:function get(){return lodash["merge"].apply(void 0,toConsumableArray_default()(this.tabItem))}},{key:'reducers',get:function get(){return lodash["merge"].apply(void 0,toConsumableArray_default()(this.reducer))}},{key:'resolvers',get:function get(){return lodash["merge"].apply(void 0,toConsumableArray_default()(this.resolver))}}]),_default}();
 // CONCATENATED MODULE: ../client/src/modules/counter/index.jsx
 /* harmony default export */ var modules_counter = (new connector__default({tabItem:{Counter:{screen:containers_Counter,navigationOptions:{tabBarIcon:native_createTabBarIconWrapper(vector_icons["Ionicons"],{name:'ios-home-outline',size:30})}}},resolver:counter_resolvers,reducer:{counter:reducers}}));
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/react-navigation/src/react-navigation.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/react-navigation/src/react-navigation.js
 var react_navigation = __webpack_require__(482);
 var react_navigation_default = /*#__PURE__*/__webpack_require__.n(react_navigation);
 
@@ -4144,7 +4144,7 @@ var DeletePost_graphql_default = /*#__PURE__*/__webpack_require__.n(DeletePost_g
 
 // CONCATENATED MODULE: ../client/src/modules/post/containers/Post.jsx
 var Post__class,Post__temp;function AddPost(prev,node){if(null!==node.id&&prev.posts.edges.some(function(post){return node.id===post.cursor}))return prev;var edge={cursor:node.id,node:node,__typename:'PostEdges'};return immutability_helper_default()(prev,{posts:{totalCount:{$set:prev.posts.totalCount+1},edges:{$unshift:[edge]}}})}function DeletePost(prev,id){var index=prev.posts.edges.findIndex(function(x){return x.node.id===id});return 0>index?prev:immutability_helper_default()(prev,{posts:{totalCount:{$set:prev.posts.totalCount-1},edges:{$splice:[[index,1]]}}})}var Post_Post=(Post__temp=Post__class=function(_React$Component){function Post(props){classCallCheck_default()(this,Post);var _this=possibleConstructorReturn_default()(this,(Post.__proto__||get_prototype_of_default()(Post)).call(this,props));return _this.subscribeToPostList=function(endCursor){var subscribeToMore=_this.props.subscribeToMore;_this.subscription=subscribeToMore({document:PostsSubscription_graphql_default.a,variables:{endCursor:endCursor},updateQuery:function updateQuery(prev,_ref){var _ref$subscriptionData=_ref.subscriptionData.data.postsUpdated,mutation=_ref$subscriptionData.mutation,node=_ref$subscriptionData.node,newResult=prev;return'CREATED'===mutation?newResult=AddPost(prev,node):'DELETED'===mutation&&(newResult=DeletePost(prev,node.id)),newResult}})},_this.subscription=null,_this}return inherits_default()(Post,_React$Component),createClass_default()(Post,[{key:'componentWillReceiveProps',value:function componentWillReceiveProps(nextProps){if(!nextProps.loading){var endCursor=this.props.posts?this.props.posts.pageInfo.endCursor:0,nextEndCursor=nextProps.posts.pageInfo.endCursor;this.subscription&&endCursor!==nextEndCursor&&(this.subscription(),this.subscription=null),this.subscription||this.subscribeToPostList(nextEndCursor)}}},{key:'componentWillUnmount',value:function componentWillUnmount(){this.subscription&&this.subscription()}},{key:'render',value:function render(){return react_default.a.createElement(PostList_PostList,this.props)}}]),Post}(react_default.a.Component),Post__class.propTypes={loading:prop_types_default.a.bool.isRequired,posts:prop_types_default.a.object,subscribeToMore:prop_types_default.a.func.isRequired},Post__temp);/* harmony default export */ var containers_Post = (Object(react_apollo_browser_umd["compose"])(Object(react_apollo_browser_umd["graphql"])(PostsQuery_graphql_default.a,{options:function options(){return{variables:{limit:10,after:0}}},props:function props(_ref2){var data=_ref2.data,loading=data.loading,error=data.error,posts=data.posts,fetchMore=data.fetchMore,subscribeToMore=data.subscribeToMore;if(error)throw new Error(error);return{loading:loading,posts:posts,subscribeToMore:subscribeToMore,loadMoreRows:function loadMoreRows(){return fetchMore({variables:{after:posts.pageInfo.endCursor},updateQuery:function updateQuery(previousResult,_ref3){var fetchMoreResult=_ref3.fetchMoreResult,totalCount=fetchMoreResult.posts.totalCount,newEdges=fetchMoreResult.posts.edges,pageInfo=fetchMoreResult.posts.pageInfo;return{posts:{totalCount:totalCount,edges:[].concat(toConsumableArray_default()(previousResult.posts.edges),toConsumableArray_default()(newEdges)),pageInfo:pageInfo,__typename:'Posts'}}}})}}}}),Object(react_apollo_browser_umd["graphql"])(DeletePost_graphql_default.a,{props:function props(_ref4){var mutate=_ref4.mutate;return{deletePost:function deletePost(id){mutate({variables:{id:id},optimisticResponse:{__typename:'Mutation',deletePost:{id:id,__typename:'Post'}},updateQueries:{posts:function posts(prev,_ref5){var deletePost=_ref5.mutationResult.data.deletePost;return DeletePost(prev,deletePost.id)}}})}}}}))(Post_Post));
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/formik/dist/formik.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/formik/dist/formik.js
 var dist_formik = __webpack_require__(276);
 var formik_default = /*#__PURE__*/__webpack_require__.n(dist_formik);
 
@@ -4272,35 +4272,35 @@ var favicon_default = /*#__PURE__*/__webpack_require__.n(favicon);
 /* harmony default export */ var modules = (new connector__default(modules_counter,modules_post,upload,user,subscription_default.a,modules_contact,pageNotFound_default.a));
 // CONCATENATED MODULE: ../client/src/app/Routes.jsx
 var MainScreenNavigator=Object(react_navigation["TabNavigator"])(extends_default()({},modules.tabItems));/* harmony default export */ var Routes = (MainScreenNavigator);
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/babel-runtime/core-js/object/assign.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/babel-runtime/core-js/object/assign.js
 var object_assign = __webpack_require__(421);
 var assign_default = /*#__PURE__*/__webpack_require__.n(object_assign);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/node_modules/dotenv/config.js
+// EXTERNAL MODULE: /projects/apollo-lab2/node_modules/dotenv/config.js
 var config = __webpack_require__(1246);
 var config_default = /*#__PURE__*/__webpack_require__.n(config);
 
-// CONCATENATED MODULE: /projects/lab/nodejs/apollo/apollo-lab2/config/app.js
+// CONCATENATED MODULE: /projects/apollo-lab2/config/app.js
 /* harmony default export */ var app = ({name:'Apollo Starter Kit',logging:{debugSQL:!1,apolloLogging:!1},stackFragmentFormat:'vscode://file/{0}:{1}:{2}'});
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/config/db.js
+// EXTERNAL MODULE: /projects/apollo-lab2/config/db.js
 var db = __webpack_require__(1249);
 
-// CONCATENATED MODULE: /projects/lab/nodejs/apollo/apollo-lab2/config/engine.js
+// CONCATENATED MODULE: /projects/apollo-lab2/config/engine.js
 /* harmony default export */ var engine = ({engineConfig:{apiKey:'',logging:{level:'DEBUG'}},dumpTraffic:!0});
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/config/user.js
+// EXTERNAL MODULE: /projects/apollo-lab2/config/user.js
 var config_user = __webpack_require__(1250);
 
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/config/mailer.js
+// EXTERNAL MODULE: /projects/apollo-lab2/config/mailer.js
 var mailer = __webpack_require__(1251);
 
-// CONCATENATED MODULE: /projects/lab/nodejs/apollo/apollo-lab2/config/analytics.js
+// CONCATENATED MODULE: /projects/apollo-lab2/config/analytics.js
 /* harmony default export */ var analytics = ({ga:{trackingId:'UA-000000-01'},apolloEngine:{key:'service:sysgears-Apollo-Universal-Starter-Kit:mZvnMtAgDE93vAtk8Cj-1Q'}});
-// EXTERNAL MODULE: /projects/lab/nodejs/apollo/apollo-lab2/config/subscription.js
+// EXTERNAL MODULE: /projects/apollo-lab2/config/subscription.js
 var config_subscription = __webpack_require__(1252);
 
-// CONCATENATED MODULE: /projects/lab/nodejs/apollo/apollo-lab2/config/index.js
+// CONCATENATED MODULE: /projects/apollo-lab2/config/index.js
 
-// CONCATENATED MODULE: /projects/lab/nodejs/apollo/apollo-lab2/settings.js
+// CONCATENATED MODULE: /projects/apollo-lab2/settings.js
 var envSettings=assign_default()({},lodash_default.a.pickBy(config_namespaceObject,function(v,k){return'env'!==k}),lodash_default.a.get(config_namespaceObject,'env.'+"production"));/* harmony default export */ var settings = (envSettings);
 // CONCATENATED MODULE: ./src/App.js
 var App__class,App__temp;var store=Object(lib["createStore"])(Object(lib["combineReducers"])(extends_default()({},modules.reducers)),{}),_url$parse=url_default.a.parse("https://apollo-universal-starter-kit.herokuapp.com/graphql"),protocol=_url$parse.protocol,pathname=_url$parse.pathname,port=_url$parse.port,App_Main=(App__temp=App__class=function(_React$Component){function Main(){return classCallCheck_default()(this,Main),possibleConstructorReturn_default()(this,(Main.__proto__||get_prototype_of_default()(Main)).apply(this,arguments))}return inherits_default()(Main,_React$Component),createClass_default()(Main,[{key:'render',value:function render(){var _url$parse2=url_default.a.parse("https://apollo-universal-starter-kit.herokuapp.com/graphql"),hostname=_url$parse2.hostname,uri=this.props.expUri&&'localhost'===hostname?protocol+'//'+url_default.a.parse(this.props.expUri).hostname+':'+port+pathname:"https://apollo-universal-starter-kit.herokuapp.com/graphql";common_log.info('Connecting to GraphQL backend at: '+uri);var fetch=Object(bundle_umd["createApolloFetch"])({uri:uri}),cache=new apollo_cache_inmemory_lib_bundle_umd["InMemoryCache"],wsUri=uri.replace(/^http/,'ws'),link=apollo_link_lib_bundle_umd["ApolloLink"].split(function(operation){var operationAST=Object(graphql["getOperationAST"])(operation.query,operation.operationName);return!!operationAST&&'subscription'===operationAST.operation},new apollo_link_ws_lib_bundle_umd["WebSocketLink"]({uri:wsUri,options:{reconnect:!0}}),new lib_bundle_umd["BatchHttpLink"]({fetch:fetch})),linkState=Object(apollo_link_state_lib_bundle_umd["withClientState"])(extends_default()({},modules.resolvers,{cache:cache})),client=new apollo_client_bundle_umd_default.a({link:apollo_link_lib_bundle_umd["ApolloLink"].from((settings.app.logging.apolloLogging?[new apollo_logger_lib_bundle_umd["LoggingLink"]]:[]).concat([linkState,link])),cache:cache});return react_default.a.createElement(react_redux_lib["Provider"],{store:store},react_default.a.createElement(react_apollo_browser_umd["ApolloProvider"],{client:client},react_default.a.createElement(Routes,null)))}}]),Main}(react_default.a.Component),App__class.propTypes={expUri:prop_types_default.a.string},App__temp);
@@ -6845,7 +6845,7 @@ var _extends=Object.assign||function(target){for(var source,i=1;i<arguments.leng
   type: 'ttf',
   hash: '744ce60078c17d86006dd0edabcd59a7',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/fonts/Entypo.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/@expo/vector-icons/fonts/Entypo.ttf' ],
   fileHashes: [ '744ce60078c17d86006dd0edabcd59a7' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/@expo/vector-icons/fonts"});
     
@@ -6869,7 +6869,7 @@ module.exports = {"archive":61696,"arrow-down":61697,"arrow-left":61698,"arrow-r
   type: 'ttf',
   hash: '5221f35630f5b71e53c3196d3ff681a1',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/fonts/EvilIcons.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/@expo/vector-icons/fonts/EvilIcons.ttf' ],
   fileHashes: [ '5221f35630f5b71e53c3196d3ff681a1' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/@expo/vector-icons/fonts"});
     
@@ -6893,7 +6893,7 @@ module.exports = {"activity":59648,"airplay":59649,"alert-circle":59650,"alert-o
   type: 'ttf',
   hash: '517bb9a13989451be6623299153f503f',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/fonts/Feather.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/@expo/vector-icons/fonts/Feather.ttf' ],
   fileHashes: [ '517bb9a13989451be6623299153f503f' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/@expo/vector-icons/fonts"});
     
@@ -6917,7 +6917,7 @@ module.exports = {"glass":61440,"music":61441,"search":61442,"envelope-o":61443,
   type: 'ttf',
   hash: 'b06871f281fee6b241d60582ae9369b9',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/fonts/FontAwesome.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/@expo/vector-icons/fonts/FontAwesome.ttf' ],
   fileHashes: [ 'b06871f281fee6b241d60582ae9369b9' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/@expo/vector-icons/fonts"});
     
@@ -6941,7 +6941,7 @@ module.exports = {"address-book":61696,"alert":61697,"align-center":61698,"align
   type: 'ttf',
   hash: 'e20945d7c929279ef7a6f1db184a4470',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/fonts/Foundation.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/@expo/vector-icons/fonts/Foundation.ttf' ],
   fileHashes: [ 'e20945d7c929279ef7a6f1db184a4470' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/@expo/vector-icons/fonts"});
     
@@ -6971,7 +6971,7 @@ module.exports = {"access-point":61442,"access-point-network":61443,"account":61
   type: 'ttf',
   hash: '3ef6639a4cce5b903e4031b1b0102675',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/fonts/MaterialCommunityIcons.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/@expo/vector-icons/fonts/MaterialCommunityIcons.ttf' ],
   fileHashes: [ '3ef6639a4cce5b903e4031b1b0102675' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/@expo/vector-icons/fonts"});
     
@@ -6995,7 +6995,7 @@ module.exports = {"3d-rotation":59469,"ac-unit":60219,"access-alarm":57744,"acce
   type: 'ttf',
   hash: 'a37b0c01c0baf1888ca812cc0508f6e2',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/fonts/MaterialIcons.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/@expo/vector-icons/fonts/MaterialIcons.ttf' ],
   fileHashes: [ 'a37b0c01c0baf1888ca812cc0508f6e2' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/@expo/vector-icons/fonts"});
     
@@ -7019,7 +7019,7 @@ module.exports = {"alert":61696,"arrow-down":61697,"arrow-left":61698,"arrow-rig
   type: 'ttf',
   hash: '9e9dbe78c20054a6d71d9c10c939ba68',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/fonts/Octicons.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/@expo/vector-icons/fonts/Octicons.ttf' ],
   fileHashes: [ '9e9dbe78c20054a6d71d9c10c939ba68' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/@expo/vector-icons/fonts"});
     
@@ -7043,7 +7043,7 @@ module.exports = {"user":57349,"people":57345,"user-female":57344,"user-follow":
   type: 'ttf',
   hash: 'd2285965fe34b05465047401b8595dd0',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/fonts/SimpleLineIcons.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/@expo/vector-icons/fonts/SimpleLineIcons.ttf' ],
   fileHashes: [ 'd2285965fe34b05465047401b8595dd0' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/@expo/vector-icons/fonts"});
     
@@ -7067,7 +7067,7 @@ module.exports = {"acrobat":61696,"amazon":61697,"android":61698,"angellist":616
   type: 'ttf',
   hash: '5cdf883b18a5651a29a4d1ef276d2457',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/@expo/vector-icons/fonts/Zocial.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/@expo/vector-icons/fonts/Zocial.ttf' ],
   fileHashes: [ '5cdf883b18a5651a29a4d1ef276d2457' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/@expo/vector-icons/fonts"});
     
@@ -8366,8 +8366,8 @@ Object.defineProperty(exports,'__esModule',{value:!0});var brandPrimary='#108ee9
   width: 32,
   height: 54,
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow@2x.png',
-     '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow@3x.png' ],
+   [ '/projects/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow@2x.png',
+     '/projects/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow@3x.png' ],
   fileHashes: 
    [ 'ea653157b745b94573e2035e28506e6f',
      '92a1891fc561537876ead21e1ca446bf' ],
@@ -8389,8 +8389,8 @@ Object.defineProperty(exports,'__esModule',{value:!0});var brandPrimary='#108ee9
   width: 54,
   height: 32,
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow-down@2x.png',
-     '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow-down@3x.png' ],
+   [ '/projects/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow-down@2x.png',
+     '/projects/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow-down@3x.png' ],
   fileHashes: 
    [ '1a4e40f84134fc8e5e60ed988aac2192',
      '0c3b76aa0cf378693ff28a325abdc351' ],
@@ -8412,8 +8412,8 @@ Object.defineProperty(exports,'__esModule',{value:!0});var brandPrimary='#108ee9
   width: 54,
   height: 32,
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow-up@2x.png',
-     '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow-up@3x.png' ],
+   [ '/projects/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow-up@2x.png',
+     '/projects/apollo-lab2/node_modules/antd-mobile/lib/style/images/arrow-up@3x.png' ],
   fileHashes: 
    [ '70a900a658a93e42dcf6a0156bdab1f3',
      '46a63d70bf58eaa7656153ce66aeee8e' ],
@@ -8617,11 +8617,11 @@ var _createClass=function(){function defineProperties(target,props){for(var desc
   width: 13,
   height: 21,
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/react-navigation/src/views/assets/back-icon@1x.android.png',
-     '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/react-navigation/src/views/assets/back-icon@1.5x.android.png',
-     '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/react-navigation/src/views/assets/back-icon@2x.android.png',
-     '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/react-navigation/src/views/assets/back-icon@3x.android.png',
-     '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/react-navigation/src/views/assets/back-icon@4x.android.png' ],
+   [ '/projects/apollo-lab2/node_modules/react-navigation/src/views/assets/back-icon@1x.android.png',
+     '/projects/apollo-lab2/node_modules/react-navigation/src/views/assets/back-icon@1.5x.android.png',
+     '/projects/apollo-lab2/node_modules/react-navigation/src/views/assets/back-icon@2x.android.png',
+     '/projects/apollo-lab2/node_modules/react-navigation/src/views/assets/back-icon@3x.android.png',
+     '/projects/apollo-lab2/node_modules/react-navigation/src/views/assets/back-icon@4x.android.png' ],
   fileHashes: 
    [ '778ffc9fe8773a878e9c30a6304784de',
      '376d6a4c7f622917c39feb23671ef71d',
@@ -9472,7 +9472,7 @@ doc.definitions = doc.definitions.concat(unique(__webpack_require__(98).definiti
   type: 'ttf',
   hash: '54a91b0619ccf9373d525109268219dc',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/native-base/Fonts/Roboto.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/native-base/Fonts/Roboto.ttf' ],
   fileHashes: [ '54a91b0619ccf9373d525109268219dc' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/native-base/Fonts"});
     
@@ -9490,7 +9490,7 @@ doc.definitions = doc.definitions.concat(unique(__webpack_require__(98).definiti
   type: 'ttf',
   hash: '99fc0816a09395454061301fefa42bf1',
   files: 
-   [ '/projects/lab/nodejs/apollo/apollo-lab2/node_modules/native-base/Fonts/Roboto_medium.ttf' ],
+   [ '/projects/apollo-lab2/node_modules/native-base/Fonts/Roboto_medium.ttf' ],
   fileHashes: [ '99fc0816a09395454061301fefa42bf1' ],
   httpServerLocation: __webpack_require__.p + "assets/android/node_modules/native-base/Fonts"});
     

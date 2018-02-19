@@ -1,0 +1,5 @@
+fragment KarmaInfo on Post {
+    id
+    title
+    content
+}

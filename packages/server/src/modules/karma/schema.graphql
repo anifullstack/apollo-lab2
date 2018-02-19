@@ -1,0 +1,67 @@
+type Karma {
+    id: Int!
+    title: String!
+    content: String!
+}
+
+# Edges for Karmas
+type KarmaEdges {
+    node: Karma
+    cursor: Int
+}
+
+# PageInfo for Karmas
+type KarmaPageInfo {
+    endCursor: Int
+    hasNextPage: Boolean
+}
+
+# Karmas relay-style pagination query
+type Karmas {
+    totalCount: Int
+    edges: [KarmaEdges]
+    pageInfo: KarmaPageInfo
+}
+
+extend type Query {
+    # karma pagination query
+    karmas(limit: Int, after: Int): Karmas
+    # karma
+    karma(id: Int!): Karma
+}
+
+extend type Mutation {
+    # Create new karma
+    addKarma(input: AddKarmaInput!): Karma
+    # Delete a karma
+    deleteKarma(id: Int!): Karma
+    # Edit a karma
+    editKarma(input: EditKarmaInput!): Post
+}
+
+# Input for addKarma Mutation
+input AddKarmaInput {
+    title: String!
+    content: String!
+}
+
+# Input for editKarma Mutation
+input EditKarmaInput {
+    id: Int!
+    title: String!
+    content: String!
+}
+
+extend type Subscription {
+    # Subscription for when editing a karma
+    karmatUpdated(id: Int!): Karma
+    # Subscription for karma list
+    karmasUpdated(endCursor: Int!): UpdateKarmaPayload
+}
+
+# Payload for postsUpdated Subscription
+type UpdateKarmaPayload {
+    mutation: String!
+    id: Int!
+    node: Post
+}

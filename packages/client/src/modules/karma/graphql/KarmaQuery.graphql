@@ -1,0 +1,7 @@
+#import "./Karma.graphql"
+
+query karma($id: Int!) {
+    karma(id: $id) {
+        ...PostInfo
+    }
+}

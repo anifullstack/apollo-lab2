@@ -54,7 +54,7 @@ input EditKarmaInput {
 
 extend type Subscription {
     # Subscription for when editing a karma
-    karmatUpdated(id: Int!): Karma
+    karmaUpdated(id: Int!): Karma
     # Subscription for karma list
     karmasUpdated(endCursor: Int!): UpdateKarmaPayload
 }

@@ -5,7 +5,7 @@ const KarmaView = () => {
   return (
     <View style={styles.container}>
       <View style={styles.element}>
-        <Text style={styles.box}>Hello Karma!</Text>
+        <Text style={styles.box}>Hello Karma v0.0.0.10!</Text>
       </View>
     </View>
   );

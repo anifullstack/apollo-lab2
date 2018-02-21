@@ -7,6 +7,7 @@ import KarmaList from '../components/KarmaList';
 
 import KARMAS_QUERY from '../graphql/KarmasQuery.graphql';
 import KARMAS_SUBSCRIPTION from '../graphql/KarmasSubscription.graphql';
+import DELETE_KARMA from '../graphql/DeleteKarma.graphql';
 
 export function AddKarma(prev, node) {
   // ignore if duplicate
@@ -149,5 +150,26 @@ export default compose(
       if (error) throw new Error(error);
       return { loading, karmas, subscribeToMore, loadMoreRows };
     }
+  }),
+  graphql(DELETE_KARMA, {
+    props: ({ mutate }) => ({
+      deleteKarma: id => {
+        mutate({
+          variables: { id },
+          optimisticResponse: {
+            __typename: 'Mutation',
+            deleteKarma: {
+              id: id,
+              __typename: 'Karma'
+            }
+          },
+          updateQueries: {
+            posts: (prev, { mutationResult: { data: { deleteKarma } } }) => {
+              return DeleteKarma(prev, deleteKarma.id);
+            }
+          }
+        });
+      }
+    })
   })
 )(Karma);

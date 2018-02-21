@@ -1,0 +1,5 @@
+mutation deleteKarma($id: Int!) {
+    deleteKarma(id: $id) {
+        id
+    }
+}

@@ -36,7 +36,7 @@ extend type Mutation {
     # Delete a karma
     deleteKarma(id: Int!): Karma
     # Edit a karma
-    editKarma(input: EditKarmaInput!): Post
+    editKarma(input: EditKarmaInput!): Karma
 }
 
 # Input for addKarma Mutation
@@ -63,5 +63,5 @@ extend type Subscription {
 type UpdateKarmaPayload {
     mutation: String!
     id: Int!
-    node: Post
+    node: Karma
 }

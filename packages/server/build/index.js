@@ -21,7 +21,7 @@ require("source-map-support").install();
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f29634703ffa5cb7ca3c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "88ff133988a6435f6c33"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -4087,6 +4087,8 @@ var KarmaList = (_temp2 = _class = function (_React$PureComponent) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__graphql_KarmasQuery_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__graphql_KarmasQuery_graphql__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__graphql_KarmasSubscription_graphql__ = __webpack_require__("../client/src/modules/karma/graphql/KarmasSubscription.graphql");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__graphql_KarmasSubscription_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__graphql_KarmasSubscription_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__graphql_DeleteKarma_graphql__ = __webpack_require__("../client/src/modules/karma/graphql/DeleteKarma.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__graphql_DeleteKarma_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__graphql_DeleteKarma_graphql__);
 
 
 
@@ -4095,6 +4097,7 @@ var KarmaList = (_temp2 = _class = function (_React$PureComponent) {
 
 
 var _class, _temp;
+
 
 
 
@@ -4275,7 +4278,63 @@ var Karma = (_temp = _class = function (_React$Component) {
     if (error) throw new Error(error);
     return { loading: loading, karmas: karmas, subscribeToMore: subscribeToMore, loadMoreRows: loadMoreRows };
   }
+}), Object(__WEBPACK_IMPORTED_MODULE_8_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_13__graphql_DeleteKarma_graphql___default.a, {
+  props: function props(_ref4) {
+    var mutate = _ref4.mutate;
+    return {
+      deleteKarma: function deleteKarma(id) {
+        mutate({
+          variables: { id: id },
+          optimisticResponse: {
+            __typename: 'Mutation',
+            deleteKarma: {
+              id: id,
+              __typename: 'Karma'
+            }
+          },
+          updateQueries: {
+            posts: function posts(prev, _ref5) {
+              var deleteKarma = _ref5.mutationResult.data.deleteKarma;
+
+              return DeleteKarma(prev, deleteKarma.id);
+            }
+          }
+        });
+      }
+    };
+  }
 }))(Karma));
+
+/***/ }),
+
+/***/ "../client/src/modules/karma/graphql/DeleteKarma.graphql":
+/***/ (function(module, exports) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"deleteKarma"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"deleteKarma"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"id"},"arguments":[],"directives":[],"selectionSet":null}]}}]}}],"loc":{"start":0,"end":72}};
+    doc.loc.source = {"body":"mutation deleteKarma($id: Int!) {\n  deleteKarma(id: $id) {\n    id\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+      module.exports = doc;
+    
+
 
 /***/ }),
 
@@ -4346,8 +4405,8 @@ var Karma = (_temp = _class = function (_React$Component) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"subscription","name":{"kind":"Name","value":"onKarmasUpdated"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"endCursor"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"karmasUpdated"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"endCursor"},"value":{"kind":"Variable","name":{"kind":"Name","value":"endCursor"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"mutation"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"node"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"KarmaInfo"},"directives":[]}]}}]}}]}}],"loc":{"start":0,"end":182}};
-    doc.loc.source = {"body":"#import \"./Karma.graphql\"\r\n\r\nsubscription onKarmasUpdated($endCursor: Int!) {\r\n  karmasUpdated(endCursor: $endCursor) {\r\n    mutation\r\n    node {\r\n      ...KarmaInfo\r\n    }\r\n  }\r\n}\r\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"subscription","name":{"kind":"Name","value":"onKarmasUpdated"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"endCursor"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"karmasUpdated"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"endCursor"},"value":{"kind":"Variable","name":{"kind":"Name","value":"endCursor"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"mutation"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"node"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"KarmaInfo"},"directives":[]}]}}]}}]}}],"loc":{"start":0,"end":204}};
+    doc.loc.source = {"body":"#import \"./Karma.graphql\"\r\n\r\nsubscription onKarmasUpdated($endCursor: Int!) {\r\n    karmasUpdated(endCursor: $endCursor) {\r\n        mutation\r\n        node {\r\n            ...KarmaInfo\r\n        }\r\n    }\r\n}\r\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
   
 
     var names = {};
@@ -15468,8 +15527,8 @@ var KARMAS_SUBSCRIPTION = 'karmas_subscription';
 /***/ (function(module, exports) {
 
 
-    var doc = {"kind":"Document","definitions":[{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Karma"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"id"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"title"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"content"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"KarmaEdges"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"node"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"cursor"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"KarmaPageInfo"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"endCursor"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"hasNextPage"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Boolean"}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Karmas"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"totalCount"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"edges"},"arguments":[],"type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"KarmaEdges"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"pageInfo"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"KarmaPageInfo"}},"directives":[]}]},{"kind":"TypeExtensionDefinition","definition":{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Query"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"karmas"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"limit"},"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"after"},"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karmas"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"karma"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]}]}},{"kind":"TypeExtensionDefinition","definition":{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Mutation"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"addKarma"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"input"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"AddKarmaInput"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"deleteKarma"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"editKarma"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"input"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"EditKarmaInput"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Post"}},"directives":[]}]}},{"kind":"InputObjectTypeDefinition","name":{"kind":"Name","value":"AddKarmaInput"},"directives":[],"fields":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"title"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"content"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]}]},{"kind":"InputObjectTypeDefinition","name":{"kind":"Name","value":"EditKarmaInput"},"directives":[],"fields":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"title"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"content"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]}]},{"kind":"TypeExtensionDefinition","definition":{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Subscription"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"karmaUpdated"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"karmasUpdated"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"endCursor"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"UpdateKarmaPayload"}},"directives":[]}]}},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"UpdateKarmaPayload"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"mutation"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"id"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"node"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Post"}},"directives":[]}]}],"loc":{"start":0,"end":1221}};
-    doc.loc.source = {"body":"type Karma {\n    id: Int!\n    title: String!\n    content: String!\n}\n\n# Edges for Karmas\ntype KarmaEdges {\n    node: Karma\n    cursor: Int\n}\n\n# PageInfo for Karmas\ntype KarmaPageInfo {\n    endCursor: Int\n    hasNextPage: Boolean\n}\n\n# Karmas relay-style pagination query\ntype Karmas {\n    totalCount: Int\n    edges: [KarmaEdges]\n    pageInfo: KarmaPageInfo\n}\n\nextend type Query {\n    # karma pagination query\n    karmas(limit: Int, after: Int): Karmas\n    # karma\n    karma(id: Int!): Karma\n}\n\nextend type Mutation {\n    # Create new karma\n    addKarma(input: AddKarmaInput!): Karma\n    # Delete a karma\n    deleteKarma(id: Int!): Karma\n    # Edit a karma\n    editKarma(input: EditKarmaInput!): Post\n}\n\n# Input for addKarma Mutation\ninput AddKarmaInput {\n    title: String!\n    content: String!\n}\n\n# Input for editKarma Mutation\ninput EditKarmaInput {\n    id: Int!\n    title: String!\n    content: String!\n}\n\nextend type Subscription {\n    # Subscription for when editing a karma\n    karmaUpdated(id: Int!): Karma\n    # Subscription for karma list\n    karmasUpdated(endCursor: Int!): UpdateKarmaPayload\n}\n\n# Payload for postsUpdated Subscription\ntype UpdateKarmaPayload {\n    mutation: String!\n    id: Int!\n    node: Post\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+    var doc = {"kind":"Document","definitions":[{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Karma"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"id"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"title"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"content"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"KarmaEdges"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"node"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"cursor"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"KarmaPageInfo"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"endCursor"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"hasNextPage"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Boolean"}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Karmas"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"totalCount"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"edges"},"arguments":[],"type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"KarmaEdges"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"pageInfo"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"KarmaPageInfo"}},"directives":[]}]},{"kind":"TypeExtensionDefinition","definition":{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Query"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"karmas"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"limit"},"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"after"},"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karmas"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"karma"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]}]}},{"kind":"TypeExtensionDefinition","definition":{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Mutation"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"addKarma"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"input"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"AddKarmaInput"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"deleteKarma"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"editKarma"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"input"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"EditKarmaInput"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]}]}},{"kind":"InputObjectTypeDefinition","name":{"kind":"Name","value":"AddKarmaInput"},"directives":[],"fields":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"title"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"content"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]}]},{"kind":"InputObjectTypeDefinition","name":{"kind":"Name","value":"EditKarmaInput"},"directives":[],"fields":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"title"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"content"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]}]},{"kind":"TypeExtensionDefinition","definition":{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Subscription"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"karmaUpdated"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"karmasUpdated"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"endCursor"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"UpdateKarmaPayload"}},"directives":[]}]}},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"UpdateKarmaPayload"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"mutation"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"id"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"node"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Karma"}},"directives":[]}]}],"loc":{"start":0,"end":1223}};
+    doc.loc.source = {"body":"type Karma {\n    id: Int!\n    title: String!\n    content: String!\n}\n\n# Edges for Karmas\ntype KarmaEdges {\n    node: Karma\n    cursor: Int\n}\n\n# PageInfo for Karmas\ntype KarmaPageInfo {\n    endCursor: Int\n    hasNextPage: Boolean\n}\n\n# Karmas relay-style pagination query\ntype Karmas {\n    totalCount: Int\n    edges: [KarmaEdges]\n    pageInfo: KarmaPageInfo\n}\n\nextend type Query {\n    # karma pagination query\n    karmas(limit: Int, after: Int): Karmas\n    # karma\n    karma(id: Int!): Karma\n}\n\nextend type Mutation {\n    # Create new karma\n    addKarma(input: AddKarmaInput!): Karma\n    # Delete a karma\n    deleteKarma(id: Int!): Karma\n    # Edit a karma\n    editKarma(input: EditKarmaInput!): Karma\n}\n\n# Input for addKarma Mutation\ninput AddKarmaInput {\n    title: String!\n    content: String!\n}\n\n# Input for editKarma Mutation\ninput EditKarmaInput {\n    id: Int!\n    title: String!\n    content: String!\n}\n\nextend type Subscription {\n    # Subscription for when editing a karma\n    karmaUpdated(id: Int!): Karma\n    # Subscription for karma list\n    karmasUpdated(endCursor: Int!): UpdateKarmaPayload\n}\n\n# Payload for postsUpdated Subscription\ntype UpdateKarmaPayload {\n    mutation: String!\n    id: Int!\n    node: Karma\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
   
 
     var names = {};
@@ -15535,8 +15594,8 @@ var Karma = function () {
       return Object(__WEBPACK_IMPORTED_MODULE_2__sql_connector__["a" /* default */])('karma').countDistinct('id as count').where('id', '<', id).first();
     }
   }, {
-    key: 'post',
-    value: function post(id) {
+    key: 'karma',
+    value: function karma(id) {
       return __WEBPACK_IMPORTED_MODULE_2__sql_connector__["a" /* default */].select('id', 'title', 'content').from('karma').where('id', '=', id).first();
     }
   }, {
@@ -15550,7 +15609,7 @@ var Karma = function () {
   }, {
     key: 'deleteKarma',
     value: function deleteKarma(id) {
-      return Object(__WEBPACK_IMPORTED_MODULE_2__sql_connector__["a" /* default */])('post').where('id', '=', id).del();
+      return Object(__WEBPACK_IMPORTED_MODULE_2__sql_connector__["a" /* default */])('karma').where('id', '=', id).del();
     }
   }, {
     key: 'editKarma',
@@ -20428,4 +20487,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.e0385912331e88401d8f.js.map
+//# sourceMappingURL=index.dce39ce67f7c8ca1c507.js.map

@@ -28,7 +28,7 @@ export default class Karma {
       .first();
   }
 
-  post(id) {
+  karma(id) {
     return knex
       .select('id', 'title', 'content')
       .from('karma')
@@ -43,7 +43,7 @@ export default class Karma {
   }
 
   deleteKarma(id) {
-    return knex('post')
+    return knex('karma')
       .where('id', '=', id)
       .del();
   }

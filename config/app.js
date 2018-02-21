@@ -1,8 +1,8 @@
 export default {
-  name: 'Apollo Starter Kit',
+  name: 'Chitragupta',
   logging: {
     debugSQL: false,
-    apolloLogging: false
+    apolloLogging: true
   },
   // Check here for Windows and Mac OS X: https://code.visualstudio.com/docs/editor/command-line#_opening-vs-code-with-urls
   // Use this protocol handler for Linux: https://github.com/sysgears/vscode-handler

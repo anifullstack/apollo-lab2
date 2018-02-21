@@ -53,6 +53,21 @@ export default pubsub => ({
       });
       return karma;
     },
+    async editKarma(obj, { input }, context) {
+      await context.Karma.editKarma(input);
+      const karma = await context.Karma.karma(input.id);
+      // publish for post list
+      pubsub.publish(KARMAS_SUBSCRIPTION, {
+        karmasUpdated: {
+          mutation: 'UPDATED',
+          id: karma.id,
+          node: karma
+        }
+      });
+      // publish for edit post page
+      pubsub.publish(KARMA_SUBSCRIPTION, { karmaUpdated: karma });
+      return karma;
+    },
     async deleteKarma(obj, { id }, context) {
       const karma = await context.Karma.karma(id);
       const isDeleted = await context.Karma.deleteKarma(id);

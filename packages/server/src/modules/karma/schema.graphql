@@ -1,3 +1,4 @@
+# Karma
 type Karma {
     id: Int!
     title: String!
@@ -24,9 +25,9 @@ type Karmas {
 }
 
 extend type Query {
-    # karma pagination query
+    # Karmas pagination query
     karmas(limit: Int, after: Int): Karmas
-    # karma
+    # Karma
     karma(id: Int!): Karma
 }
 
@@ -59,7 +60,7 @@ extend type Subscription {
     karmasUpdated(endCursor: Int!): UpdateKarmaPayload
 }
 
-# Payload for postsUpdated Subscription
+# Payload for karmasUpdated Subscription
 type UpdateKarmaPayload {
     mutation: String!
     id: Int!

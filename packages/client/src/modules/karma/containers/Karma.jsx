@@ -22,7 +22,7 @@ export function AddKarma(prev, node) {
   };
 
   return update(prev, {
-    posts: {
+    karmas: {
       totalCount: {
         $set: prev.karmas.totalCount + 1
       },

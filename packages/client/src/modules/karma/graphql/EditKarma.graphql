@@ -1,0 +1,7 @@
+#import "./Karma.graphql"
+
+mutation editKarma($input: EditKarmaInput!) {
+    editKarma(input: $input) {
+        ...KarmaInfo
+    }
+}

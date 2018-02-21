@@ -21,7 +21,7 @@ require("source-map-support").install();
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "88ff133988a6435f6c33"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f81b7a39365085adf4bd"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -3875,6 +3875,208 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
+/***/ "../client/src/modules/karma/components/KarmaEditView.web.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_helmet__ = __webpack_require__("react-helmet");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_helmet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_helmet__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__("react-router-dom");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_router_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_components_web__ = __webpack_require__("../client/src/modules/common/components/web/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__KarmaForm__ = __webpack_require__("../client/src/modules/karma/components/KarmaForm.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__settings__ = __webpack_require__("../../settings.js");
+
+
+
+
+
+
+
+
+
+var onSubmit = function onSubmit(karma, addKarma, editKarma) {
+  return function (values) {
+    if (karma) {
+      editKarma(karma.id, values.title, values.content);
+    } else {
+      addKarma(values.title, values.content);
+    }
+  };
+};
+
+var KarmaEditView = function KarmaEditView(_ref) {
+  var loading = _ref.loading,
+      karma = _ref.karma,
+      match = _ref.match,
+      location = _ref.location,
+      subscribeToMore = _ref.subscribeToMore,
+      addKarma = _ref.addKarma,
+      editKarma = _ref.editKarma;
+
+  var karmaObj = karma;
+  console.log('KarmaEditView', 'KarmaEditView', 'match', match, 'subscribeToMore', subscribeToMore);
+  // if new karma was just added read it from router
+  if (!karmaObj && location.state) {
+    karmaObj = location.state.karma;
+  }
+
+  var renderMetaData = function renderMetaData() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_helmet___default.a, {
+      title: __WEBPACK_IMPORTED_MODULE_6__settings__["a" /* default */].app.name + ' - Edit Karma',
+      meta: [{
+        name: 'description',
+        content: 'Edit karma example page'
+      }]
+    });
+  };
+
+  if (loading && !karmaObj) {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_4__common_components_web__["n" /* PageLayout */],
+      null,
+      renderMetaData(),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'text-center' },
+        'Loading...'
+      )
+    );
+  } else {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_4__common_components_web__["n" /* PageLayout */],
+      null,
+      renderMetaData(),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["Link"],
+        { id: 'back-button', to: '/karmas' },
+        'Back'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h2',
+        null,
+        karma ? 'Edit' : 'Create',
+        ' Karma'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__KarmaForm__["a" /* default */], { onSubmit: onSubmit(karmaObj, addKarma, editKarma), karma: karma }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)
+    );
+  }
+};
+
+KarmaEditView.propTypes = {
+  loading: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool.isRequired,
+  karma: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
+  addKarma: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
+  editKarma: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
+  match: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired,
+  location: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired,
+  subscribeToMore: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (KarmaEditView);
+
+/***/ }),
+
+/***/ "../client/src/modules/karma/components/KarmaForm.web.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_formik__ = __webpack_require__("formik");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_formik___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_formik__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_FieldAdapter__ = __webpack_require__("../client/src/utils/FieldAdapter.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_components_web__ = __webpack_require__("../client/src/modules/common/components/web/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_validation__ = __webpack_require__("../common/validation.js");
+
+
+
+
+
+
+
+var karmaFormSchema = {
+  title: [__WEBPACK_IMPORTED_MODULE_5__common_validation__["d" /* required */]],
+  content: [__WEBPACK_IMPORTED_MODULE_5__common_validation__["d" /* required */]]
+};
+
+var _validate = function _validate(values) {
+  return Object(__WEBPACK_IMPORTED_MODULE_5__common_validation__["e" /* validateForm */])(values, karmaFormSchema);
+};
+
+var KarmaForm = function KarmaForm(_ref) {
+  var values = _ref.values,
+      handleSubmit = _ref.handleSubmit,
+      submitting = _ref.submitting,
+      handleChange = _ref.handleChange;
+
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_4__common_components_web__["h" /* Form */],
+    { name: 'karma', onSubmit: handleSubmit },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__utils_FieldAdapter__["a" /* default */], {
+      name: 'title',
+      component: __WEBPACK_IMPORTED_MODULE_4__common_components_web__["p" /* RenderField */],
+      type: 'text',
+      label: 'Title',
+      value: values.title,
+      onChange: handleChange
+    }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__utils_FieldAdapter__["a" /* default */], {
+      name: 'content',
+      component: __WEBPACK_IMPORTED_MODULE_4__common_components_web__["p" /* RenderField */],
+      type: 'text',
+      label: 'Content',
+      value: values.content,
+      onChange: handleChange
+    }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_4__common_components_web__["b" /* Button */],
+      { color: 'primary', type: 'submit', disabled: submitting },
+      'Save'
+    )
+  );
+};
+
+KarmaForm.propTypes = {
+  handleSubmit: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
+  handleChange: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
+  onSubmit: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
+  submitting: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
+  values: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
+  post: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
+};
+
+var KarmaFormWithFormik = Object(__WEBPACK_IMPORTED_MODULE_2_formik__["withFormik"])({
+  mapPropsToValues: function mapPropsToValues(props) {
+    return {
+      title: props.karma && props.karma.title || '',
+      content: props.karma && props.karma.content || ''
+    };
+  },
+  validate: function validate(values) {
+    return _validate(values);
+  },
+  handleSubmit: function handleSubmit(values, _ref2) {
+    var onSubmit = _ref2.props.onSubmit;
+
+    onSubmit(values);
+  },
+
+  enableReinitialize: true,
+  displayName: 'KarmaForm' // helps with React DevTools
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (KarmaFormWithFormik(KarmaForm));
+
+/***/ }),
+
 /***/ "../client/src/modules/karma/components/KarmaList.web.jsx":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4061,7 +4263,7 @@ var KarmaList = (_temp2 = _class = function (_React$PureComponent) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export AddKarma */
+/* harmony export (immutable) */ __webpack_exports__["a"] = AddKarma;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__("babel-runtime/helpers/toConsumableArray");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__("babel-runtime/core-js/object/get-prototype-of");
@@ -4124,7 +4326,7 @@ function AddKarma(prev, node) {
   };
 
   return __WEBPACK_IMPORTED_MODULE_9_immutability_helper___default()(prev, {
-    posts: {
+    karmas: {
       totalCount: {
         $set: prev.karmas.totalCount + 1
       },
@@ -4236,7 +4438,7 @@ var Karma = (_temp = _class = function (_React$Component) {
 }, _temp);
 
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_8_react_apollo__["compose"])(Object(__WEBPACK_IMPORTED_MODULE_8_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_11__graphql_KarmasQuery_graphql___default.a, {
+/* harmony default export */ __webpack_exports__["b"] = (Object(__WEBPACK_IMPORTED_MODULE_8_react_apollo__["compose"])(Object(__WEBPACK_IMPORTED_MODULE_8_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_11__graphql_KarmasQuery_graphql___default.a, {
   options: function options() {
     return {
       variables: { limit: 10, after: 0 }
@@ -4307,12 +4509,311 @@ var Karma = (_temp = _class = function (_React$Component) {
 
 /***/ }),
 
+/***/ "../client/src/modules/karma/containers/KarmaEdit.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__("babel-runtime/regenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__("babel-runtime/helpers/asyncToGenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__("babel-runtime/core-js/object/get-prototype-of");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__("babel-runtime/helpers/classCallCheck");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__ = __webpack_require__("babel-runtime/helpers/createClass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__("babel-runtime/helpers/possibleConstructorReturn");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__("babel-runtime/helpers/inherits");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react_apollo__ = __webpack_require__("react-apollo");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react_apollo___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_react_apollo__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_KarmaEditView__ = __webpack_require__("../client/src/modules/karma/components/KarmaEditView.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Karma__ = __webpack_require__("../client/src/modules/karma/containers/Karma.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__graphql_KarmaQuery_graphql__ = __webpack_require__("../client/src/modules/karma/graphql/KarmaQuery.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__graphql_KarmaQuery_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__graphql_KarmaQuery_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__graphql_AddKarma_graphql__ = __webpack_require__("../client/src/modules/karma/graphql/AddKarma.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__graphql_AddKarma_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__graphql_AddKarma_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__graphql_EditKarma_graphql__ = __webpack_require__("../client/src/modules/karma/graphql/EditKarma.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__graphql_EditKarma_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__graphql_EditKarma_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__graphql_KarmaSubscription_graphql__ = __webpack_require__("../client/src/modules/karma/graphql/KarmaSubscription.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__graphql_KarmaSubscription_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__graphql_KarmaSubscription_graphql__);
+
+
+
+
+
+
+
+
+var _class,
+    _temp,
+    _this2 = this;
+
+
+
+
+
+
+
+
+
+
+
+
+
+var KarmaEdit = (_temp = _class = function (_React$Component) {
+  __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default()(KarmaEdit, _React$Component);
+
+  function KarmaEdit(props) {
+    __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default()(this, KarmaEdit);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default()(this, (KarmaEdit.__proto__ || __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default()(KarmaEdit)).call(this, props));
+
+    _this.subscribeToKarmaEdit = function (karmaId) {
+      var subscribeToMore = _this.props.subscribeToMore;
+
+
+      _this.subscription = subscribeToMore({
+        document: __WEBPACK_IMPORTED_MODULE_15__graphql_KarmaSubscription_graphql___default.a,
+        variables: { id: karmaId }
+      });
+    };
+
+    _this.subscription = null;
+    return _this;
+  }
+
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default()(KarmaEdit, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (!nextProps.loading) {
+        // Check if props have changed and, if necessary, stop the subscription
+        if (this.subscription && this.props.karma.id !== nextProps.karma.id) {
+          this.subscription();
+          this.subscription = null;
+        }
+
+        // Subscribe or re-subscribe
+        if (!this.subscription && nextProps.karma) {
+          this.subscribeToKarmaEdit(nextProps.karma.id);
+        }
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      if (this.subscription) {
+        // unsubscribe
+        this.subscription();
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_7_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__components_KarmaEditView__["a" /* default */], this.props);
+    }
+  }]);
+
+  return KarmaEdit;
+}(__WEBPACK_IMPORTED_MODULE_7_react___default.a.Component), _class.propTypes = {
+  loading: __WEBPACK_IMPORTED_MODULE_8_prop_types___default.a.bool.isRequired,
+  karma: __WEBPACK_IMPORTED_MODULE_8_prop_types___default.a.object,
+  subscribeToMore: __WEBPACK_IMPORTED_MODULE_8_prop_types___default.a.func.isRequired
+}, _temp);
+
+
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_9_react_apollo__["compose"])(Object(__WEBPACK_IMPORTED_MODULE_9_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_12__graphql_KarmaQuery_graphql___default.a, {
+  options: function options(props) {
+    var id = 0;
+    if (props.match) {
+      id = props.match.params.id;
+    } else if (props.navigation) {
+      id = props.navigation.state.params.id;
+    }
+
+    return {
+      variables: { id: id }
+    };
+  },
+  props: function props(_ref) {
+    var _ref$data = _ref.data,
+        loading = _ref$data.loading,
+        error = _ref$data.error,
+        karma = _ref$data.karma,
+        subscribeToMore = _ref$data.subscribeToMore;
+
+    if (error) throw new Error(error);
+    return { loading: loading, karma: karma, subscribeToMore: subscribeToMore };
+  }
+}), Object(__WEBPACK_IMPORTED_MODULE_9_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_13__graphql_AddKarma_graphql___default.a, {
+  props: function props(_ref2) {
+    var _ref2$ownProps = _ref2.ownProps,
+        history = _ref2$ownProps.history,
+        navigation = _ref2$ownProps.navigation,
+        mutate = _ref2.mutate;
+    return {
+      addKarma: function () {
+        var _ref3 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee(title, content) {
+          var karmaData;
+          return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  _context.next = 2;
+                  return mutate({
+                    variables: { input: { title: title, content: content } },
+                    optimisticResponse: {
+                      __typename: 'Mutation',
+                      addKarma: {
+                        __typename: 'Karma',
+                        id: null,
+                        title: title,
+                        content: content,
+                        comments: []
+                      }
+                    },
+                    updateQueries: {
+                      karmas: function karmas(prev, _ref4) {
+                        var addKarma = _ref4.mutationResult.data.addKarma;
+
+                        return Object(__WEBPACK_IMPORTED_MODULE_11__Karma__["a" /* AddKarma */])(prev, addKarma);
+                      }
+                    }
+                  });
+
+                case 2:
+                  karmaData = _context.sent;
+
+                  if (!history) {
+                    _context.next = 7;
+                    break;
+                  }
+
+                  return _context.abrupt('return', history.push('/karma/' + karmaData.data.addKarma.id, {
+                    karma: karmaData.data.addKarma
+                  }));
+
+                case 7:
+                  if (!navigation) {
+                    _context.next = 9;
+                    break;
+                  }
+
+                  return _context.abrupt('return', navigation.setParams({
+                    id: karmaData.data.addKarma.id,
+                    karma: karmaData.data.addKarma
+                  }));
+
+                case 9:
+                case 'end':
+                  return _context.stop();
+              }
+            }
+          }, _callee, _this2);
+        }));
+
+        return function addKarma(_x, _x2) {
+          return _ref3.apply(this, arguments);
+        };
+      }()
+    };
+  }
+}), Object(__WEBPACK_IMPORTED_MODULE_9_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_14__graphql_EditKarma_graphql___default.a, {
+  props: function props(_ref5) {
+    var _ref5$ownProps = _ref5.ownProps,
+        history = _ref5$ownProps.history,
+        navigation = _ref5$ownProps.navigation,
+        mutate = _ref5.mutate;
+    return {
+      editKarma: function () {
+        var _ref6 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee2(id, title, content) {
+          return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  _context2.next = 2;
+                  return mutate({
+                    variables: { input: { id: id, title: title, content: content } }
+                  });
+
+                case 2:
+                  if (!history) {
+                    _context2.next = 4;
+                    break;
+                  }
+
+                  return _context2.abrupt('return', history.push('/karmas'));
+
+                case 4:
+                  if (!navigation) {
+                    _context2.next = 6;
+                    break;
+                  }
+
+                  return _context2.abrupt('return', navigation.goBack());
+
+                case 6:
+                case 'end':
+                  return _context2.stop();
+              }
+            }
+          }, _callee2, _this2);
+        }));
+
+        return function editKarma(_x3, _x4, _x5) {
+          return _ref6.apply(this, arguments);
+        };
+      }()
+    };
+  }
+}))(KarmaEdit));
+
+/***/ }),
+
+/***/ "../client/src/modules/karma/graphql/AddKarma.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"addKarma"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"AddKarmaInput"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"addKarma"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"KarmaInfo"},"directives":[]}]}}]}}],"loc":{"start":0,"end":130}};
+    doc.loc.source = {"body":"#import \"./Karma.graphql\"\n\nmutation addKarma($input: AddKarmaInput!) {\n    addKarma(input: $input) {\n        ...KarmaInfo\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/karma/graphql/Karma.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
 /***/ "../client/src/modules/karma/graphql/DeleteKarma.graphql":
 /***/ (function(module, exports) {
 
 
-    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"deleteKarma"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"deleteKarma"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"id"},"arguments":[],"directives":[],"selectionSet":null}]}}]}}],"loc":{"start":0,"end":72}};
-    doc.loc.source = {"body":"mutation deleteKarma($id: Int!) {\n  deleteKarma(id: $id) {\n    id\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"deleteKarma"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"deleteKarma"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"id"},"arguments":[],"directives":[],"selectionSet":null}]}}]}}],"loc":{"start":0,"end":80}};
+    doc.loc.source = {"body":"mutation deleteKarma($id: Int!) {\n    deleteKarma(id: $id) {\n        id\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
   
 
     var names = {};
@@ -4331,6 +4832,38 @@ var Karma = (_temp = _class = function (_React$Component) {
       )
     }
   
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/karma/graphql/EditKarma.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"editKarma"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"EditKarmaInput"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"editKarma"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"KarmaInfo"},"directives":[]}]}}]}}],"loc":{"start":0,"end":140}};
+    doc.loc.source = {"body":"#import \"./Karma.graphql\"\r\n\r\nmutation editKarma($input: EditKarmaInput!) {\r\n    editKarma(input: $input) {\r\n        ...KarmaInfo\r\n    }\r\n}\r\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/karma/graphql/Karma.graphql").definitions));
+
 
       module.exports = doc;
     
@@ -4362,6 +4895,70 @@ var Karma = (_temp = _class = function (_React$Component) {
       )
     }
   
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/karma/graphql/KarmaQuery.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"karma"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"karma"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"KarmaInfo"},"directives":[]}]}}]}}],"loc":{"start":0,"end":102}};
+    doc.loc.source = {"body":"#import \"./Karma.graphql\"\n\nquery karma($id: Int!) {\n    karma(id: $id) {\n        ...KarmaInfo\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/karma/graphql/Karma.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/karma/graphql/KarmaSubscription.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"subscription","name":{"kind":"Name","value":"onKarmaUpdated"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"karmaUpdated"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"KarmaInfo"},"directives":[]}]}}]}}],"loc":{"start":0,"end":132}};
+    doc.loc.source = {"body":"#import \"./Karma.graphql\"\r\n\r\nsubscription onKarmaUpdated($id: Int!) {\r\n    karmaUpdated(id: $id) {\r\n        ...KarmaInfo\r\n    }\r\n}\r\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/karma/graphql/Karma.graphql").definitions));
+
 
       module.exports = doc;
     
@@ -4443,7 +5040,7 @@ var Karma = (_temp = _class = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_common_components_web__ = __webpack_require__("../client/src/modules/common/components/web/index.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__containers_Karma__ = __webpack_require__("../client/src/modules/karma/containers/Karma.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reducers__ = __webpack_require__("../client/src/modules/karma/reducers/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__containers_KarmaEdit__ = __webpack_require__("../client/src/modules/karma/containers/KarmaEdit.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__connector__ = __webpack_require__("../client/src/modules/connector.web.jsx");
 
 
@@ -4452,38 +5049,23 @@ var Karma = (_temp = _class = function (_React$Component) {
 
 
 
+//import resolvers from './resolvers';
+
+
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_5__connector__["a" /* default */]({
-  route: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["Route"], { exact: true, path: '/karma', component: __WEBPACK_IMPORTED_MODULE_3__containers_Karma__["a" /* default */] }),
+  route: [__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["Route"], { exact: true, path: '/karmas', component: __WEBPACK_IMPORTED_MODULE_3__containers_Karma__["b" /* default */] }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["Route"], { exact: true, path: '/karma/:id', component: __WEBPACK_IMPORTED_MODULE_4__containers_KarmaEdit__["a" /* default */] })],
   navItem: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_2__modules_common_components_web__["l" /* MenuItem */],
-    { key: 'karma' },
+    { key: '/karmas' },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["NavLink"],
-      { to: '/karma', className: 'nav-link', activeClassName: 'active' },
-      'Karma'
+      { to: '/karmas', className: 'nav-link', activeClassName: 'active' },
+      'Karmas'
     )
-  ),
-  reducer: { karma: __WEBPACK_IMPORTED_MODULE_4__reducers__["a" /* default */] }
+  )
+  //resolver: resolvers
 }));
-
-/***/ }),
-
-/***/ "../client/src/modules/karma/reducers/index.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var defaultState = {};
-
-/* harmony default export */ __webpack_exports__["a"] = (function () {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;
-  var action = arguments[1];
-
-  switch (action.type) {
-    default:
-      return state;
-  }
-});
 
 /***/ }),
 
@@ -20487,4 +21069,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.dce39ce67f7c8ca1c507.js.map
+//# sourceMappingURL=index.c2dcf7469d7934b1a215.js.map

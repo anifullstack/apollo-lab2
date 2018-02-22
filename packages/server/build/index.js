@@ -21,7 +21,7 @@ require("source-map-support").install();
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2cf1222aeace3ec1ec0c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "bfd4a3db191036b95b02"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -707,7 +707,7 @@ require("source-map-support").install();
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'Montessory v0.0.1',
+  name: 'Montessory v0.0.2',
   logging: {
     debugSQL: false,
     apolloLogging: true
@@ -7874,14 +7874,9 @@ var StudentNotesView = (_temp2 = _class = function (_React$PureComponent) {
             ' ',
             __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_7__common_components_web__["b" /* Button */],
-              {
-                color: 'primary',
-                size: 'sm',
-                className: 'delete-note',
-                onClick: function onClick() {
+              { color: 'primary', size: 'sm', className: 'delete-note', onClick: function onClick() {
                   return _this2.handleDeleteNote(record.id);
-                }
-              },
+                } },
               'Delete'
             )
           );
@@ -23757,4 +23752,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.39f068f197dd502f321c.js.map
+//# sourceMappingURL=index.fa5415b501ee4e807a70.js.map

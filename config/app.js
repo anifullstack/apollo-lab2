@@ -1,5 +1,5 @@
 export default {
-  name: 'Montessory v0.0.1',
+  name: 'Montessory v0.0.2',
   logging: {
     debugSQL: false,
     apolloLogging: true

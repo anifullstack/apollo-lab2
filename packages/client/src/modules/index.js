@@ -1,3 +1,4 @@
+import student from './student';
 import karma from './karma';
 import counter from './counter';
 import post from './post';
@@ -9,4 +10,4 @@ import './favicon';
 
 import Feature from './connector';
 
-export default new Feature(karma, counter, post, upload, user, subscription, pageNotFound);
+export default new Feature(student, karma, counter, post, upload, user, subscription, pageNotFound);

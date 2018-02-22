@@ -1,0 +1,113 @@
+# Student
+type Student {
+    id: Int!
+    title: String!
+    content: String!
+    notes: [Note]
+}
+
+# Note
+type Note {
+    id: Int!
+    content: String!
+}
+
+# Edges for Students
+type StudentEdges {
+    node: Student
+    cursor: Int
+}
+
+# PageInfo for Students
+type StudentPageInfo {
+    endCursor: Int
+    hasNextPage: Boolean
+}
+
+# Students relay-style pagination query
+type Students {
+    totalCount: Int
+    edges: [StudentEdges]
+    pageInfo: StudentPageInfo
+}
+
+extend type Query {
+    # Students pagination query
+    students(limit: Int, after: Int): Students
+    # Student
+    student(id: Int!): Student
+}
+
+extend type Mutation {
+    # Create new student
+    addStudent(input: AddStudentInput!): Student
+    # Delete a student
+    deleteStudent(id: Int!): Student
+    # Edit a student
+    editStudent(input: EditStudentInput!): Student
+    # Add note to student
+    addNote(input: AddNoteInput!): Note
+    # Delete a note
+    deleteNote(input: DeleteNoteInput!): Note
+    # Edit a note
+    editNote(input: EditNoteInput!): Note
+}
+
+# Input for addStudent Mutation
+input AddStudentInput {
+    title: String!
+    content: String!
+}
+
+# Input for editStudent Mutation
+input EditStudentInput {
+    id: Int!
+    title: String!
+    content: String!
+}
+
+# Input for addNote Mutation
+input AddNoteInput {
+    content: String!
+    # Needed for noteUpdated Subscription filter
+    studentId: Int!
+}
+
+# Input for editNote Mutation
+input DeleteNoteInput {
+    id: Int!
+    # Needed for noteUpdated Subscription filter
+    studentId: Int!
+}
+
+# Input for deleteNote Mutation
+input EditNoteInput {
+    id: Int!
+    content: String!
+    # Needed for noteUpdated Subscription filter
+    studentId: Int!
+}
+
+extend type Subscription {
+    # Subscription for when editing a student
+    studentUpdated(id: Int!): Student
+    # Subscription for student list
+    studentsUpdated(endCursor: Int!): UpdateStudentPayload
+    # Subscription for notes
+    noteUpdated(studentId: Int!): UpdateNotePayload
+}
+
+# Payload for studentsUpdated Subscription
+type UpdateStudentPayload {
+    mutation: String!
+    id: Int!
+    node: Student
+}
+
+# Payload for noteUpdated Subscription
+type UpdateNotePayload {
+    mutation: String!
+    id: Int
+    studentId: Int!
+    node: Note
+}

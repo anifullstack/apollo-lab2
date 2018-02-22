@@ -21,7 +21,7 @@ require("source-map-support").install();
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "bd22e1171701abdb0fe4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2cf1222aeace3ec1ec0c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -3850,16 +3850,17 @@ req.keys().map(req);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__karma__ = __webpack_require__("../client/src/modules/karma/index.web.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__counter__ = __webpack_require__("../client/src/modules/counter/index.web.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__post__ = __webpack_require__("../client/src/modules/post/index.web.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__upload__ = __webpack_require__("../client/src/modules/upload/index.web.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__user__ = __webpack_require__("../client/src/modules/user/index.web.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__subscription__ = __webpack_require__("../client/src/modules/subscription/index.web.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pageNotFound__ = __webpack_require__("../client/src/modules/pageNotFound/index.web.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__favicon__ = __webpack_require__("../client/src/modules/favicon/index.web.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__favicon___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__favicon__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__connector__ = __webpack_require__("../client/src/modules/connector.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__student__ = __webpack_require__("../client/src/modules/student/index.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__karma__ = __webpack_require__("../client/src/modules/karma/index.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__counter__ = __webpack_require__("../client/src/modules/counter/index.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__post__ = __webpack_require__("../client/src/modules/post/index.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__upload__ = __webpack_require__("../client/src/modules/upload/index.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__user__ = __webpack_require__("../client/src/modules/user/index.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__subscription__ = __webpack_require__("../client/src/modules/subscription/index.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pageNotFound__ = __webpack_require__("../client/src/modules/pageNotFound/index.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__favicon__ = __webpack_require__("../client/src/modules/favicon/index.web.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__favicon___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__favicon__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__connector__ = __webpack_require__("../client/src/modules/connector.web.jsx");
 
 
 
@@ -3871,7 +3872,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (new __WEBPACK_IMPORTED_MODULE_8__connector__["a" /* default */](__WEBPACK_IMPORTED_MODULE_0__karma__["a" /* default */], __WEBPACK_IMPORTED_MODULE_1__counter__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__post__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__upload__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4__user__["a" /* default */], __WEBPACK_IMPORTED_MODULE_5__subscription__["a" /* default */], __WEBPACK_IMPORTED_MODULE_6__pageNotFound__["a" /* default */]));
+
+/* harmony default export */ __webpack_exports__["default"] = (new __WEBPACK_IMPORTED_MODULE_9__connector__["a" /* default */](__WEBPACK_IMPORTED_MODULE_0__student__["a" /* default */], __WEBPACK_IMPORTED_MODULE_1__karma__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__counter__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__post__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4__upload__["a" /* default */], __WEBPACK_IMPORTED_MODULE_5__user__["a" /* default */], __WEBPACK_IMPORTED_MODULE_6__subscription__["a" /* default */], __WEBPACK_IMPORTED_MODULE_7__pageNotFound__["a" /* default */]));
 
 /***/ }),
 
@@ -6827,8 +6829,8 @@ doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/s
 /***/ (function(module, exports) {
 
 
-    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"deleteComment"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"DeleteCommentInput"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"deleteComment"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"id"},"arguments":[],"directives":[],"selectionSet":null}]}}]}}],"loc":{"start":0,"end":100}};
-    doc.loc.source = {"body":"mutation deleteComment($input: DeleteCommentInput!) {\n  deleteComment(input: $input) {\n    id\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"deleteNote"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"DeleteCommentInput"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"deleteComment"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"id"},"arguments":[],"directives":[],"selectionSet":null}]}}]}}],"loc":{"start":0,"end":97}};
+    doc.loc.source = {"body":"mutation deleteNote($input: DeleteCommentInput!) {\n  deleteComment(input: $input) {\n    id\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
   
 
     var names = {};
@@ -7223,6 +7225,2078 @@ var resolvers = {
       }));
 
       return function onCommentSelect(_x, _x2, _x3) {
+        return _ref2.apply(this, arguments);
+      };
+    }()
+  }
+};
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  defaults: defaults,
+  resolvers: resolvers
+});
+
+/***/ }),
+
+/***/ "../client/src/modules/student/components/StudentEditView.web.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_helmet__ = __webpack_require__("react-helmet");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_helmet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_helmet__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__("react-router-dom");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_router_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_components_web__ = __webpack_require__("../client/src/modules/common/components/web/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StudentForm__ = __webpack_require__("../client/src/modules/student/components/StudentForm.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__containers_StudentNotes__ = __webpack_require__("../client/src/modules/student/containers/StudentNotes.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__settings__ = __webpack_require__("../../settings.js");
+
+
+
+
+
+
+
+
+
+
+var onSubmit = function onSubmit(student, addStudent, editStudent) {
+  return function (values) {
+    if (student) {
+      editStudent(student.id, values.title, values.content);
+    } else {
+      addStudent(values.title, values.content);
+    }
+  };
+};
+
+var StudentEditView = function StudentEditView(_ref) {
+  var loading = _ref.loading,
+      student = _ref.student,
+      match = _ref.match,
+      location = _ref.location,
+      subscribeToMore = _ref.subscribeToMore,
+      addStudent = _ref.addStudent,
+      editStudent = _ref.editStudent;
+
+  var studentObj = student;
+  // if new student was just added read it from router
+  if (!studentObj && location.state) {
+    studentObj = location.state.student;
+  }
+
+  var renderMetaData = function renderMetaData() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_helmet___default.a, {
+      title: __WEBPACK_IMPORTED_MODULE_7__settings__["a" /* default */].app.name + ' - Edit student',
+      meta: [{
+        name: 'description',
+        content: 'Edit student example page'
+      }]
+    });
+  };
+
+  if (loading && !studentObj) {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_4__common_components_web__["n" /* PageLayout */],
+      null,
+      renderMetaData(),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'text-center' },
+        'Loading...'
+      )
+    );
+  } else {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_4__common_components_web__["n" /* PageLayout */],
+      null,
+      renderMetaData(),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["Link"],
+        { id: 'back-button', to: '/students' },
+        'Back'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h2',
+        null,
+        student ? 'Edit' : 'Create',
+        ' Student'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__StudentForm__["a" /* default */], { onSubmit: onSubmit(studentObj, addStudent, editStudent), student: student }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+      studentObj && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__containers_StudentNotes__["a" /* default */], {
+        studentId: Number(match.params.id),
+        notes: studentObj.notes,
+        subscribeToMore: subscribeToMore
+      })
+    );
+  }
+};
+
+StudentEditView.propTypes = {
+  loading: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool.isRequired,
+  student: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
+  addStudent: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
+  editStudent: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
+  match: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired,
+  location: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired,
+  subscribeToMore: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (StudentEditView);
+
+/***/ }),
+
+/***/ "../client/src/modules/student/components/StudentForm.web.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_formik__ = __webpack_require__("formik");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_formik___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_formik__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_FieldAdapter__ = __webpack_require__("../client/src/utils/FieldAdapter.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_components_web__ = __webpack_require__("../client/src/modules/common/components/web/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_validation__ = __webpack_require__("../common/validation.js");
+
+
+
+
+
+
+
+var studentFormSchema = {
+  title: [__WEBPACK_IMPORTED_MODULE_5__common_validation__["d" /* required */]],
+  content: [__WEBPACK_IMPORTED_MODULE_5__common_validation__["d" /* required */]]
+};
+
+var _validate = function _validate(values) {
+  return Object(__WEBPACK_IMPORTED_MODULE_5__common_validation__["e" /* validateForm */])(values, studentFormSchema);
+};
+
+var StudentForm = function StudentForm(_ref) {
+  var values = _ref.values,
+      handleSubmit = _ref.handleSubmit,
+      submitting = _ref.submitting,
+      handleChange = _ref.handleChange;
+
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_4__common_components_web__["h" /* Form */],
+    { name: 'student', onSubmit: handleSubmit },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__utils_FieldAdapter__["a" /* default */], {
+      name: 'title',
+      component: __WEBPACK_IMPORTED_MODULE_4__common_components_web__["p" /* RenderField */],
+      type: 'text',
+      label: 'Title',
+      value: values.title,
+      onChange: handleChange
+    }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__utils_FieldAdapter__["a" /* default */], {
+      name: 'content',
+      component: __WEBPACK_IMPORTED_MODULE_4__common_components_web__["p" /* RenderField */],
+      type: 'text',
+      label: 'Content',
+      value: values.content,
+      onChange: handleChange
+    }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_4__common_components_web__["b" /* Button */],
+      { color: 'primary', type: 'submit', disabled: submitting },
+      'Save'
+    )
+  );
+};
+
+StudentForm.propTypes = {
+  handleSubmit: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
+  handleChange: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
+  onSubmit: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
+  submitting: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
+  values: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
+  student: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
+};
+
+var StudentFormWithFormik = Object(__WEBPACK_IMPORTED_MODULE_2_formik__["withFormik"])({
+  mapPropsToValues: function mapPropsToValues(props) {
+    return {
+      title: props.student && props.student.title || '',
+      content: props.student && props.student.content || ''
+    };
+  },
+  validate: function validate(values) {
+    return _validate(values);
+  },
+  handleSubmit: function handleSubmit(values, _ref2) {
+    var onSubmit = _ref2.props.onSubmit;
+
+    onSubmit(values);
+  },
+
+  enableReinitialize: true,
+  displayName: 'StudentForm' // helps with React DevTools
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (StudentFormWithFormik(StudentForm));
+
+/***/ }),
+
+/***/ "../client/src/modules/student/components/StudentList.web.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StudentList; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__("babel-runtime/core-js/object/get-prototype-of");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__("babel-runtime/helpers/classCallCheck");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__("babel-runtime/helpers/createClass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__("babel-runtime/helpers/possibleConstructorReturn");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__("babel-runtime/helpers/inherits");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_helmet__ = __webpack_require__("react-helmet");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_helmet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_helmet__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_router_dom__ = __webpack_require__("react-router-dom");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_router_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_react_router_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_components_web__ = __webpack_require__("../client/src/modules/common/components/web/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__settings__ = __webpack_require__("../../settings.js");
+
+
+
+
+
+
+var _class, _temp2;
+
+
+
+
+
+
+
+
+var StudentList = (_temp2 = _class = function (_React$PureComponent) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(StudentList, _React$PureComponent);
+
+  function StudentList() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, StudentList);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (_ref = StudentList.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(StudentList)).call.apply(_ref, [this].concat(args))), _this), _this.handleDeleteStudent = function (id) {
+      var deleteStudent = _this.props.deleteStudent;
+
+      deleteStudent(id);
+    }, _this.renderLoadMore = function (students, loadMoreRows) {
+      if (students.pageInfo.hasNextPage) {
+        return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_9__common_components_web__["b" /* Button */],
+          { id: 'load-more', color: 'primary', onClick: loadMoreRows },
+          'Load more ...'
+        );
+      }
+    }, _this.renderMetaData = function () {
+      return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7_react_helmet___default.a, {
+        title: __WEBPACK_IMPORTED_MODULE_10__settings__["a" /* default */].app.name + ' - Students list',
+        meta: [{
+          name: 'description',
+          content: __WEBPACK_IMPORTED_MODULE_10__settings__["a" /* default */].app.name + ' - List of all students example page'
+        }]
+      });
+    }, _temp), __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(_this, _ret);
+  }
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(StudentList, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _props = this.props,
+          loading = _props.loading,
+          students = _props.students,
+          loadMoreRows = _props.loadMoreRows;
+
+      if (loading) {
+        return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_9__common_components_web__["n" /* PageLayout */],
+          null,
+          this.renderMetaData(),
+          __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+            'div',
+            { className: 'text-center' },
+            'Loading...'
+          )
+        );
+      } else {
+        var columns = [{
+          title: 'Title',
+          dataIndex: 'title',
+          key: 'title',
+          render: function render(text, record) {
+            return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_8_react_router_dom__["Link"],
+              { className: 'student-link', to: '/student/' + record.id },
+              text
+            );
+          }
+        }, {
+          title: 'Actions',
+          key: 'actions',
+          width: 50,
+          render: function render(text, record) {
+            return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_9__common_components_web__["b" /* Button */],
+              {
+                color: 'primary',
+                size: 'sm',
+                className: 'delete-button',
+                onClick: function onClick() {
+                  return _this2.handleDeleteStudent(record.id);
+                }
+              },
+              'Delete'
+            );
+          }
+        }];
+        return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_9__common_components_web__["n" /* PageLayout */],
+          null,
+          this.renderMetaData(),
+          __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+            'h2',
+            null,
+            'Students'
+          ),
+          __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_8_react_router_dom__["Link"],
+            { to: '/student/0' },
+            __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_9__common_components_web__["b" /* Button */],
+              { color: 'primary' },
+              'Add'
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement('h1', null),
+          __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__common_components_web__["t" /* Table */], { dataSource: students.edges.map(function (_ref2) {
+              var node = _ref2.node;
+              return node;
+            }), columns: columns }),
+          __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+            'div',
+            null,
+            __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+              'small',
+              null,
+              '(',
+              students.edges.length,
+              ' / ',
+              students.totalCount,
+              ')'
+            )
+          ),
+          this.renderLoadMore(students, loadMoreRows)
+        );
+      }
+    }
+  }]);
+
+  return StudentList;
+}(__WEBPACK_IMPORTED_MODULE_5_react___default.a.PureComponent), _class.propTypes = {
+  loading: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.bool.isRequired,
+  students: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.object,
+  deleteStudent: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.func.isRequired,
+  loadMoreRows: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.func.isRequired
+}, _temp2);
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/components/StudentNoteForm.web.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__("babel-runtime/regenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__("babel-runtime/helpers/asyncToGenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_formik__ = __webpack_require__("formik");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_formik___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_formik__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_FieldAdapter__ = __webpack_require__("../client/src/utils/FieldAdapter.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_components_web__ = __webpack_require__("../client/src/modules/common/components/web/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_validation__ = __webpack_require__("../common/validation.js");
+
+
+
+
+
+
+
+
+
+var noteFormSchema = {
+  content: [__WEBPACK_IMPORTED_MODULE_7__common_validation__["d" /* required */]]
+};
+
+var _validate = function _validate(values) {
+  return Object(__WEBPACK_IMPORTED_MODULE_7__common_validation__["e" /* validateForm */])(values, noteFormSchema);
+};
+
+var StudentNoteForm = function StudentNoteForm(_ref) {
+  var values = _ref.values,
+      handleSubmit = _ref.handleSubmit,
+      initialValues = _ref.initialValues,
+      handleChange = _ref.handleChange;
+
+  return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_6__common_components_web__["h" /* Form */],
+    { name: 'note', onSubmit: handleSubmit },
+    __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_6__common_components_web__["r" /* Row */],
+      null,
+      __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_6__common_components_web__["g" /* Col */],
+        { xs: 2 },
+        __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_6__common_components_web__["k" /* Label */],
+          null,
+          initialValues.id === null ? 'Add note' : 'Edit note'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_6__common_components_web__["g" /* Col */],
+        { xs: 8 },
+        __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__utils_FieldAdapter__["a" /* default */], { name: 'content', component: __WEBPACK_IMPORTED_MODULE_6__common_components_web__["p" /* RenderField */], type: 'text', value: values.content, onChange: handleChange })
+      ),
+      __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_6__common_components_web__["g" /* Col */],
+        { xs: 2 },
+        __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_6__common_components_web__["b" /* Button */],
+          { color: 'primary', type: 'submit', className: 'float-right' },
+          'Save'
+        )
+      )
+    )
+  );
+};
+
+StudentNoteForm.propTypes = {
+  handleSubmit: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func,
+  handleChange: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func,
+  initialValues: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object,
+  onSubmit: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func,
+  submitting: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
+  values: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object,
+  content: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.string,
+  changeContent: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func
+};
+
+var StudentNoteFormWithFormik = Object(__WEBPACK_IMPORTED_MODULE_4_formik__["withFormik"])({
+  mapPropsToValues: function mapPropsToValues(props) {
+    return { content: props.note && props.note.content || '' };
+  },
+  handleSubmit: function handleSubmit(values, _ref2) {
+    var _this = this;
+
+    var resetForm = _ref2.resetForm,
+        onSubmit = _ref2.props.onSubmit;
+    return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
+      return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return onSubmit(values);
+
+            case 2:
+              resetForm({ content: '' });
+
+            case 3:
+            case 'end':
+              return _context.stop();
+          }
+        }
+      }, _callee, _this);
+    }))();
+  },
+
+  validate: function validate(values) {
+    return _validate(values);
+  },
+  displayName: 'NoteForm', // helps with React DevTools,
+  enableReinitialize: true
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (StudentNoteFormWithFormik(StudentNoteForm));
+
+/***/ }),
+
+/***/ "../client/src/modules/student/components/StudentNotesView.web.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StudentNotesView; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__("babel-runtime/core-js/object/get-prototype-of");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__("babel-runtime/helpers/classCallCheck");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__("babel-runtime/helpers/createClass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__("babel-runtime/helpers/possibleConstructorReturn");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__("babel-runtime/helpers/inherits");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_components_web__ = __webpack_require__("../client/src/modules/common/components/web/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__StudentNoteForm__ = __webpack_require__("../client/src/modules/student/components/StudentNoteForm.web.jsx");
+
+
+
+
+
+
+var _class, _temp2;
+
+
+
+
+
+
+var StudentNotesView = (_temp2 = _class = function (_React$PureComponent) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(StudentNotesView, _React$PureComponent);
+
+  function StudentNotesView() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, StudentNotesView);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (_ref = StudentNotesView.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(StudentNotesView)).call.apply(_ref, [this].concat(args))), _this), _this.handleEditNote = function (id, content) {
+      var onNoteSelect = _this.props.onNoteSelect;
+
+      onNoteSelect({ id: id, content: content });
+    }, _this.handleDeleteNote = function (id) {
+      var _this$props = _this.props,
+          note = _this$props.note,
+          onNoteSelect = _this$props.onNoteSelect,
+          deleteNote = _this$props.deleteNote;
+
+
+      if (note.id === id) {
+        onNoteSelect({ id: null, content: '' });
+      }
+
+      deleteNote(id);
+    }, _this.onSubmit = function () {
+      return function (values) {
+        var _this$props2 = _this.props,
+            note = _this$props2.note,
+            studentId = _this$props2.studentId,
+            addNote = _this$props2.addNote,
+            editNote = _this$props2.editNote,
+            onNoteSelect = _this$props2.onNoteSelect;
+
+
+        if (note.id === null) {
+          addNote(values.content, studentId);
+        } else {
+          editNote(note.id, values.content);
+        }
+
+        onNoteSelect({ id: null, content: '' });
+      };
+    }, _temp), __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(_this, _ret);
+  }
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(StudentNotesView, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _props = this.props,
+          studentId = _props.studentId,
+          notes = _props.notes,
+          note = _props.note;
+
+      var columns = [{
+        title: 'Content',
+        dataIndex: 'content',
+        key: 'content'
+      }, {
+        title: 'Actions',
+        key: 'actions',
+        width: 120,
+        render: function render(text, record) {
+          return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+            'div',
+            { style: { width: 120 } },
+            __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_7__common_components_web__["b" /* Button */],
+              {
+                color: 'primary',
+                size: 'sm',
+                className: 'edit-note',
+                onClick: function onClick() {
+                  return _this2.handleEditNote(record.id, record.content);
+                }
+              },
+              'Edit'
+            ),
+            ' ',
+            __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_7__common_components_web__["b" /* Button */],
+              {
+                color: 'primary',
+                size: 'sm',
+                className: 'delete-note',
+                onClick: function onClick() {
+                  return _this2.handleDeleteNote(record.id);
+                }
+              },
+              'Delete'
+            )
+          );
+        }
+      }];
+
+      return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+        'div',
+        null,
+        __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+          'h3',
+          null,
+          'Notes'
+        ),
+        __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__StudentNoteForm__["a" /* default */], { studentId: studentId, onSubmit: this.onSubmit(), initialValues: note, note: note }),
+        __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement('h1', null),
+        __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__common_components_web__["t" /* Table */], { dataSource: notes, columns: columns })
+      );
+    }
+  }]);
+
+  return StudentNotesView;
+}(__WEBPACK_IMPORTED_MODULE_5_react___default.a.PureComponent), _class.propTypes = {
+  studentId: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.number.isRequired,
+  notes: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.array.isRequired,
+  note: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.object,
+  addNote: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.func.isRequired,
+  editNote: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.func.isRequired,
+  deleteNote: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.func.isRequired,
+  subscribeToMore: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.func.isRequired,
+  onNoteSelect: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.func.isRequired
+}, _temp2);
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/containers/Student.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = AddStudent;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__("babel-runtime/helpers/toConsumableArray");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__("babel-runtime/core-js/object/get-prototype-of");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__("babel-runtime/helpers/classCallCheck");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__("babel-runtime/helpers/createClass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__("babel-runtime/helpers/possibleConstructorReturn");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__("babel-runtime/helpers/inherits");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_apollo__ = __webpack_require__("react-apollo");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_apollo___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_react_apollo__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_immutability_helper__ = __webpack_require__("immutability-helper");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_immutability_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_immutability_helper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_StudentList__ = __webpack_require__("../client/src/modules/student/components/StudentList.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__graphql_StudentsQuery_graphql__ = __webpack_require__("../client/src/modules/student/graphql/StudentsQuery.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__graphql_StudentsQuery_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__graphql_StudentsQuery_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__graphql_StudentsSubscription_graphql__ = __webpack_require__("../client/src/modules/student/graphql/StudentsSubscription.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__graphql_StudentsSubscription_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__graphql_StudentsSubscription_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__graphql_DeleteStudent_graphql__ = __webpack_require__("../client/src/modules/student/graphql/DeleteStudent.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__graphql_DeleteStudent_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__graphql_DeleteStudent_graphql__);
+
+
+
+
+
+
+
+var _class, _temp;
+
+
+
+
+
+
+
+
+
+
+
+
+function AddStudent(prev, node) {
+  // ignore if duplicate
+  if (node.id !== null && prev.students.edges.some(function (student) {
+    return node.id === student.cursor;
+  })) {
+    return prev;
+  }
+
+  var edge = {
+    cursor: node.id,
+    node: node,
+    __typename: 'StudentEdges'
+  };
+
+  return __WEBPACK_IMPORTED_MODULE_9_immutability_helper___default()(prev, {
+    students: {
+      totalCount: {
+        $set: prev.students.totalCount + 1
+      },
+      edges: {
+        $unshift: [edge]
+      }
+    }
+  });
+}
+
+function DeleteStudent(prev, id) {
+  var index = prev.students.edges.findIndex(function (x) {
+    return x.node.id === id;
+  });
+
+  // ignore if not found
+  if (index < 0) {
+    return prev;
+  }
+
+  return __WEBPACK_IMPORTED_MODULE_9_immutability_helper___default()(prev, {
+    students: {
+      totalCount: {
+        $set: prev.students.totalCount - 1
+      },
+      edges: {
+        $splice: [[index, 1]]
+      }
+    }
+  });
+}
+
+var Student = (_temp = _class = function (_React$Component) {
+  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(Student, _React$Component);
+
+  function Student(props) {
+    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, Student);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Student.__proto__ || __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default()(Student)).call(this, props));
+
+    _this.subscribeToStudentList = function (endCursor) {
+      var subscribeToMore = _this.props.subscribeToMore;
+
+
+      _this.subscription = subscribeToMore({
+        document: __WEBPACK_IMPORTED_MODULE_12__graphql_StudentsSubscription_graphql___default.a,
+        variables: { endCursor: endCursor },
+        updateQuery: function updateQuery(prev, _ref) {
+          var _ref$subscriptionData = _ref.subscriptionData.data.studentsUpdated,
+              mutation = _ref$subscriptionData.mutation,
+              node = _ref$subscriptionData.node;
+
+          var newResult = prev;
+
+          if (mutation === 'CREATED') {
+            newResult = AddStudent(prev, node);
+          } else if (mutation === 'DELETED') {
+            newResult = DeleteStudent(prev, node.id);
+          }
+
+          return newResult;
+        }
+      });
+    };
+
+    _this.subscription = null;
+    return _this;
+  }
+
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(Student, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (!nextProps.loading) {
+        var endCursor = this.props.students ? this.props.students.pageInfo.endCursor : 0;
+        var nextEndCursor = nextProps.students.pageInfo.endCursor;
+
+        // Check if props have changed and, if necessary, stop the subscription
+        if (this.subscription && endCursor !== nextEndCursor) {
+          this.subscription();
+          this.subscription = null;
+        }
+
+        // Subscribe or re-subscribe
+        if (!this.subscription) {
+          this.subscribeToStudentList(nextEndCursor);
+        }
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      if (this.subscription) {
+        // unsubscribe
+        this.subscription();
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__components_StudentList__["a" /* default */], this.props);
+    }
+  }]);
+
+  return Student;
+}(__WEBPACK_IMPORTED_MODULE_6_react___default.a.Component), _class.propTypes = {
+  loading: __WEBPACK_IMPORTED_MODULE_7_prop_types___default.a.bool.isRequired,
+  students: __WEBPACK_IMPORTED_MODULE_7_prop_types___default.a.object,
+  subscribeToMore: __WEBPACK_IMPORTED_MODULE_7_prop_types___default.a.func.isRequired
+}, _temp);
+
+
+/* harmony default export */ __webpack_exports__["b"] = (Object(__WEBPACK_IMPORTED_MODULE_8_react_apollo__["compose"])(Object(__WEBPACK_IMPORTED_MODULE_8_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_11__graphql_StudentsQuery_graphql___default.a, {
+  options: function options() {
+    return {
+      variables: { limit: 10, after: 0 }
+    };
+  },
+  props: function props(_ref2) {
+    var data = _ref2.data;
+    var loading = data.loading,
+        error = data.error,
+        students = data.students,
+        fetchMore = data.fetchMore,
+        subscribeToMore = data.subscribeToMore;
+
+    var loadMoreRows = function loadMoreRows() {
+      return fetchMore({
+        variables: {
+          after: students.pageInfo.endCursor
+        },
+        updateQuery: function updateQuery(previousResult, _ref3) {
+          var fetchMoreResult = _ref3.fetchMoreResult;
+
+          var totalCount = fetchMoreResult.students.totalCount;
+          var newEdges = fetchMoreResult.students.edges;
+          var pageInfo = fetchMoreResult.students.pageInfo;
+
+          return {
+            // By returning `cursor` here, we update the `fetchMore` function
+            // to the new cursor.
+            students: {
+              totalCount: totalCount,
+              edges: [].concat(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default()(previousResult.students.edges), __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default()(newEdges)),
+              pageInfo: pageInfo,
+              __typename: 'Students'
+            }
+          };
+        }
+      });
+    };
+    if (error) throw new Error(error);
+    return { loading: loading, students: students, subscribeToMore: subscribeToMore, loadMoreRows: loadMoreRows };
+  }
+}), Object(__WEBPACK_IMPORTED_MODULE_8_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_13__graphql_DeleteStudent_graphql___default.a, {
+  props: function props(_ref4) {
+    var mutate = _ref4.mutate;
+    return {
+      deleteStudent: function deleteStudent(id) {
+        mutate({
+          variables: { id: id },
+          optimisticResponse: {
+            __typename: 'Mutation',
+            deleteStudent: {
+              id: id,
+              __typename: 'Student'
+            }
+          },
+          updateQueries: {
+            students: function students(prev, _ref5) {
+              var deleteStudent = _ref5.mutationResult.data.deleteStudent;
+
+              return DeleteStudent(prev, deleteStudent.id);
+            }
+          }
+        });
+      }
+    };
+  }
+}))(Student));
+
+/***/ }),
+
+/***/ "../client/src/modules/student/containers/StudentEdit.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__("babel-runtime/regenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__("babel-runtime/helpers/asyncToGenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__("babel-runtime/core-js/object/get-prototype-of");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__("babel-runtime/helpers/classCallCheck");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__ = __webpack_require__("babel-runtime/helpers/createClass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__("babel-runtime/helpers/possibleConstructorReturn");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__("babel-runtime/helpers/inherits");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react_apollo__ = __webpack_require__("react-apollo");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react_apollo___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_react_apollo__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_StudentEditView__ = __webpack_require__("../client/src/modules/student/components/StudentEditView.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Student__ = __webpack_require__("../client/src/modules/student/containers/Student.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__graphql_StudentQuery_graphql__ = __webpack_require__("../client/src/modules/student/graphql/StudentQuery.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__graphql_StudentQuery_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__graphql_StudentQuery_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__graphql_AddStudent_graphql__ = __webpack_require__("../client/src/modules/student/graphql/AddStudent.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__graphql_AddStudent_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__graphql_AddStudent_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__graphql_EditStudent_graphql__ = __webpack_require__("../client/src/modules/student/graphql/EditStudent.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__graphql_EditStudent_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__graphql_EditStudent_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__graphql_StudentSubscription_graphql__ = __webpack_require__("../client/src/modules/student/graphql/StudentSubscription.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__graphql_StudentSubscription_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__graphql_StudentSubscription_graphql__);
+
+
+
+
+
+
+
+
+var _class,
+    _temp,
+    _this2 = this;
+
+
+
+
+
+
+
+
+
+
+
+
+
+var StudentEdit = (_temp = _class = function (_React$Component) {
+  __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default()(StudentEdit, _React$Component);
+
+  function StudentEdit(props) {
+    __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default()(this, StudentEdit);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default()(this, (StudentEdit.__proto__ || __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default()(StudentEdit)).call(this, props));
+
+    _this.subscribeToStudentEdit = function (studentId) {
+      var subscribeToMore = _this.props.subscribeToMore;
+
+
+      _this.subscription = subscribeToMore({
+        document: __WEBPACK_IMPORTED_MODULE_15__graphql_StudentSubscription_graphql___default.a,
+        variables: { id: studentId }
+      });
+    };
+
+    _this.subscription = null;
+    return _this;
+  }
+
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default()(StudentEdit, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (!nextProps.loading) {
+        // Check if props have changed and, if necessary, stop the subscription
+        if (this.subscription && this.props.student.id !== nextProps.student.id) {
+          this.subscription();
+          this.subscription = null;
+        }
+
+        // Subscribe or re-subscribe
+        if (!this.subscription && nextProps.student) {
+          this.subscribeToStudentEdit(nextProps.student.id);
+        }
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      if (this.subscription) {
+        // unsubscribe
+        this.subscription();
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_7_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__components_StudentEditView__["a" /* default */], this.props);
+    }
+  }]);
+
+  return StudentEdit;
+}(__WEBPACK_IMPORTED_MODULE_7_react___default.a.Component), _class.propTypes = {
+  loading: __WEBPACK_IMPORTED_MODULE_8_prop_types___default.a.bool.isRequired,
+  student: __WEBPACK_IMPORTED_MODULE_8_prop_types___default.a.object,
+  subscribeToMore: __WEBPACK_IMPORTED_MODULE_8_prop_types___default.a.func.isRequired
+}, _temp);
+
+
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_9_react_apollo__["compose"])(Object(__WEBPACK_IMPORTED_MODULE_9_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_12__graphql_StudentQuery_graphql___default.a, {
+  options: function options(props) {
+    var id = 0;
+    if (props.match) {
+      id = props.match.params.id;
+    } else if (props.navigation) {
+      id = props.navigation.state.params.id;
+    }
+
+    return {
+      variables: { id: id }
+    };
+  },
+  props: function props(_ref) {
+    var _ref$data = _ref.data,
+        loading = _ref$data.loading,
+        error = _ref$data.error,
+        student = _ref$data.student,
+        subscribeToMore = _ref$data.subscribeToMore;
+
+    if (error) throw new Error(error);
+    return { loading: loading, student: student, subscribeToMore: subscribeToMore };
+  }
+}), Object(__WEBPACK_IMPORTED_MODULE_9_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_13__graphql_AddStudent_graphql___default.a, {
+  props: function props(_ref2) {
+    var _ref2$ownProps = _ref2.ownProps,
+        history = _ref2$ownProps.history,
+        navigation = _ref2$ownProps.navigation,
+        mutate = _ref2.mutate;
+    return {
+      addStudent: function () {
+        var _ref3 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee(title, content) {
+          var studentData;
+          return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  _context.next = 2;
+                  return mutate({
+                    variables: { input: { title: title, content: content } },
+                    optimisticResponse: {
+                      __typename: 'Mutation',
+                      addStudent: {
+                        __typename: 'Student',
+                        id: null,
+                        title: title,
+                        content: content,
+                        notes: []
+                      }
+                    },
+                    updateQueries: {
+                      students: function students(prev, _ref4) {
+                        var addStudent = _ref4.mutationResult.data.addStudent;
+
+                        return Object(__WEBPACK_IMPORTED_MODULE_11__Student__["a" /* AddStudent */])(prev, addStudent);
+                      }
+                    }
+                  });
+
+                case 2:
+                  studentData = _context.sent;
+
+                  if (!history) {
+                    _context.next = 7;
+                    break;
+                  }
+
+                  return _context.abrupt('return', history.push('/student/' + studentData.data.addStudent.id, {
+                    student: studentData.data.addStudent
+                  }));
+
+                case 7:
+                  if (!navigation) {
+                    _context.next = 9;
+                    break;
+                  }
+
+                  return _context.abrupt('return', navigation.setParams({
+                    id: studentData.data.addStudent.id,
+                    student: studentData.data.addStudent
+                  }));
+
+                case 9:
+                case 'end':
+                  return _context.stop();
+              }
+            }
+          }, _callee, _this2);
+        }));
+
+        return function addStudent(_x, _x2) {
+          return _ref3.apply(this, arguments);
+        };
+      }()
+    };
+  }
+}), Object(__WEBPACK_IMPORTED_MODULE_9_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_14__graphql_EditStudent_graphql___default.a, {
+  props: function props(_ref5) {
+    var _ref5$ownProps = _ref5.ownProps,
+        history = _ref5$ownProps.history,
+        navigation = _ref5$ownProps.navigation,
+        mutate = _ref5.mutate;
+    return {
+      editStudent: function () {
+        var _ref6 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee2(id, title, content) {
+          return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  _context2.next = 2;
+                  return mutate({
+                    variables: { input: { id: id, title: title, content: content } }
+                  });
+
+                case 2:
+                  if (!history) {
+                    _context2.next = 4;
+                    break;
+                  }
+
+                  return _context2.abrupt('return', history.push('/students'));
+
+                case 4:
+                  if (!navigation) {
+                    _context2.next = 6;
+                    break;
+                  }
+
+                  return _context2.abrupt('return', navigation.goBack());
+
+                case 6:
+                case 'end':
+                  return _context2.stop();
+              }
+            }
+          }, _callee2, _this2);
+        }));
+
+        return function editStudent(_x3, _x4, _x5) {
+          return _ref6.apply(this, arguments);
+        };
+      }()
+    };
+  }
+}))(StudentEdit));
+
+/***/ }),
+
+/***/ "../client/src/modules/student/containers/StudentNotes.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__("babel-runtime/core-js/object/get-prototype-of");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__("babel-runtime/helpers/classCallCheck");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__("babel-runtime/helpers/createClass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__("babel-runtime/helpers/possibleConstructorReturn");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__("babel-runtime/helpers/inherits");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_apollo__ = __webpack_require__("react-apollo");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_apollo___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_apollo__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_immutability_helper__ = __webpack_require__("immutability-helper");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_immutability_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_immutability_helper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_StudentNotesView__ = __webpack_require__("../client/src/modules/student/components/StudentNotesView.web.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__graphql_AddNote_graphql__ = __webpack_require__("../client/src/modules/student/graphql/AddNote.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__graphql_AddNote_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__graphql_AddNote_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__graphql_EditNote_graphql__ = __webpack_require__("../client/src/modules/student/graphql/EditNote.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__graphql_EditNote_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__graphql_EditNote_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__graphql_DeleteNote_graphql__ = __webpack_require__("../client/src/modules/student/graphql/DeleteNote.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__graphql_DeleteNote_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__graphql_DeleteNote_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__graphql_NoteSubscription_graphql__ = __webpack_require__("../client/src/modules/student/graphql/NoteSubscription.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__graphql_NoteSubscription_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__graphql_NoteSubscription_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__graphql_AddNote_client_graphql__ = __webpack_require__("../client/src/modules/student/graphql/AddNote.client.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__graphql_AddNote_client_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__graphql_AddNote_client_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__graphql_NoteQuery_client_graphql__ = __webpack_require__("../client/src/modules/student/graphql/NoteQuery.client.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__graphql_NoteQuery_client_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__graphql_NoteQuery_client_graphql__);
+
+
+
+
+
+
+var _class, _temp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function AddNote(prev, node) {
+  // ignore if duplicate
+  if (node.id !== null && prev.student.notes.some(function (note) {
+    return node.id !== null && node.id === note.id;
+  })) {
+    return prev;
+  }
+
+  return __WEBPACK_IMPORTED_MODULE_8_immutability_helper___default()(prev, {
+    student: {
+      notes: {
+        $push: [node]
+      }
+    }
+  });
+}
+
+function DeleteNote(prev, id) {
+  var index = prev.student.notes.findIndex(function (x) {
+    return x.id === id;
+  });
+
+  // ignore if not found
+  if (index < 0) {
+    return prev;
+  }
+
+  return __WEBPACK_IMPORTED_MODULE_8_immutability_helper___default()(prev, {
+    student: {
+      notes: {
+        $splice: [[index, 1]]
+      }
+    }
+  });
+}
+
+var StudentNotes = (_temp = _class = function (_React$Component) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(StudentNotes, _React$Component);
+
+  function StudentNotes(props) {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, StudentNotes);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (StudentNotes.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(StudentNotes)).call(this, props));
+
+    _this.subscribeToNoteList = function (studentId) {
+      var subscribeToMore = _this.props.subscribeToMore;
+
+
+      _this.subscription = subscribeToMore({
+        document: __WEBPACK_IMPORTED_MODULE_13__graphql_NoteSubscription_graphql___default.a,
+        variables: { studentId: studentId },
+        updateQuery: function updateQuery(prev, _ref) {
+          var _ref$subscriptionData = _ref.subscriptionData.data.noteUpdated,
+              mutation = _ref$subscriptionData.mutation,
+              id = _ref$subscriptionData.id,
+              node = _ref$subscriptionData.node;
+
+          var newResult = prev;
+
+          if (mutation === 'CREATED') {
+            newResult = AddNote(prev, node);
+          } else if (mutation === 'DELETED') {
+            newResult = DeleteNote(prev, id);
+          }
+
+          return newResult;
+        }
+      });
+    };
+
+    _this.subscription = null;
+    return _this;
+  }
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(StudentNotes, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      // Check if props have changed and, if necessary, stop the subscription
+      if (this.subscription && this.props.studentId !== nextProps.studentId) {
+        this.subscription = null;
+      }
+
+      // Subscribe or re-subscribe
+      if (!this.subscription) {
+        this.subscribeToNoteList(nextProps.studentId);
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.props.onNoteSelect({ id: null, content: '' });
+
+      if (this.subscription) {
+        // unsubscribe
+        this.subscription();
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__components_StudentNotesView__["a" /* default */], this.props);
+    }
+  }]);
+
+  return StudentNotes;
+}(__WEBPACK_IMPORTED_MODULE_5_react___default.a.Component), _class.propTypes = {
+  studentId: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.number.isRequired,
+  notes: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.array.isRequired,
+  note: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.object.isRequired,
+  onNoteSelect: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.func.isRequired,
+  subscribeToMore: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.func.isRequired
+}, _temp);
+
+
+var StudentNotesWithApollo = Object(__WEBPACK_IMPORTED_MODULE_7_react_apollo__["compose"])(Object(__WEBPACK_IMPORTED_MODULE_7_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_10__graphql_AddNote_graphql___default.a, {
+  props: function props(_ref2) {
+    var mutate = _ref2.mutate;
+    return {
+      addNote: function addNote(content, studentId) {
+        return mutate({
+          variables: { input: { content: content, studentId: studentId } },
+          optimisticResponse: {
+            __typename: 'Mutation',
+            addNote: {
+              __typename: 'Note',
+              id: null,
+              content: content
+            }
+          },
+          updateQueries: {
+            student: function student(prev, _ref3) {
+              var addNote = _ref3.mutationResult.data.addNote;
+
+              if (prev.student) {
+                prev.student.notes = prev.student.notes.filter(function (note) {
+                  return note.id;
+                });
+                return AddNote(prev, addNote);
+              }
+            }
+          }
+        });
+      }
+    };
+  }
+}), Object(__WEBPACK_IMPORTED_MODULE_7_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_11__graphql_EditNote_graphql___default.a, {
+  props: function props(_ref4) {
+    var studentId = _ref4.ownProps.studentId,
+        mutate = _ref4.mutate;
+    return {
+      editNote: function editNote(id, content) {
+        return mutate({
+          variables: { input: { id: id, studentId: studentId, content: content } },
+          optimisticResponse: {
+            __typename: 'Mutation',
+            editNote: {
+              __typename: 'Note',
+              id: id,
+              content: content
+            }
+          }
+        });
+      }
+    };
+  }
+}), Object(__WEBPACK_IMPORTED_MODULE_7_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_12__graphql_DeleteNote_graphql___default.a, {
+  props: function props(_ref5) {
+    var studentId = _ref5.ownProps.studentId,
+        mutate = _ref5.mutate;
+    return {
+      deleteNote: function deleteNote(id) {
+        return mutate({
+          variables: { input: { id: id, studentId: studentId } },
+          optimisticResponse: {
+            __typename: 'Mutation',
+            deleteNote: {
+              __typename: 'Note',
+              id: id
+            }
+          },
+          updateQueries: {
+            student: function student(prev, _ref6) {
+              var deleteNote = _ref6.mutationResult.data.deleteNote;
+
+              if (prev.student) {
+                return DeleteNote(prev, deleteNote.id);
+              }
+            }
+          }
+        });
+      }
+    };
+  }
+}), Object(__WEBPACK_IMPORTED_MODULE_7_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_14__graphql_AddNote_client_graphql___default.a, {
+  props: function props(_ref7) {
+    var mutate = _ref7.mutate;
+    return {
+      onNoteSelect: function onNoteSelect(note) {
+        mutate({ variables: { note: note } });
+      }
+    };
+  }
+}), Object(__WEBPACK_IMPORTED_MODULE_7_react_apollo__["graphql"])(__WEBPACK_IMPORTED_MODULE_15__graphql_NoteQuery_client_graphql___default.a, {
+  props: function props(_ref8) {
+    var note = _ref8.data.note;
+    return { note: note };
+  }
+}))(StudentNotes);
+
+/* harmony default export */ __webpack_exports__["a"] = (StudentNotesWithApollo);
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/AddNote.client.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"addNoteClient"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"note"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"NoteInfo"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"onNoteSelect"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"note"},"value":{"kind":"Variable","name":{"kind":"Name","value":"note"}}}],"directives":[{"kind":"Directive","name":{"kind":"Name","value":"client"},"arguments":[]}],"selectionSet":null}]}}],"loc":{"start":0,"end":109}};
+    doc.loc.source = {"body":"#import \"./Note.graphql\"\n\nmutation addNoteClient($note: NoteInfo!) {\n    onNoteSelect(note: $note) @client\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Note.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/AddNote.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"addNote"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"AddNoteInput"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"addNote"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"NoteInfo"},"directives":[]}]}}]}}],"loc":{"start":0,"end":117}};
+    doc.loc.source = {"body":"#import \"./Note.graphql\"\n\nmutation addNote($input: AddNoteInput!) {\n  addNote(input: $input) {\n    ...NoteInfo\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Note.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/AddStudent.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"addStudent"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"AddStudentInput"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"addStudent"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"StudentInfo"},"directives":[]},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"notes"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"NoteInfo"},"directives":[]}]}}]}}]}}],"loc":{"start":0,"end":215}};
+    doc.loc.source = {"body":"#import \"./Student.graphql\"\n#import \"./Note.graphql\"\n\nmutation addStudent($input: AddStudentInput!) {\n    addStudent(input: $input) {\n        ...StudentInfo\n        notes {\n            ...NoteInfo\n        }\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Student.graphql").definitions));
+doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Note.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/DeleteNote.graphql":
+/***/ (function(module, exports) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"deleteNote"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"DeleteNoteInput"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"deleteNote"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"id"},"arguments":[],"directives":[],"selectionSet":null}]}}]}}],"loc":{"start":0,"end":91}};
+    doc.loc.source = {"body":"mutation deleteNote($input: DeleteNoteInput!) {\n  deleteNote(input: $input) {\n    id\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/DeleteStudent.graphql":
+/***/ (function(module, exports) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"deleteStudent"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"deleteStudent"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"id"},"arguments":[],"directives":[],"selectionSet":null}]}}]}}],"loc":{"start":0,"end":76}};
+    doc.loc.source = {"body":"mutation deleteStudent($id: Int!) {\n  deleteStudent(id: $id) {\n    id\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/EditNote.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"editNote"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"EditNoteInput"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"editNote"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"NoteInfo"},"directives":[]}]}}]}}],"loc":{"start":0,"end":128}};
+    doc.loc.source = {"body":"#import \"./Note.graphql\"\n\nmutation editNote($input: EditNoteInput!) {\n    editNote(input: $input) {\n        ...NoteInfo\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Note.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/EditStudent.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"editStudent"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"EditStudentInput"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"editStudent"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"StudentInfo"},"directives":[]}]}}]}}],"loc":{"start":0,"end":143}};
+    doc.loc.source = {"body":"#import \"./Student.graphql\"\n\nmutation editStudent($input: EditStudentInput!) {\n    editStudent(input: $input) {\n        ...StudentInfo\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Student.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/Note.graphql":
+/***/ (function(module, exports) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NoteInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Note"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"id"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"content"},"arguments":[],"directives":[],"selectionSet":null}]}}],"loc":{"start":0,"end":45}};
+    doc.loc.source = {"body":"fragment NoteInfo on Note {\n  id\n  content\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/NoteQuery.client.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"noteState"},"variableDefinitions":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"note"},"arguments":[],"directives":[{"kind":"Directive","name":{"kind":"Name","value":"client"},"arguments":[]}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"NoteInfo"},"directives":[]}]}}]}}],"loc":{"start":0,"end":90}};
+    doc.loc.source = {"body":"#import \"./Note.graphql\"\nquery noteState {\n    note @client {\n        ...NoteInfo\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Note.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/NoteSubscription.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"subscription","name":{"kind":"Name","value":"onNoteUpdated"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"studentId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"noteUpdated"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"studentId"},"value":{"kind":"Variable","name":{"kind":"Name","value":"studentId"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"mutation"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"id"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"studentId"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"node"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"NoteInfo"},"directives":[]}]}}]}}]}}],"loc":{"start":0,"end":217}};
+    doc.loc.source = {"body":"#import \"./Note.graphql\"\n\nsubscription onNoteUpdated($studentId: Int!) {\n    noteUpdated(studentId: $studentId) {\n        mutation\n        id\n        studentId\n        node {\n            ...NoteInfo\n        }\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Note.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/Student.graphql":
+/***/ (function(module, exports) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StudentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Student"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"id"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"title"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"content"},"arguments":[],"directives":[],"selectionSet":null}]}}],"loc":{"start":0,"end":59}};
+    doc.loc.source = {"body":"fragment StudentInfo on Student {\n  id\n  title\n  content\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/StudentQuery.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"student"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"student"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"StudentInfo"},"directives":[]},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"notes"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"NoteInfo"},"directives":[]}]}}]}}]}}],"loc":{"start":0,"end":185}};
+    doc.loc.source = {"body":"#import \"./Student.graphql\"\n#import \"./Note.graphql\"\n\nquery student($id: Int!) {\n    student(id: $id) {\n        ...StudentInfo\n        notes {\n            ...NoteInfo\n        }\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Student.graphql").definitions));
+doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Note.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/StudentSubscription.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"subscription","name":{"kind":"Name","value":"onStudentUpdated"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"studentUpdated"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"StudentInfo"},"directives":[]}]}}]}}],"loc":{"start":0,"end":133}};
+    doc.loc.source = {"body":"#import \"./Student.graphql\"\n\nsubscription onStudentUpdated($id: Int!) {\n    studentUpdated(id: $id) {\n        ...StudentInfo\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Student.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/StudentsQuery.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"students"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"limit"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"after"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"students"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"Variable","name":{"kind":"Name","value":"limit"}}},{"kind":"Argument","name":{"kind":"Name","value":"after"},"value":{"kind":"Variable","name":{"kind":"Name","value":"after"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"totalCount"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"edges"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"cursor"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"node"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"StudentInfo"},"directives":[]}]}}]}},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"pageInfo"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"endCursor"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"hasNextPage"},"arguments":[],"directives":[],"selectionSet":null}]}}]}}]}}],"loc":{"start":0,"end":329}};
+    doc.loc.source = {"body":"#import \"./Student.graphql\"\n\nquery students($limit: Int!, $after: Int) {\n    students(limit: $limit, after: $after) {\n        totalCount\n        edges {\n            cursor\n            node {\n                ...StudentInfo\n            }\n        }\n        pageInfo {\n            endCursor\n            hasNextPage\n        }\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Student.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/graphql/StudentsSubscription.graphql":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"subscription","name":{"kind":"Name","value":"onStudentsUpdated"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"endCursor"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"studentsUpdated"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"endCursor"},"value":{"kind":"Variable","name":{"kind":"Name","value":"endCursor"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":null,"name":{"kind":"Name","value":"mutation"},"arguments":[],"directives":[],"selectionSet":null},{"kind":"Field","alias":null,"name":{"kind":"Name","value":"node"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"StudentInfo"},"directives":[]}]}}]}}]}}],"loc":{"start":0,"end":180}};
+    doc.loc.source = {"body":"#import \"./Student.graphql\"\n\nsubscription onStudentsUpdated($endCursor: Int!) {\n  studentsUpdated(endCursor: $endCursor) {\n    mutation\n    node {\n      ...StudentInfo\n    }\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(__webpack_require__("../client/src/modules/student/graphql/Student.graphql").definitions));
+
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "../client/src/modules/student/index.web.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__("react-router-dom");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_common_components_web__ = __webpack_require__("../client/src/modules/common/components/web/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__containers_Student__ = __webpack_require__("../client/src/modules/student/containers/Student.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__containers_StudentEdit__ = __webpack_require__("../client/src/modules/student/containers/StudentEdit.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__resolvers__ = __webpack_require__("../client/src/modules/student/resolvers/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__connector__ = __webpack_require__("../client/src/modules/connector.web.jsx");
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_6__connector__["a" /* default */]({
+  route: [__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["Route"], { exact: true, path: '/students', component: __WEBPACK_IMPORTED_MODULE_3__containers_Student__["b" /* default */] }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["Route"], { exact: true, path: '/student/:id', component: __WEBPACK_IMPORTED_MODULE_4__containers_StudentEdit__["a" /* default */] })],
+  navItem: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_2__modules_common_components_web__["l" /* MenuItem */],
+    { key: '/students' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["NavLink"],
+      { to: '/students', className: 'nav-link', activeClassName: 'active' },
+      'Students'
+    )
+  ),
+  resolver: __WEBPACK_IMPORTED_MODULE_5__resolvers__["a" /* default */]
+}));
+
+/***/ }),
+
+/***/ "../client/src/modules/student/resolvers/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__("babel-runtime/regenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__ = __webpack_require__("babel-runtime/helpers/extends");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__("babel-runtime/helpers/asyncToGenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__graphql_NoteQuery_client_graphql__ = __webpack_require__("../client/src/modules/student/graphql/NoteQuery.client.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__graphql_NoteQuery_client_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__graphql_NoteQuery_client_graphql__);
+
+
+
+
+var _this = this;
+
+
+
+var TYPE_NAME = 'NoteState';
+
+var defaults = {
+  note: {
+    id: null,
+    content: '',
+    __typename: TYPE_NAME
+  }
+};
+
+var resolvers = {
+  Query: {
+    noteState: function noteState(_, args, _ref) {
+      var cache = _ref.cache;
+
+      var _cache$readQuery = cache.readQuery({ query: __WEBPACK_IMPORTED_MODULE_3__graphql_NoteQuery_client_graphql___default.a }),
+          note = _cache$readQuery.note.note;
+
+      return {
+        note: note,
+        __typename: TYPE_NAME
+      };
+    }
+  },
+  Mutation: {
+    onNoteSelect: function () {
+      var _ref2 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee(_, _ref3, _ref4) {
+        var note = _ref3.note;
+        var cache = _ref4.cache;
+        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return cache.writeData({
+                  data: {
+                    note: __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default()({}, note, {
+                      __typename: TYPE_NAME
+                    })
+                  }
+                });
+
+              case 2:
+                return _context.abrupt('return', null);
+
+              case 3:
+              case 'end':
+                return _context.stop();
+            }
+          }
+        }, _callee, _this);
+      }));
+
+      return function onNoteSelect(_x, _x2, _x3) {
         return _ref2.apply(this, arguments);
       };
     }()
@@ -15854,17 +17928,18 @@ if (true && __WEBPACK_IMPORTED_MODULE_2__settings__["a" /* default */].app.loggi
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__karma__ = __webpack_require__("./src/modules/karma/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__counter__ = __webpack_require__("./src/modules/counter/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__post__ = __webpack_require__("./src/modules/post/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__upload__ = __webpack_require__("./src/modules/upload/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__user__ = __webpack_require__("./src/modules/user/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__subscription__ = __webpack_require__("./src/modules/subscription/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mailer__ = __webpack_require__("./src/modules/mailer/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__graphqlTypes__ = __webpack_require__("./src/modules/graphqlTypes/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__apolloEngine__ = __webpack_require__("./src/modules/apolloEngine/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__debug__ = __webpack_require__("./src/modules/debug/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__connector__ = __webpack_require__("./src/modules/connector.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__student__ = __webpack_require__("./src/modules/student/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__karma__ = __webpack_require__("./src/modules/karma/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__counter__ = __webpack_require__("./src/modules/counter/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__post__ = __webpack_require__("./src/modules/post/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__upload__ = __webpack_require__("./src/modules/upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__user__ = __webpack_require__("./src/modules/user/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__subscription__ = __webpack_require__("./src/modules/subscription/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mailer__ = __webpack_require__("./src/modules/mailer/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__graphqlTypes__ = __webpack_require__("./src/modules/graphqlTypes/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__apolloEngine__ = __webpack_require__("./src/modules/apolloEngine/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__debug__ = __webpack_require__("./src/modules/debug/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__connector__ = __webpack_require__("./src/modules/connector.js");
 
 
 
@@ -15878,7 +17953,8 @@ if (true && __WEBPACK_IMPORTED_MODULE_2__settings__["a" /* default */].app.loggi
 
 
 
-/* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_10__connector__["a" /* default */](__WEBPACK_IMPORTED_MODULE_1__counter__["a" /* default */], __WEBPACK_IMPORTED_MODULE_0__karma__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__post__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__upload__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4__user__["a" /* default */], __WEBPACK_IMPORTED_MODULE_5__subscription__["a" /* default */], __WEBPACK_IMPORTED_MODULE_6__mailer__["a" /* default */], __WEBPACK_IMPORTED_MODULE_7__graphqlTypes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_8__apolloEngine__["a" /* default */]));
+
+/* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_11__connector__["a" /* default */](__WEBPACK_IMPORTED_MODULE_0__student__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__counter__["a" /* default */], __WEBPACK_IMPORTED_MODULE_1__karma__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__post__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4__upload__["a" /* default */], __WEBPACK_IMPORTED_MODULE_5__user__["a" /* default */], __WEBPACK_IMPORTED_MODULE_6__subscription__["a" /* default */], __WEBPACK_IMPORTED_MODULE_7__mailer__["a" /* default */], __WEBPACK_IMPORTED_MODULE_8__graphqlTypes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_9__apolloEngine__["a" /* default */]));
 
 /***/ }),
 
@@ -16851,6 +18927,578 @@ var Post = function () {
   }]);
 
   return Post;
+}();
+
+
+
+/***/ }),
+
+/***/ "./src/modules/student/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sql__ = __webpack_require__("./src/modules/student/sql.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__schema_graphql__ = __webpack_require__("./src/modules/student/schema.graphql");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__schema_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__schema_graphql__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resolvers__ = __webpack_require__("./src/modules/student/resolvers.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__connector__ = __webpack_require__("./src/modules/connector.js");
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_3__connector__["a" /* default */]({
+  schema: __WEBPACK_IMPORTED_MODULE_1__schema_graphql___default.a,
+  createResolversFunc: __WEBPACK_IMPORTED_MODULE_2__resolvers__["a" /* default */],
+  createContextFunc: function createContextFunc() {
+    return { Student: new __WEBPACK_IMPORTED_MODULE_0__sql__["a" /* default */]() };
+  }
+}));
+
+/***/ }),
+
+/***/ "./src/modules/student/resolvers.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__ = __webpack_require__("babel-runtime/helpers/slicedToArray");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator__ = __webpack_require__("babel-runtime/regenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise__ = __webpack_require__("babel-runtime/core-js/promise");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__("babel-runtime/helpers/asyncToGenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_graphql_subscriptions__ = __webpack_require__("graphql-subscriptions");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_graphql_subscriptions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_graphql_subscriptions__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_graphql_resolve_batch__ = __webpack_require__("graphql-resolve-batch");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_graphql_resolve_batch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_graphql_resolve_batch__);
+
+
+
+
+
+
+
+var POST_SUBSCRIPTION = 'student_subscription';
+var POSTS_SUBSCRIPTION = 'students_subscription';
+var COMMENT_SUBSCRIPTION = 'note_subscription';
+
+/* harmony default export */ __webpack_exports__["a"] = (function (pubsub) {
+  return {
+    Query: {
+      students: function students(obj, _ref, context) {
+        var _this = this;
+
+        var limit = _ref.limit,
+            after = _ref.after;
+        return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.mark(function _callee() {
+          var edgesArray, students, endCursor, values;
+          return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  edgesArray = [];
+                  _context.next = 3;
+                  return context.Student.studentsPagination(limit, after);
+
+                case 3:
+                  students = _context.sent;
+
+
+                  students.map(function (student) {
+                    edgesArray.push({
+                      cursor: student.id,
+                      node: {
+                        id: student.id,
+                        title: student.title,
+                        content: student.content
+                      }
+                    });
+                  });
+
+                  endCursor = edgesArray.length > 0 ? edgesArray[edgesArray.length - 1].cursor : 0;
+                  _context.next = 8;
+                  return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise___default.a.all([context.Student.getTotal(), context.Student.getNextPageFlag(endCursor)]);
+
+                case 8:
+                  values = _context.sent;
+                  return _context.abrupt('return', {
+                    totalCount: values[0].count,
+                    edges: edgesArray,
+                    pageInfo: {
+                      endCursor: endCursor,
+                      hasNextPage: values[1].count > 0
+                    }
+                  });
+
+                case 10:
+                case 'end':
+                  return _context.stop();
+              }
+            }
+          }, _callee, _this);
+        }))();
+      },
+      student: function student(obj, _ref2, context) {
+        var id = _ref2.id;
+
+        return context.Student.student(id);
+      }
+    },
+    Student: {
+      notes: Object(__WEBPACK_IMPORTED_MODULE_5_graphql_resolve_batch__["createBatchResolver"])(function (sources, args, context) {
+        return context.Student.getNotesForStudentIds(sources.map(function (_ref3) {
+          var id = _ref3.id;
+          return id;
+        }));
+      })
+    },
+    Mutation: {
+      addStudent: function addStudent(obj, _ref4, context) {
+        var _this2 = this;
+
+        var input = _ref4.input;
+        return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.mark(function _callee2() {
+          var _ref5, _ref6, id, student;
+
+          return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  _context2.next = 2;
+                  return context.Student.addStudent(input);
+
+                case 2:
+                  _ref5 = _context2.sent;
+                  _ref6 = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(_ref5, 1);
+                  id = _ref6[0];
+                  _context2.next = 7;
+                  return context.Student.student(id);
+
+                case 7:
+                  student = _context2.sent;
+
+                  // publish for student list
+                  pubsub.publish(POSTS_SUBSCRIPTION, {
+                    studentsUpdated: {
+                      mutation: 'CREATED',
+                      id: id,
+                      node: student
+                    }
+                  });
+                  return _context2.abrupt('return', student);
+
+                case 10:
+                case 'end':
+                  return _context2.stop();
+              }
+            }
+          }, _callee2, _this2);
+        }))();
+      },
+      deleteStudent: function deleteStudent(obj, _ref7, context) {
+        var _this3 = this;
+
+        var id = _ref7.id;
+        return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.mark(function _callee3() {
+          var student, isDeleted;
+          return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
+            while (1) {
+              switch (_context3.prev = _context3.next) {
+                case 0:
+                  _context3.next = 2;
+                  return context.Student.student(id);
+
+                case 2:
+                  student = _context3.sent;
+                  _context3.next = 5;
+                  return context.Student.deleteStudent(id);
+
+                case 5:
+                  isDeleted = _context3.sent;
+
+                  if (!isDeleted) {
+                    _context3.next = 11;
+                    break;
+                  }
+
+                  // publish for student list
+                  pubsub.publish(POSTS_SUBSCRIPTION, {
+                    studentsUpdated: {
+                      mutation: 'DELETED',
+                      id: id,
+                      node: student
+                    }
+                  });
+                  return _context3.abrupt('return', { id: student.id });
+
+                case 11:
+                  return _context3.abrupt('return', { id: null });
+
+                case 12:
+                case 'end':
+                  return _context3.stop();
+              }
+            }
+          }, _callee3, _this3);
+        }))();
+      },
+      editStudent: function editStudent(obj, _ref8, context) {
+        var _this4 = this;
+
+        var input = _ref8.input;
+        return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.mark(function _callee4() {
+          var student;
+          return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
+            while (1) {
+              switch (_context4.prev = _context4.next) {
+                case 0:
+                  _context4.next = 2;
+                  return context.Student.editStudent(input);
+
+                case 2:
+                  _context4.next = 4;
+                  return context.Student.student(input.id);
+
+                case 4:
+                  student = _context4.sent;
+
+                  // publish for student list
+                  pubsub.publish(POSTS_SUBSCRIPTION, {
+                    studentsUpdated: {
+                      mutation: 'UPDATED',
+                      id: student.id,
+                      node: student
+                    }
+                  });
+                  // publish for edit student page
+                  pubsub.publish(POST_SUBSCRIPTION, { studentUpdated: student });
+                  return _context4.abrupt('return', student);
+
+                case 8:
+                case 'end':
+                  return _context4.stop();
+              }
+            }
+          }, _callee4, _this4);
+        }))();
+      },
+      addNote: function addNote(obj, _ref9, context) {
+        var _this5 = this;
+
+        var input = _ref9.input;
+        return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.mark(function _callee5() {
+          var _ref10, _ref11, id, note;
+
+          return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.wrap(function _callee5$(_context5) {
+            while (1) {
+              switch (_context5.prev = _context5.next) {
+                case 0:
+                  _context5.next = 2;
+                  return context.Student.addNote(input);
+
+                case 2:
+                  _ref10 = _context5.sent;
+                  _ref11 = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(_ref10, 1);
+                  id = _ref11[0];
+                  _context5.next = 7;
+                  return context.Student.getNote(id);
+
+                case 7:
+                  note = _context5.sent;
+
+                  // publish for edit student page
+                  pubsub.publish(COMMENT_SUBSCRIPTION, {
+                    noteUpdated: {
+                      mutation: 'CREATED',
+                      id: note.id,
+                      studentId: input.studentId,
+                      node: note
+                    }
+                  });
+                  return _context5.abrupt('return', note);
+
+                case 10:
+                case 'end':
+                  return _context5.stop();
+              }
+            }
+          }, _callee5, _this5);
+        }))();
+      },
+      deleteNote: function deleteNote(obj, _ref12, context) {
+        var _this6 = this;
+
+        var _ref12$input = _ref12.input,
+            id = _ref12$input.id,
+            studentId = _ref12$input.studentId;
+        return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.mark(function _callee6() {
+          return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.wrap(function _callee6$(_context6) {
+            while (1) {
+              switch (_context6.prev = _context6.next) {
+                case 0:
+                  _context6.next = 2;
+                  return context.Student.deleteNote(id);
+
+                case 2:
+                  // publish for edit student page
+                  pubsub.publish(COMMENT_SUBSCRIPTION, {
+                    noteUpdated: {
+                      mutation: 'DELETED',
+                      id: id,
+                      studentId: studentId,
+                      node: null
+                    }
+                  });
+                  return _context6.abrupt('return', { id: id });
+
+                case 4:
+                case 'end':
+                  return _context6.stop();
+              }
+            }
+          }, _callee6, _this6);
+        }))();
+      },
+      editNote: function editNote(obj, _ref13, context) {
+        var _this7 = this;
+
+        var input = _ref13.input;
+        return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.mark(function _callee7() {
+          var note;
+          return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_regenerator___default.a.wrap(function _callee7$(_context7) {
+            while (1) {
+              switch (_context7.prev = _context7.next) {
+                case 0:
+                  _context7.next = 2;
+                  return context.Student.editNote(input);
+
+                case 2:
+                  _context7.next = 4;
+                  return context.Student.getNote(input.id);
+
+                case 4:
+                  note = _context7.sent;
+
+                  // publish for edit student page
+                  pubsub.publish(COMMENT_SUBSCRIPTION, {
+                    noteUpdated: {
+                      mutation: 'UPDATED',
+                      id: input.id,
+                      studentId: input.studentId,
+                      node: note
+                    }
+                  });
+                  return _context7.abrupt('return', note);
+
+                case 7:
+                case 'end':
+                  return _context7.stop();
+              }
+            }
+          }, _callee7, _this7);
+        }))();
+      }
+    },
+    Subscription: {
+      studentUpdated: {
+        subscribe: Object(__WEBPACK_IMPORTED_MODULE_4_graphql_subscriptions__["withFilter"])(function () {
+          return pubsub.asyncIterator(POST_SUBSCRIPTION);
+        }, function (payload, variables) {
+          return payload.studentUpdated.id === variables.id;
+        })
+      },
+      studentsUpdated: {
+        subscribe: Object(__WEBPACK_IMPORTED_MODULE_4_graphql_subscriptions__["withFilter"])(function () {
+          return pubsub.asyncIterator(POSTS_SUBSCRIPTION);
+        }, function (payload, variables) {
+          return variables.endCursor <= payload.studentsUpdated.id;
+        })
+      },
+      noteUpdated: {
+        subscribe: Object(__WEBPACK_IMPORTED_MODULE_4_graphql_subscriptions__["withFilter"])(function () {
+          return pubsub.asyncIterator(COMMENT_SUBSCRIPTION);
+        }, function (payload, variables) {
+          return payload.noteUpdated.studentId === variables.studentId;
+        })
+      }
+    }
+  };
+});
+
+/***/ }),
+
+/***/ "./src/modules/student/schema.graphql":
+/***/ (function(module, exports) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Student"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"id"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"title"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"content"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"notes"},"arguments":[],"type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Note"}}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Note"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"id"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"content"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"StudentEdges"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"node"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Student"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"cursor"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"StudentPageInfo"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"endCursor"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"hasNextPage"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Boolean"}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Students"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"totalCount"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"edges"},"arguments":[],"type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"StudentEdges"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"pageInfo"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"StudentPageInfo"}},"directives":[]}]},{"kind":"TypeExtensionDefinition","definition":{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Query"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"students"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"limit"},"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"after"},"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Students"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"student"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Student"}},"directives":[]}]}},{"kind":"TypeExtensionDefinition","definition":{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Mutation"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"addStudent"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"input"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"AddStudentInput"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Student"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"deleteStudent"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Student"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"editStudent"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"input"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"EditStudentInput"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Student"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"addNote"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"input"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"AddNoteInput"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Note"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"deleteNote"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"input"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"DeleteNoteInput"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Note"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"editNote"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"input"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"EditNoteInput"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Note"}},"directives":[]}]}},{"kind":"InputObjectTypeDefinition","name":{"kind":"Name","value":"AddStudentInput"},"directives":[],"fields":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"title"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"content"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]}]},{"kind":"InputObjectTypeDefinition","name":{"kind":"Name","value":"EditStudentInput"},"directives":[],"fields":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"title"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"content"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]}]},{"kind":"InputObjectTypeDefinition","name":{"kind":"Name","value":"AddNoteInput"},"directives":[],"fields":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"content"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"studentId"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}]},{"kind":"InputObjectTypeDefinition","name":{"kind":"Name","value":"DeleteNoteInput"},"directives":[],"fields":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"studentId"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}]},{"kind":"InputObjectTypeDefinition","name":{"kind":"Name","value":"EditNoteInput"},"directives":[],"fields":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"content"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"defaultValue":null,"directives":[]},{"kind":"InputValueDefinition","name":{"kind":"Name","value":"studentId"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}]},{"kind":"TypeExtensionDefinition","definition":{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"Subscription"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"studentUpdated"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"id"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Student"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"studentsUpdated"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"endCursor"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"UpdateStudentPayload"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"noteUpdated"},"arguments":[{"kind":"InputValueDefinition","name":{"kind":"Name","value":"studentId"},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"defaultValue":null,"directives":[]}],"type":{"kind":"NamedType","name":{"kind":"Name","value":"UpdateNotePayload"}},"directives":[]}]}},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"UpdateStudentPayload"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"mutation"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"id"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"node"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Student"}},"directives":[]}]},{"kind":"ObjectTypeDefinition","name":{"kind":"Name","value":"UpdateNotePayload"},"interfaces":[],"directives":[],"fields":[{"kind":"FieldDefinition","name":{"kind":"Name","value":"mutation"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"id"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"studentId"},"arguments":[],"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},"directives":[]},{"kind":"FieldDefinition","name":{"kind":"Name","value":"node"},"arguments":[],"type":{"kind":"NamedType","name":{"kind":"Name","value":"Note"}},"directives":[]}]}],"loc":{"start":0,"end":2126}};
+    doc.loc.source = {"body":"# Student\ntype Student {\n  id: Int!\n  title: String!\n  content: String!\n  notes: [Note]\n}\n\n# Note\ntype Note {\n  id: Int!\n  content: String!\n}\n\n# Edges for Students\ntype StudentEdges {\n  node: Student\n  cursor: Int\n}\n\n# PageInfo for Students\ntype StudentPageInfo {\n  endCursor: Int\n  hasNextPage: Boolean\n}\n\n# Students relay-style pagination query\ntype Students {\n  totalCount: Int\n  edges: [StudentEdges]\n  pageInfo: StudentPageInfo\n}\n\nextend type Query {\n  # Students pagination query\n  students(limit: Int, after: Int): Students\n  # Student\n  student(id: Int!): Student\n}\n\nextend type Mutation {\n  # Create new student\n  addStudent(input: AddStudentInput!): Student\n  # Delete a student\n  deleteStudent(id: Int!): Student\n  # Edit a student\n  editStudent(input: EditStudentInput!): Student\n  # Add note to student\n  addNote(input: AddNoteInput!): Note\n  # Delete a note\n  deleteNote(input: DeleteNoteInput!): Note\n  # Edit a note\n  editNote(input: EditNoteInput!): Note\n}\n\n# Input for addStudent Mutation\ninput AddStudentInput {\n  title: String!\n  content: String!\n}\n\n# Input for editStudent Mutation\ninput EditStudentInput {\n  id: Int!\n  title: String!\n  content: String!\n}\n\n# Input for addNote Mutation\ninput AddNoteInput {\n  content: String!\n  # Needed for noteUpdated Subscription filter\n  studentId: Int!\n}\n\n# Input for editNote Mutation\ninput DeleteNoteInput {\n  id: Int!\n  # Needed for noteUpdated Subscription filter\n  studentId: Int!\n}\n\n# Input for deleteNote Mutation\ninput EditNoteInput {\n  id: Int!\n  content: String!\n  # Needed for noteUpdated Subscription filter\n  studentId: Int!\n}\n\nextend type Subscription {\n  # Subscription for when editing a student\n  studentUpdated(id: Int!): Student\n  # Subscription for student list\n  studentsUpdated(endCursor: Int!): UpdateStudentPayload\n  # Subscription for notes\n  noteUpdated(studentId: Int!): UpdateNotePayload\n}\n\n# Payload for studentsUpdated Subscription\ntype UpdateStudentPayload {\n  mutation: String!\n  id: Int!\n  node: Student\n}\n\n# Payload for noteUpdated Subscription\ntype UpdateNotePayload {\n  mutation: String!\n  id: Int\n  studentId: Int!\n  node: Note\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+      module.exports = doc;
+    
+
+
+/***/ }),
+
+/***/ "./src/modules/student/sql.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Student; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__("babel-runtime/regenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__("babel-runtime/helpers/asyncToGenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__("babel-runtime/helpers/classCallCheck");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__("babel-runtime/helpers/createClass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sql_helpers__ = __webpack_require__("./src/sql/helpers.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__sql_connector__ = __webpack_require__("./src/sql/connector.js");
+
+
+
+
+
+
+
+var Student = function () {
+  function Student() {
+    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, Student);
+  }
+
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(Student, [{
+    key: 'studentsPagination',
+    value: function studentsPagination(limit, after) {
+      var where = '';
+      if (after > 0) {
+        where = 'id < ' + after;
+      }
+
+      return __WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */].select('id', 'title', 'content').from('student').whereRaw(where).orderBy('id', 'desc').limit(limit);
+    }
+  }, {
+    key: 'getNotesForStudentIds',
+    value: function () {
+      var _ref = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee(studentIds) {
+        var res;
+        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return __WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */].select('id', 'content', 'student_id AS studentId').from('note').whereIn('student_id', studentIds);
+
+              case 2:
+                res = _context.sent;
+                return _context.abrupt('return', Object(__WEBPACK_IMPORTED_MODULE_4__sql_helpers__["a" /* orderedFor */])(res, studentIds, 'studentId', false));
+
+              case 4:
+              case 'end':
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function getNotesForStudentIds(_x) {
+        return _ref.apply(this, arguments);
+      }
+
+      return getNotesForStudentIds;
+    }()
+  }, {
+    key: 'getTotal',
+    value: function getTotal() {
+      return Object(__WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */])('student').countDistinct('id as count').first();
+    }
+  }, {
+    key: 'getNextPageFlag',
+    value: function getNextPageFlag(id) {
+      return Object(__WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */])('student').countDistinct('id as count').where('id', '<', id).first();
+    }
+  }, {
+    key: 'student',
+    value: function student(id) {
+      return __WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */].select('id', 'title', 'content').from('student').where('id', '=', id).first();
+    }
+  }, {
+    key: 'addStudent',
+    value: function addStudent(_ref2) {
+      var title = _ref2.title,
+          content = _ref2.content;
+
+      return Object(__WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */])('student').insert({ title: title, content: content }).returning('id');
+    }
+  }, {
+    key: 'deleteStudent',
+    value: function deleteStudent(id) {
+      return Object(__WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */])('student').where('id', '=', id).del();
+    }
+  }, {
+    key: 'editStudent',
+    value: function editStudent(_ref3) {
+      var id = _ref3.id,
+          title = _ref3.title,
+          content = _ref3.content;
+
+      return Object(__WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */])('student').where('id', '=', id).update({
+        title: title,
+        content: content
+      });
+    }
+  }, {
+    key: 'addNote',
+    value: function addNote(_ref4) {
+      var content = _ref4.content,
+          studentId = _ref4.studentId;
+
+      return Object(__WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */])('note').insert({ content: content, student_id: studentId }).returning('id');
+    }
+  }, {
+    key: 'getNote',
+    value: function getNote(id) {
+      return __WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */].select('id', 'content').from('note').where('id', '=', id).first();
+    }
+  }, {
+    key: 'deleteNote',
+    value: function deleteNote(id) {
+      return Object(__WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */])('note').where('id', '=', id).del();
+    }
+  }, {
+    key: 'editNote',
+    value: function editNote(_ref5) {
+      var id = _ref5.id,
+          content = _ref5.content;
+
+      return Object(__WEBPACK_IMPORTED_MODULE_5__sql_connector__["a" /* default */])('note').where('id', '=', id).update({
+        content: content
+      });
+    }
+  }]);
+
+  return Student;
 }();
 
 
@@ -21109,4 +23757,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.3aedbf55468e45c651a2.js.map
+//# sourceMappingURL=index.39f068f197dd502f321c.js.map

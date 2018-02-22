@@ -1,0 +1,5 @@
+#import "./Note.graphql"
+
+mutation addNoteClient($note: NoteInfo!) {
+    onNoteSelect(note: $note) @client
+}

@@ -1,0 +1,4 @@
+fragment NoteInfo on Note {
+    id
+    content
+}

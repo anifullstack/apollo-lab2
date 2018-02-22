@@ -1,3 +1,4 @@
+import student from './student';
 import karma from './karma';
 import counter from './counter';
 import post from './post';
@@ -11,4 +12,15 @@ import './debug';
 
 import Feature from './connector';
 
-export default new Feature(counter, karma, post, upload, user, subscription, mailer, graphqlTypes, apolloEngine);
+export default new Feature(
+  student,
+  counter,
+  karma,
+  post,
+  upload,
+  user,
+  subscription,
+  mailer,
+  graphqlTypes,
+  apolloEngine
+);

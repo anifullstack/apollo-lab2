@@ -1,0 +1,11 @@
+#import "./Student.graphql"
+#import "./Note.graphql"
+
+query student($id: Int!) {
+    student(id: $id) {
+        ...StudentInfo
+        notes {
+            ...NoteInfo
+        }
+    }
+}

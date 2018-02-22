@@ -1,5 +1,5 @@
 export default {
-  name: 'Chitragupta',
+  name: 'Montessory v0.0.1',
   logging: {
     debugSQL: false,
     apolloLogging: true

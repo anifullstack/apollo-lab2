@@ -3,8 +3,8 @@ import { step } from 'mocha-steps';
 import _ from 'lodash';
 
 import Renderer from '../../../testHelpers/Renderer';
-import POSTS_SUBSCRIPTION from '../graphql/StudentsSubscription.graphql';
-import POST_SUBSCRIPTION from '../graphql/StudentSubscription.graphql';
+import STUDENTS_SUBSCRIPTION from '../graphql/StudentsSubscription.graphql';
+import STUDENT_SUBSCRIPTION from '../graphql/StudentSubscription.graphql';
 import COMMENT_SUBSCRIPTION from '../graphql/NoteSubscription.graphql';
 
 const createNode = id => ({
@@ -99,11 +99,11 @@ describe('Students and notes example UI works', () => {
   });
 
   step('Check subscribed to student list updates', () => {
-    expect(renderer.getSubscriptions(POSTS_SUBSCRIPTION)).has.lengthOf(1);
+    expect(renderer.getSubscriptions(STUDENTS_SUBSCRIPTION)).has.lengthOf(1);
   });
 
   step('Updates student list on student delete from subscription', () => {
-    const subscription = renderer.getSubscriptions(POSTS_SUBSCRIPTION)[0];
+    const subscription = renderer.getSubscriptions(STUDENTS_SUBSCRIPTION)[0];
     subscription.next({
       data: {
         studentsUpdated: {
@@ -119,7 +119,7 @@ describe('Students and notes example UI works', () => {
   });
 
   step('Updates student list on student create from subscription', () => {
-    const subscription = renderer.getSubscriptions(POSTS_SUBSCRIPTION)[0];
+    const subscription = renderer.getSubscriptions(STUDENTS_SUBSCRIPTION)[0];
     subscription.next(
       _.cloneDeep({
         data: {
@@ -179,11 +179,11 @@ describe('Students and notes example UI works', () => {
   });
 
   step('Check subscribed to student updates', () => {
-    expect(renderer.getSubscriptions(POST_SUBSCRIPTION)).has.lengthOf(1);
+    expect(renderer.getSubscriptions(STUDENT_SUBSCRIPTION)).has.lengthOf(1);
   });
 
   step('Updates student form on student updated from subscription', () => {
-    const subscription = renderer.getSubscriptions(POST_SUBSCRIPTION)[0];
+    const subscription = renderer.getSubscriptions(STUDENT_SUBSCRIPTION)[0];
     subscription.next({
       data: {
         studentUpdated: {

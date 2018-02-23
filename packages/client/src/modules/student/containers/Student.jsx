@@ -5,9 +5,9 @@ import update from 'immutability-helper';
 
 import StudentList from '../components/StudentList';
 
-import POSTS_QUERY from '../graphql/StudentsQuery.graphql';
-import POSTS_SUBSCRIPTION from '../graphql/StudentsSubscription.graphql';
-import DELETE_POST from '../graphql/DeleteStudent.graphql';
+import STUDENTS_QUERY from '../graphql/StudentsQuery.graphql';
+import STUDENTS_SUBSCRIPTION from '../graphql/StudentsSubscription.graphql';
+import DELETE_STUDENT from '../graphql/DeleteStudent.graphql';
 
 export function AddStudent(prev, node) {
   // ignore if duplicate
@@ -94,7 +94,7 @@ class Student extends React.Component {
     const { subscribeToMore } = this.props;
 
     this.subscription = subscribeToMore({
-      document: POSTS_SUBSCRIPTION,
+      document: STUDENTS_SUBSCRIPTION,
       variables: { endCursor },
       updateQuery: (prev, { subscriptionData: { data: { studentsUpdated: { mutation, node } } } }) => {
         let newResult = prev;
@@ -116,7 +116,7 @@ class Student extends React.Component {
 }
 
 export default compose(
-  graphql(POSTS_QUERY, {
+  graphql(STUDENTS_QUERY, {
     options: () => {
       return {
         variables: { limit: 10, after: 0 }
@@ -151,7 +151,7 @@ export default compose(
       return { loading, students, subscribeToMore, loadMoreRows };
     }
   }),
-  graphql(DELETE_POST, {
+  graphql(DELETE_STUDENT, {
     props: ({ mutate }) => ({
       deleteStudent: id => {
         mutate({

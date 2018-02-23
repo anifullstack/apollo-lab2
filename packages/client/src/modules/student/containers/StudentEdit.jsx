@@ -5,10 +5,10 @@ import { graphql, compose } from 'react-apollo';
 import StudentEditView from '../components/StudentEditView';
 import { AddStudent } from './Student';
 
-import POST_QUERY from '../graphql/StudentQuery.graphql';
-import ADD_POST from '../graphql/AddStudent.graphql';
-import EDIT_POST from '../graphql/EditStudent.graphql';
-import POST_SUBSCRIPTION from '../graphql/StudentSubscription.graphql';
+import STUDENT_QUERY from '../graphql/StudentQuery.graphql';
+import ADD_STUDENT from '../graphql/AddStudent.graphql';
+import EDIT_STUDENT from '../graphql/EditStudent.graphql';
+import STUDENT_SUBSCRIPTION from '../graphql/StudentSubscription.graphql';
 
 class StudentEdit extends React.Component {
   static propTypes = {
@@ -48,7 +48,7 @@ class StudentEdit extends React.Component {
     const { subscribeToMore } = this.props;
 
     this.subscription = subscribeToMore({
-      document: POST_SUBSCRIPTION,
+      document: STUDENT_SUBSCRIPTION,
       variables: { id: studentId }
     });
   };
@@ -59,7 +59,7 @@ class StudentEdit extends React.Component {
 }
 
 export default compose(
-  graphql(POST_QUERY, {
+  graphql(STUDENT_QUERY, {
     options: props => {
       let id = 0;
       if (props.match) {
@@ -77,7 +77,7 @@ export default compose(
       return { loading, student, subscribeToMore };
     }
   }),
-  graphql(ADD_POST, {
+  graphql(ADD_STUDENT, {
     props: ({ ownProps: { history, navigation }, mutate }) => ({
       addStudent: async (title, content) => {
         let studentData = await mutate({
@@ -112,7 +112,7 @@ export default compose(
       }
     })
   }),
-  graphql(EDIT_POST, {
+  graphql(EDIT_STUDENT, {
     props: ({ ownProps: { history, navigation }, mutate }) => ({
       editStudent: async (id, title, content) => {
         await mutate({

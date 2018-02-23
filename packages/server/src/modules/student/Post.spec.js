@@ -2,12 +2,12 @@ import { expect } from 'chai';
 import { step } from 'mocha-steps';
 
 import { getApollo } from '../../testHelpers/integrationSetup';
-import POSTS_QUERY from '../../../../client/src/modules/student/graphql/StudentsQuery.graphql';
-import POST_QUERY from '../../../../client/src/modules/student/graphql/StudentQuery.graphql';
-import ADD_POST from '../../../../client/src/modules/student/graphql/AddStudent.graphql';
-import EDIT_POST from '../../../../client/src/modules/student/graphql/EditStudent.graphql';
-import DELETE_POST from '../../../../client/src/modules/student/graphql/DeleteStudent.graphql';
-import POSTS_SUBSCRIPTION from '../../../../client/src/modules/student/graphql/StudentsSubscription.graphql';
+import STUDENTS_QUERY from '../../../../client/src/modules/student/graphql/StudentsQuery.graphql';
+import STUDENT_QUERY from '../../../../client/src/modules/student/graphql/StudentQuery.graphql';
+import ADD_STUDENT from '../../../../client/src/modules/student/graphql/AddStudent.graphql';
+import EDIT_STUDENT from '../../../../client/src/modules/student/graphql/EditStudent.graphql';
+import DELETE_STUDENT from '../../../../client/src/modules/student/graphql/DeleteStudent.graphql';
+import STUDENTS_SUBSCRIPTION from '../../../../client/src/modules/student/graphql/StudentsSubscription.graphql';
 
 describe('Student and notes example API works', () => {
   let apollo;
@@ -18,7 +18,7 @@ describe('Student and notes example API works', () => {
 
   step('Query student list works', async () => {
     let result = await apollo.query({
-      query: POSTS_QUERY,
+      query: STUDENTS_QUERY,
       variables: { limit: 1, after: 0 }
     });
 
@@ -48,7 +48,7 @@ describe('Student and notes example API works', () => {
   });
 
   step('Query single student with notes works', async () => {
-    let result = await apollo.query({ query: POST_QUERY, variables: { id: 1 } });
+    let result = await apollo.query({ query: STUDENT_QUERY, variables: { id: 1 } });
 
     expect(result.data).to.deep.equal({
       student: {
@@ -74,7 +74,7 @@ describe('Student and notes example API works', () => {
 
   step('Publishes student on add', done => {
     apollo.mutate({
-      mutation: ADD_POST,
+      mutation: ADD_STUDENT,
       variables: {
         input: {
           title: 'New student 1',
@@ -87,7 +87,7 @@ describe('Student and notes example API works', () => {
 
     subscription = apollo
       .subscribe({
-        query: POSTS_SUBSCRIPTION,
+        query: STUDENTS_SUBSCRIPTION,
         variables: { endCursor: 10 }
       })
       .subscribe({
@@ -114,7 +114,7 @@ describe('Student and notes example API works', () => {
 
   step('Adding student works', async () => {
     let result = await apollo.query({
-      query: POSTS_QUERY,
+      query: STUDENTS_QUERY,
       variables: { limit: 1, after: 0 },
       fetchPolicy: 'network-only'
     });
@@ -125,7 +125,7 @@ describe('Student and notes example API works', () => {
 
   step('Publishes student on update', done => {
     apollo.mutate({
-      mutation: EDIT_POST,
+      mutation: EDIT_STUDENT,
       variables: {
         input: {
           id: 21,
@@ -139,7 +139,7 @@ describe('Student and notes example API works', () => {
 
     subscription = apollo
       .subscribe({
-        query: POSTS_SUBSCRIPTION,
+        query: STUDENTS_SUBSCRIPTION,
         variables: { endCursor: 10 }
       })
       .subscribe({
@@ -166,7 +166,7 @@ describe('Student and notes example API works', () => {
 
   step('Updating student works', async () => {
     let result = await apollo.query({
-      query: POSTS_QUERY,
+      query: STUDENTS_QUERY,
       variables: { limit: 1, after: 0 },
       fetchPolicy: 'network-only'
     });
@@ -177,7 +177,7 @@ describe('Student and notes example API works', () => {
 
   step('Publishes student on removal', done => {
     apollo.mutate({
-      mutation: DELETE_POST,
+      mutation: DELETE_STUDENT,
       variables: { id: '21' }
     });
 
@@ -185,7 +185,7 @@ describe('Student and notes example API works', () => {
 
     subscription = apollo
       .subscribe({
-        query: POSTS_SUBSCRIPTION,
+        query: STUDENTS_SUBSCRIPTION,
         variables: { endCursor: 10 }
       })
       .subscribe({
@@ -212,7 +212,7 @@ describe('Student and notes example API works', () => {
 
   step('Deleting student works', async () => {
     let result = await apollo.query({
-      query: POSTS_QUERY,
+      query: STUDENTS_QUERY,
       variables: { limit: 2, after: 0 },
       fetchPolicy: 'network-only'
     });

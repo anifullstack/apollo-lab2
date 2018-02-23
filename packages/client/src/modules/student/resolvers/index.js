@@ -1,4 +1,4 @@
-import COMMENT_QUERY_CLIENT from '../graphql/NoteQuery.client.graphql';
+import NOTE_QUERY_CLIENT from '../graphql/NoteQuery.client.graphql';
 
 const TYPE_NAME = 'NoteState';
 
@@ -13,7 +13,7 @@ const defaults = {
 const resolvers = {
   Query: {
     noteState: (_, args, { cache }) => {
-      const { note: { note } } = cache.readQuery({ query: COMMENT_QUERY_CLIENT });
+      const { note: { note } } = cache.readQuery({ query: NOTE_QUERY_CLIENT });
       return {
         note: note,
         __typename: TYPE_NAME

@@ -21,7 +21,7 @@ require("source-map-support").install();
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f6c40d3e408cf627cc5f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9deba0f5d235180f95ca"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -707,7 +707,7 @@ require("source-map-support").install();
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'Montessory v0.0.2',
+  name: 'Montessory v0.0.3',
   logging: {
     debugSQL: false,
     apolloLogging: true
@@ -23752,4 +23752,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.458544c99d612e3f336c.js.map
+//# sourceMappingURL=index.162bc617848cb0c18b31.js.map

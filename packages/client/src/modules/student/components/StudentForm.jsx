@@ -15,6 +15,7 @@ const studentFormSchema = {
 const validate = values => validateForm(values, studentFormSchema);
 
 const StudentForm = ({ values, handleSubmit, valid, onSubmit, handleChange }) => {
+  
   return (
     <FormView>
       <Field
@@ -37,7 +38,7 @@ const StudentForm = ({ values, handleSubmit, valid, onSubmit, handleChange }) =>
         name="lastName"
         component={RenderField}
         type="text"
-        label="lastName"
+        label="Last Name"
         value={values.lastName}
         onChange={handleChange}
       />

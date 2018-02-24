@@ -15,6 +15,7 @@ const studentFormSchema = {
 const validate = values => validateForm(values, studentFormSchema);
 
 const StudentForm = ({ values, handleSubmit, submitting, handleChange }) => {
+  console.log("StudentForm", "values", values);
   return (
     <Form name="student" onSubmit={handleSubmit}>
       <Field
@@ -37,7 +38,7 @@ const StudentForm = ({ values, handleSubmit, submitting, handleChange }) => {
         name="lastName"
         component={RenderField}
         type="text"
-        label="lastName"
+        label="Last Name"
         value={values.lastName}
         onChange={handleChange}
       />
@@ -69,6 +70,8 @@ StudentForm.propTypes = {
 const StudentFormWithFormik = withFormik({
   mapPropsToValues: props => ({
     title: (props.student && props.student.title) || '',
+    firstName: (props.student && props.student.firstName) || '',
+    lastName: (props.student && props.student.lastName) || '',
     content: (props.student && props.student.content) || ''
   }),
   validate: values => validate(values),

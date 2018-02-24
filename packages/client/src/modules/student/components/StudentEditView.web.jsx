@@ -18,6 +18,8 @@ const onSubmit = (student, addStudent, editStudent) => values => {
 
 const StudentEditView = ({ loading, student, match, location, subscribeToMore, addStudent, editStudent }) => {
   let studentObj = student;
+
+  console.log("StudentEditViewWeb", "StudentEditView", "student", student);
   // if new student was just added read it from router
   if (!studentObj && location.state) {
     studentObj = location.state.student;

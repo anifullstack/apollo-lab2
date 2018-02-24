@@ -71,6 +71,17 @@ export default class StudentList extends React.PureComponent {
             </Link>
           )
         },
+
+        {
+          title: 'Last Name',
+          dataIndex: 'lastName',
+          key: 'lastName',
+          render: (text, record) => (
+            <Link className="student-link" to={`/student/${record.id}`}>
+              {text}
+            </Link>
+          )
+        },
         {
           title: 'Actions',
           key: 'actions',

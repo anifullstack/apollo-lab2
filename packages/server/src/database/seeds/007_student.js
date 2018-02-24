@@ -9,6 +9,8 @@ export async function seed(knex, Promise) {
         .returning('id')
         .insert({
           title: `Student title ${ii + 1}`,
+          firstName: `Student firstName ${ii + 1}`,
+          lastName: `Student lastName ${ii + 1}`,
           content: `Student content ${ii + 1}`
         });
 

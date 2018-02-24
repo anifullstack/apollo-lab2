@@ -7,7 +7,9 @@ import { required, validateForm } from '../../../../../common/validation';
 
 const studentFormSchema = {
   title: [required],
-  content: [required]
+  content: [required],
+  firstName: [required],
+  lastName: [required]
 };
 
 const validate = values => validateForm(values, studentFormSchema);
@@ -21,6 +23,22 @@ const StudentForm = ({ values, handleSubmit, valid, onSubmit, handleChange }) =>
         type="text"
         label="Title"
         value={values.title}
+        onChange={handleChange}
+      />
+      <Field
+        name="firstName"
+        component={RenderField}
+        type="text"
+        label="firstName"
+        value={values.firstName}
+        onChange={handleChange}
+      />
+      <Field
+        name="lastName"
+        component={RenderField}
+        type="text"
+        label="lastName"
+        value={values.lastName}
         onChange={handleChange}
       />
       <Field

@@ -17,6 +17,8 @@ export default pubsub => ({
           node: {
             id: student.id,
             title: student.title,
+            firstName: student.firstName,
+            lastName: student.lastName,
             content: student.content
           }
         });

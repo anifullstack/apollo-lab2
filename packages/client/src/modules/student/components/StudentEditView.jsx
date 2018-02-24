@@ -7,9 +7,9 @@ import StudentNotes from '../containers/StudentNotes';
 
 const onSubmit = (student, addStudent, editStudent) => values => {
   if (student) {
-    editStudent(student.id, values.title, values.content);
+    editStudent(student.id, values.title, values.firstName, values.lastName, values.content);
   } else {
-    addStudent(values.title, values.content);
+    addStudent(values.title, values.firstName, values.lastName, values.content);
   }
 };
 

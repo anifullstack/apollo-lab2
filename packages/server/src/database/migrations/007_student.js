@@ -4,6 +4,9 @@ exports.up = function(knex, Promise) {
       .createTable('student', table => {
         table.increments();
         table.string('title');
+        table.string('firstName');
+        table.string('lastName');
+
         table.string('content');
         table.timestamps(false, true);
       })

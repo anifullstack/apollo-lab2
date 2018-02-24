@@ -7,9 +7,9 @@ import { required, validateForm } from '../../../../../common/validation';
 
 const studentFormSchema = {
   title: [required],
-  content: [required],
   firstName: [required],
-  lastName: [required]
+  lastName: [required],
+  content: [required]
 };
 
 const validate = values => validateForm(values, studentFormSchema);
@@ -69,7 +69,6 @@ const StudentFormWithFormik = withFormik({
     title: (props.student && props.student.title) || '',
     firstName: (props.student && props.student.firstName) || '',
     lastName: (props.student && props.student.lastName) || '',
-
     content: (props.student && props.student.content) || ''
   }),
   validate: values => validate(values),

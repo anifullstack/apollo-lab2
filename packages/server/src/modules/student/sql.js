@@ -18,7 +18,7 @@ export default class Student {
 
   async getNotesForStudentIds(studentIds) {
     const res = await knex
-      .select('id', 'content', 'student_id AS studentId')
+      .select('id', 'subject', 'activity', 'content', 'student_id AS studentId')
       .from('note')
       .whereIn('student_id', studentIds);
 
@@ -69,15 +69,15 @@ export default class Student {
       });
   }
 
-  addNote({ content, studentId }) {
+  addNote({ subject, activity, content, studentId }) {
     return knex('note')
-      .insert({ content, student_id: studentId })
+      .insert({ subject, activity, content, student_id: studentId })
       .returning('id');
   }
 
   getNote(id) {
     return knex
-      .select('id', 'content')
+      .select('id', 'subject', 'activity', 'content')
       .from('note')
       .where('id', '=', id)
       .first();
@@ -89,10 +89,12 @@ export default class Student {
       .del();
   }
 
-  editNote({ id, content }) {
+  editNote({ id, subject, activity, content }) {
     return knex('note')
       .where('id', '=', id)
       .update({
+        subject: subject,
+        activity: activity,
         content: content
       });
   }

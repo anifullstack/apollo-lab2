@@ -71,7 +71,12 @@ class StudentNotes extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.onNoteSelect({ id: null, content: '' });
+    this.props.onNoteSelect({
+      id: null,
+      subject: '',
+      activity: '',
+      content: ''
+    });
 
     if (this.subscription) {
       // unsubscribe
@@ -107,9 +112,9 @@ class StudentNotes extends React.Component {
 const StudentNotesWithApollo = compose(
   graphql(ADD_COMMENT, {
     props: ({ mutate }) => ({
-      addNote: (content, studentId) =>
+      addNote: (subject, activity, content, studentId) =>
         mutate({
-          variables: { input: { content, studentId } },
+          variables: { input: { subject, activity, content, studentId } },
           optimisticResponse: {
             __typename: 'Mutation',
             addNote: {
@@ -131,14 +136,16 @@ const StudentNotesWithApollo = compose(
   }),
   graphql(EDIT_COMMENT, {
     props: ({ ownProps: { studentId }, mutate }) => ({
-      editNote: (id, content) =>
+      editNote: (id, subject, activity, content) =>
         mutate({
-          variables: { input: { id, studentId, content } },
+          variables: { input: { id, studentId, subject, activity, content } },
           optimisticResponse: {
             __typename: 'Mutation',
             editNote: {
               __typename: 'Note',
               id: id,
+              subject: subject,
+              activity: activity,
               content: content
             }
           }

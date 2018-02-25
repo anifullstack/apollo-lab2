@@ -1,4 +1,6 @@
 fragment NoteInfo on Note {
     id
+    subject
+    activity
     content
 }

@@ -19,11 +19,18 @@ export default class StudentNotesView extends React.PureComponent {
 
   keyExtractor = item => item.id;
 
-  renderItem = ({ item: { id, content } }) => {
+  renderItem = ({ item: { id, subject, activity, content } }) => {
     const { note, deleteNote, onNoteSelect } = this.props;
     return (
       <SwipeAction
-        onPress={() => onNoteSelect({ id: id, content: content })}
+        onPress={() =>
+          onNoteSelect({
+            id: id,
+            subject: subject,
+            activity: activity,
+            content: content
+          })
+        }
         right={{
           text: 'Delete',
           onPress: () => this.onNoteDelete(note, deleteNote, onNoteSelect, id)
@@ -36,7 +43,7 @@ export default class StudentNotesView extends React.PureComponent {
 
   onNoteDelete = (note, deleteNote, onNoteSelect, id) => {
     if (note.id === id) {
-      onNoteSelect({ id: null, content: '' });
+      onNoteSelect({ id: null, subject: '', activity: '', content: '' });
     }
 
     deleteNote(id);
@@ -44,12 +51,12 @@ export default class StudentNotesView extends React.PureComponent {
 
   onSubmit = (note, studentId, addNote, editNote, onNoteSelect) => values => {
     if (note.id === null) {
-      addNote(values.content, studentId);
+      addNote(values.subject, values.activity, values.content, studentId);
     } else {
-      editNote(note.id, values.content);
+      editNote(note.id, values.subject, values.activity, values.content);
     }
 
-    onNoteSelect({ id: null, content: '' });
+    onNoteSelect({ id: null, subject: '', activity: '', content: '' });
     Keyboard.dismiss();
   };
 

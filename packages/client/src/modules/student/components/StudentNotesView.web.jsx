@@ -15,16 +15,16 @@ export default class StudentNotesView extends React.PureComponent {
     onNoteSelect: PropTypes.func.isRequired
   };
 
-  handleEditNote = (id, content) => {
+  handleEditNote = (id, subject, activity, content) => {
     const { onNoteSelect } = this.props;
-    onNoteSelect({ id, content });
+    onNoteSelect({ id, subject, activity, content });
   };
 
   handleDeleteNote = id => {
     const { note, onNoteSelect, deleteNote } = this.props;
 
     if (note.id === id) {
-      onNoteSelect({ id: null, content: '' });
+      onNoteSelect({ id: null, subject: '', activity: '', content: '' });
     }
 
     deleteNote(id);
@@ -34,17 +34,27 @@ export default class StudentNotesView extends React.PureComponent {
     const { note, studentId, addNote, editNote, onNoteSelect } = this.props;
 
     if (note.id === null) {
-      addNote(values.content, studentId);
+      addNote(values.subject, values.activity, values.content, studentId);
     } else {
-      editNote(note.id, values.content);
+      editNote(note.id, values.subject, values.activity, values.content);
     }
 
-    onNoteSelect({ id: null, content: '' });
+    onNoteSelect({ id: null, subject: '', activity: '', content: '' });
   };
 
   render() {
     const { studentId, notes, note } = this.props;
     const columns = [
+      {
+        title: 'subject',
+        dataIndex: 'subject',
+        key: 'subject'
+      },
+      {
+        title: 'activity',
+        dataIndex: 'activity',
+        key: 'activity'
+      },
       {
         title: 'Content',
         dataIndex: 'content',

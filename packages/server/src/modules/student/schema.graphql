@@ -11,7 +11,9 @@ type Student {
 # Note
 type Note {
     id: Int!
-    content: String!
+    subject: String
+    activity: String
+    content: String
 }
 
 # Edges for Students
@@ -74,7 +76,9 @@ input EditStudentInput {
 
 # Input for addNote Mutation
 input AddNoteInput {
-    content: String!
+    subject: String!
+    activity: String!
+    content: String
     # Needed for noteUpdated Subscription filter
     studentId: Int!
 }
@@ -89,7 +93,9 @@ input DeleteNoteInput {
 # Input for deleteNote Mutation
 input EditNoteInput {
     id: Int!
-    content: String!
+    subject: String!
+    activity: String!
+    content: String
     # Needed for noteUpdated Subscription filter
     studentId: Int!
 }

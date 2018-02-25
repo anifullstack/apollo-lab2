@@ -6,6 +6,8 @@ import { Form, RenderField, Row, Col, Label, Button } from '../../common/compone
 import { required, validateForm } from '../../../../../common/validation';
 
 const noteFormSchema = {
+  subject: [required],
+  activity: [required],
   content: [required]
 };
 
@@ -19,6 +21,8 @@ const StudentNoteForm = ({ values, handleSubmit, initialValues, handleChange }) 
           <Label>{initialValues.id === null ? 'Add note' : 'Edit note'}</Label>
         </Col>
         <Col xs={8}>
+          <Field name="subject" component={RenderField} type="text" value={values.subject} onChange={handleChange} />
+          <Field name="activity" component={RenderField} type="text" value={values.activity} onChange={handleChange} />
           <Field name="content" component={RenderField} type="text" value={values.content} onChange={handleChange} />
         </Col>
         <Col xs={2}>
@@ -43,7 +47,11 @@ StudentNoteForm.propTypes = {
 };
 
 const StudentNoteFormWithFormik = withFormik({
-  mapPropsToValues: props => ({ content: (props.note && props.note.content) || '' }),
+  mapPropsToValues: props => ({
+    subject: (props.note && props.note.subject) || '',
+    activity: (props.note && props.note.activity) || '',
+    content: (props.note && props.note.content) || ''
+  }),
   async handleSubmit(values, { resetForm, props: { onSubmit } }) {
     await onSubmit(values);
     resetForm({ content: '' });

@@ -6,6 +6,8 @@ import { FormView, RenderField, FormButton } from '../../common/components/nativ
 import { required, validateForm } from '../../../../../common/validation';
 
 const noteFormSchema = {
+  subject: [required],
+  activity: [required],
   content: [required]
 };
 
@@ -19,6 +21,8 @@ const StudentNoteForm = ({ values, handleSubmit, initialValues, handleChange }) 
 
   return (
     <FormView>
+      <Field name="subject" component={RenderField} type="text" value={values.subject} onChange={handleChange} />
+      <Field name="activity" component={RenderField} type="text" value={values.activity} onChange={handleChange} />
       <Field name="content" component={RenderField} type="text" value={values.content} onChange={handleChange} />
       <FormButton onPress={handleSubmit}>{operation}</FormButton>
     </FormView>
@@ -35,7 +39,9 @@ StudentNoteForm.propTypes = {
 };
 
 const StudentNoteFormWithFormik = withFormik({
-  mapPropsToValues: props => ({ content: (props.note && props.note.content) || '' }),
+  mapPropsToValues: props => ({
+    content: (props.note && props.note.content) || ''
+  }),
   validate: values => validate(values),
   handleSubmit: function(values, { props: { onSubmit } }) {
     onSubmit(values);

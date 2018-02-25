@@ -21,14 +21,14 @@ export async function seed(knex, Promise) {
       await Promise.all(
         [...Array(2).keys()].map(async jj => {
           const randomActivity = casual.random_element(randomSubject.activities);
-          return knex('note')
+          return knex('journal')
             .returning('id')
             .insert({
               student_id: student[0],
               subject: randomSubject.name,
               activity: randomActivity.name,
               status: `status ${jj + 1} for student ${student[0]}`,
-              content: `Note title ${jj + 1} for student ${student[0]}`
+              content: `Journal title ${jj + 1} for student ${student[0]}`
             });
         })
       );

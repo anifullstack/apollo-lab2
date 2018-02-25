@@ -3,7 +3,7 @@ import { createBatchResolver } from 'graphql-resolve-batch';
 
 const STUDENT_SUBSCRIPTION = 'student_subscription';
 const STUDENTS_SUBSCRIPTION = 'students_subscription';
-const NOTE_SUBSCRIPTION = 'note_subscription';
+const JOURNAL_SUBSCRIPTION = 'journal_subscription';
 
 export default pubsub => ({
   Query: {
@@ -42,8 +42,8 @@ export default pubsub => ({
     }
   },
   Student: {
-    notes: createBatchResolver((sources, args, context) => {
-      return context.Student.getNotesForStudentIds(sources.map(({ id }) => id));
+    journals: createBatchResolver((sources, args, context) => {
+      return context.Student.getJournalsForStudentIds(sources.map(({ id }) => id));
     })
   },
   Mutation: {
@@ -92,25 +92,25 @@ export default pubsub => ({
       pubsub.publish(STUDENT_SUBSCRIPTION, { studentUpdated: student });
       return student;
     },
-    async addNote(obj, { input }, context) {
-      const [id] = await context.Student.addNote(input);
-      const note = await context.Student.getNote(id);
+    async addJournal(obj, { input }, context) {
+      const [id] = await context.Student.addJournal(input);
+      const journal = await context.Student.getJournal(id);
       // publish for edit student page
-      pubsub.publish(NOTE_SUBSCRIPTION, {
-        noteUpdated: {
+      pubsub.publish(JOURNAL_SUBSCRIPTION, {
+        journalUpdated: {
           mutation: 'CREATED',
-          id: note.id,
+          id: journal.id,
           studentId: input.studentId,
-          node: note
+          node: journal
         }
       });
-      return note;
+      return journal;
     },
-    async deleteNote(obj, { input: { id, studentId } }, context) {
-      await context.Student.deleteNote(id);
+    async deleteJournal(obj, { input: { id, studentId } }, context) {
+      await context.Student.deleteJournal(id);
       // publish for edit student page
-      pubsub.publish(NOTE_SUBSCRIPTION, {
-        noteUpdated: {
+      pubsub.publish(JOURNAL_SUBSCRIPTION, {
+        journalUpdated: {
           mutation: 'DELETED',
           id,
           studentId,
@@ -119,19 +119,19 @@ export default pubsub => ({
       });
       return { id };
     },
-    async editNote(obj, { input }, context) {
-      await context.Student.editNote(input);
-      const note = await context.Student.getNote(input.id);
+    async editJournal(obj, { input }, context) {
+      await context.Student.editJournal(input);
+      const journal = await context.Student.getJournal(input.id);
       // publish for edit student page
-      pubsub.publish(NOTE_SUBSCRIPTION, {
-        noteUpdated: {
+      pubsub.publish(JOURNAL_SUBSCRIPTION, {
+        journalUpdated: {
           mutation: 'UPDATED',
           id: input.id,
           studentId: input.studentId,
-          node: note
+          node: journal
         }
       });
-      return note;
+      return journal;
     }
   },
   Subscription: {
@@ -151,11 +151,11 @@ export default pubsub => ({
         }
       )
     },
-    noteUpdated: {
+    journalUpdated: {
       subscribe: withFilter(
-        () => pubsub.asyncIterator(NOTE_SUBSCRIPTION),
+        () => pubsub.asyncIterator(JOURNAL_SUBSCRIPTION),
         (payload, variables) => {
-          return payload.noteUpdated.studentId === variables.studentId;
+          return payload.journalUpdated.studentId === variables.studentId;
         }
       )
     }

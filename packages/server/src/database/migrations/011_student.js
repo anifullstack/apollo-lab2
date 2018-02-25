@@ -10,7 +10,7 @@ exports.up = function(knex, Promise) {
         table.string('content');
         table.timestamps(false, true);
       })
-      .createTable('note', table => {
+      .createTable('journal', table => {
         table.increments();
         table
           .integer('student_id')
@@ -29,5 +29,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return Promise.all([knex.schema.dropTable('note'), knex.schema.dropTable('student')]);
+  return Promise.all([knex.schema.dropTable('journal'), knex.schema.dropTable('student')]);
 };

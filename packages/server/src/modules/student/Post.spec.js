@@ -9,7 +9,7 @@ import EDIT_STUDENT from '../../../../client/src/modules/student/graphql/EditStu
 import DELETE_STUDENT from '../../../../client/src/modules/student/graphql/DeleteStudent.graphql';
 import STUDENTS_SUBSCRIPTION from '../../../../client/src/modules/student/graphql/StudentsSubscription.graphql';
 
-describe('Student and notes example API works', () => {
+describe('Student and journals example API works', () => {
   let apollo;
 
   before(() => {
@@ -47,7 +47,7 @@ describe('Student and notes example API works', () => {
     });
   });
 
-  step('Query single student with notes works', async () => {
+  step('Query single student with journals works', async () => {
     let result = await apollo.query({ query: STUDENT_QUERY, variables: { id: 1 } });
 
     expect(result.data).to.deep.equal({
@@ -56,16 +56,16 @@ describe('Student and notes example API works', () => {
         title: 'Student title 1',
         content: 'Student content 1',
         __typename: 'Student',
-        notes: [
+        journals: [
           {
             id: 1,
-            content: 'Note title 1 for student 1',
-            __typename: 'Note'
+            content: 'Journal title 1 for student 1',
+            __typename: 'Journal'
           },
           {
             id: 2,
-            content: 'Note title 2 for student 1',
-            __typename: 'Note'
+            content: 'Journal title 2 for student 1',
+            __typename: 'Journal'
           }
         ]
       }

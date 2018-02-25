@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { PageLayout } from '../../common/components/web';
 import StudentForm from './StudentForm';
-import StudentNotes from '../containers/StudentNotes';
+import StudentJournals from '../containers/StudentJournals';
 import settings from '../../../../../../settings';
 
 const onSubmit = (student, addStudent, editStudent) => values => {
@@ -19,7 +19,7 @@ const onSubmit = (student, addStudent, editStudent) => values => {
 const StudentEditView = ({ loading, student, match, location, subscribeToMore, addStudent, editStudent }) => {
   let studentObj = student;
 
-  console.log("StudentEditViewWeb", "StudentEditView", "student", student);
+  console.log('StudentEditViewWeb', 'StudentEditView', 'student', student);
   // if new student was just added read it from router
   if (!studentObj && location.state) {
     studentObj = location.state.student;
@@ -55,9 +55,9 @@ const StudentEditView = ({ loading, student, match, location, subscribeToMore, a
         <StudentForm onSubmit={onSubmit(studentObj, addStudent, editStudent)} student={student} />
         <br />
         {studentObj && (
-          <StudentNotes
+          <StudentJournals
             studentId={Number(match.params.id)}
-            notes={studentObj.notes}
+            journals={studentObj.journals}
             subscribeToMore={subscribeToMore}
           />
         )}

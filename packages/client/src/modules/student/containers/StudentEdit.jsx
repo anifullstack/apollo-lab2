@@ -91,7 +91,7 @@ export default compose(
               firstName: firstName,
               lastName: lastName,
               content: content,
-              notes: []
+              journals: []
             }
           },
           updateQueries: {

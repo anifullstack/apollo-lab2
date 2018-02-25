@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text, View } from 'react-native';
 
 import StudentForm from './StudentForm';
-import StudentNotes from '../containers/StudentNotes';
+import StudentJournals from '../containers/StudentJournals';
 
 const onSubmit = (student, addStudent, editStudent) => values => {
   if (student) {
@@ -35,9 +35,9 @@ const StudentEditView = ({ loading, student, navigation, subscribeToMore, addStu
           initialValues={studentObj ? studentObj : {}}
         />
         {studentObj && (
-          <StudentNotes
+          <StudentJournals
             studentId={navigation.state.params.id}
-            notes={studentObj.notes}
+            journals={studentObj.journals}
             subscribeToMore={subscribeToMore}
           />
         )}

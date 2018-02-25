@@ -5,24 +5,24 @@ import _ from 'lodash';
 import Renderer from '../../../testHelpers/Renderer';
 import STUDENTS_SUBSCRIPTION from '../graphql/StudentsSubscription.graphql';
 import STUDENT_SUBSCRIPTION from '../graphql/StudentSubscription.graphql';
-import COMMENT_SUBSCRIPTION from '../graphql/NoteSubscription.graphql';
+import COMMENT_SUBSCRIPTION from '../graphql/JournalSubscription.graphql';
 
 const createNode = id => ({
   id: `${id}`,
   title: `Student title ${id}`,
   content: `Student content ${id}`,
-  notes: [
-    { id: id * 1000 + 1, content: 'Student note 1', __typename: 'Note' },
-    { id: id * 1000 + 2, content: 'Student note 2', __typename: 'Note' }
+  journals: [
+    { id: id * 1000 + 1, content: 'Student journal 1', __typename: 'Journal' },
+    { id: id * 1000 + 2, content: 'Student journal 2', __typename: 'Journal' }
   ],
   __typename: 'Student'
 });
 
 const mutations = {
   editStudent: true,
-  addNote: true,
-  editNote: true,
-  onNoteSelect: true
+  addJournal: true,
+  editJournal: true,
+  onJournalSelect: true
 };
 
 const mocks = {
@@ -54,12 +54,12 @@ const mocks = {
   }),
   Mutation: () => ({
     deleteStudent: (obj, { id }) => createNode(id),
-    deleteNote: (obj, { input }) => input,
+    deleteJournal: (obj, { input }) => input,
     ...mutations
   })
 };
 
-describe('Students and notes example UI works', () => {
+describe('Students and journals example UI works', () => {
   const renderer = new Renderer(mocks, {});
   let app;
   let content;
@@ -253,114 +253,114 @@ describe('Students and notes example UI works', () => {
     expect(content.text()).to.include('Edit Student');
   });
 
-  step('Note adding works', done => {
-    mutations.addNote = (obj, { input }) => {
+  step('Journal adding works', done => {
+    mutations.addJournal = (obj, { input }) => {
       expect(input.studentId).to.equal(3);
-      expect(input.content).to.equal('Student note 24');
+      expect(input.content).to.equal('Student journal 24');
       done();
       return input;
     };
 
-    const noteForm = content.find('form[name="note"]');
-    noteForm
+    const journalForm = content.find('form[name="journal"]');
+    journalForm
       .find('[name="content"]')
       .last()
-      .simulate('change', { target: { name: 'content', value: 'Student note 24' } });
-    noteForm.last().simulate('submit');
+      .simulate('change', { target: { name: 'content', value: 'Student journal 24' } });
+    journalForm.last().simulate('submit');
   });
 
-  step('Note adding works after submit', () => {
-    expect(content.text()).to.include('Student note 24');
+  step('Journal adding works after submit', () => {
+    expect(content.text()).to.include('Student journal 24');
   });
 
-  step('Updates note form on note added got from subscription', () => {
+  step('Updates journal form on journal added got from subscription', () => {
     const subscription = renderer.getSubscriptions(COMMENT_SUBSCRIPTION)[0];
     subscription.next({
       data: {
-        noteUpdated: {
+        journalUpdated: {
           mutation: 'CREATED',
           id: 3003,
           studentId: 3,
           node: {
             id: 3003,
-            content: 'Student note 3',
-            __typename: 'Note'
+            content: 'Student journal 3',
+            __typename: 'Journal'
           },
-          __typename: 'UpdateNotePayload'
+          __typename: 'UpdateJournalPayload'
         }
       }
     });
 
-    expect(content.text()).to.include('Student note 3');
+    expect(content.text()).to.include('Student journal 3');
   });
 
-  step('Updates note form on note deleted got from subscription', () => {
+  step('Updates journal form on journal deleted got from subscription', () => {
     const subscription = renderer.getSubscriptions(COMMENT_SUBSCRIPTION)[0];
     subscription.next({
       data: {
-        noteUpdated: {
+        journalUpdated: {
           mutation: 'DELETED',
           id: 3003,
           studentId: 3,
           node: {
             id: 3003,
-            content: 'Student note 3',
-            __typename: 'Note'
+            content: 'Student journal 3',
+            __typename: 'Journal'
           },
-          __typename: 'UpdateNotePayload'
+          __typename: 'UpdateJournalPayload'
         }
       }
     });
-    expect(content.text()).to.not.include('Student note 3');
+    expect(content.text()).to.not.include('Student journal 3');
   });
 
-  step('Note deleting optimistically removes note', () => {
-    const deleteButtons = content.find('.delete-note');
+  step('Journal deleting optimistically removes journal', () => {
+    const deleteButtons = content.find('.delete-journal');
     expect(deleteButtons).has.lengthOf(9);
     deleteButtons.last().simulate('click');
 
     app.update();
     content = app.find('#content').last();
-    expect(content.text()).to.not.include('Student note 24');
-    expect(content.find('.delete-note')).has.lengthOf(6);
+    expect(content.text()).to.not.include('Student journal 24');
+    expect(content.find('.delete-journal')).has.lengthOf(6);
   });
 
-  step('Clicking note delete removes the note', () => {
-    expect(content.text()).to.not.include('Student note 24');
-    expect(content.find('.delete-note')).has.lengthOf(6);
+  step('Clicking journal delete removes the journal', () => {
+    expect(content.text()).to.not.include('Student journal 24');
+    expect(content.find('.delete-journal')).has.lengthOf(6);
   });
 
-  step('Note editing works', async done => {
-    mutations.editNote = (obj, { input }) => {
+  step('Journal editing works', async done => {
+    mutations.editJournal = (obj, { input }) => {
       expect(input.studentId).to.equal(3);
-      expect(input.content).to.equal('Edited note 2');
+      expect(input.content).to.equal('Edited journal 2');
       done();
       return input;
     };
-    const editButtons = content.find('.edit-note');
+    const editButtons = content.find('.edit-journal');
     expect(editButtons).has.lengthOf(6);
     editButtons.last().simulate('click');
     editButtons.last().simulate('click');
-    const noteForm = content.find('form[name="note"]');
+    const journalForm = content.find('form[name="journal"]');
     expect(
-      noteForm
+      journalForm
         .find('[name="content"]')
         .last()
         .instance().value
-    ).to.equal('Student note 2');
-    noteForm
+    ).to.equal('Student journal 2');
+    journalForm
       .find('[name="content"]')
       .last()
-      .simulate('change', { target: { name: 'content', value: 'Edited note 2' } });
-    noteForm.simulate('submit');
+      .simulate('change', { target: { name: 'content', value: 'Edited journal 2' } });
+    journalForm.simulate('submit');
   });
 
-  step('Note editing works', () => {
-    expect(content.text()).to.include('Edited note 2');
+  step('Journal editing works', () => {
+    expect(content.text()).to.include('Edited journal 2');
   });
 
   step('Clicking back button takes to student list', () => {
-    expect(content.text()).to.include('Edited note 2');
+    expect(content.text()).to.include('Edited journal 2');
     const backButton = content.find('#back-button');
     backButton.last().simulate('click', { button: 0 });
     app.update();

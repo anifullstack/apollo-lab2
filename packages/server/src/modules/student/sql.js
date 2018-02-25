@@ -16,10 +16,10 @@ export default class Student {
       .limit(limit);
   }
 
-  async getNotesForStudentIds(studentIds) {
+  async getJournalsForStudentIds(studentIds) {
     const res = await knex
       .select('id', 'subject', 'activity', 'content', 'student_id AS studentId')
-      .from('note')
+      .from('journal')
       .whereIn('student_id', studentIds);
 
     return orderedFor(res, studentIds, 'studentId', false);
@@ -69,28 +69,28 @@ export default class Student {
       });
   }
 
-  addNote({ subject, activity, content, studentId }) {
-    return knex('note')
+  addJournal({ subject, activity, content, studentId }) {
+    return knex('journal')
       .insert({ subject, activity, content, student_id: studentId })
       .returning('id');
   }
 
-  getNote(id) {
+  getJournal(id) {
     return knex
       .select('id', 'subject', 'activity', 'content')
-      .from('note')
+      .from('journal')
       .where('id', '=', id)
       .first();
   }
 
-  deleteNote(id) {
-    return knex('note')
+  deleteJournal(id) {
+    return knex('journal')
       .where('id', '=', id)
       .del();
   }
 
-  editNote({ id, subject, activity, content }) {
-    return knex('note')
+  editJournal({ id, subject, activity, content }) {
+    return knex('journal')
       .where('id', '=', id)
       .update({
         subject: subject,

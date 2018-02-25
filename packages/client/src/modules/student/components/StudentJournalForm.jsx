@@ -5,15 +5,15 @@ import Field from '../../../utils/FieldAdapter';
 import { FormView, RenderField, FormButton } from '../../common/components/native';
 import { required, validateForm } from '../../../../../common/validation';
 
-const noteFormSchema = {
+const journalFormSchema = {
   subject: [required],
   activity: [required],
   content: [required]
 };
 
-const validate = values => validateForm(values, noteFormSchema);
+const validate = values => validateForm(values, journalFormSchema);
 
-const StudentNoteForm = ({ values, handleSubmit, initialValues, handleChange }) => {
+const StudentJournalForm = ({ values, handleSubmit, initialValues, handleChange }) => {
   let operation = 'Add';
   if (initialValues.id !== null) {
     operation = 'Edit';
@@ -29,7 +29,7 @@ const StudentNoteForm = ({ values, handleSubmit, initialValues, handleChange }) 
   );
 };
 
-StudentNoteForm.propTypes = {
+StudentJournalForm.propTypes = {
   handleSubmit: PropTypes.func,
   handleChange: PropTypes.func,
   initialValues: PropTypes.object,
@@ -38,16 +38,16 @@ StudentNoteForm.propTypes = {
   values: PropTypes.object
 };
 
-const StudentNoteFormWithFormik = withFormik({
+const StudentJournalFormWithFormik = withFormik({
   mapPropsToValues: props => ({
-    content: (props.note && props.note.content) || ''
+    content: (props.journal && props.journal.content) || ''
   }),
   validate: values => validate(values),
   handleSubmit: function(values, { props: { onSubmit } }) {
     onSubmit(values);
   },
-  displayName: 'NoteForm', // helps with React DevTools
+  displayName: 'JournalForm', // helps with React DevTools
   enableReinitialize: true
 });
 
-export default StudentNoteFormWithFormik(StudentNoteForm);
+export default StudentJournalFormWithFormik(StudentJournalForm);

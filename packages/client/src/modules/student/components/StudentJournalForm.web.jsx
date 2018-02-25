@@ -5,20 +5,20 @@ import Field from '../../../utils/FieldAdapter';
 import { Form, RenderField, Row, Col, Label, Button } from '../../common/components/web';
 import { required, validateForm } from '../../../../../common/validation';
 
-const noteFormSchema = {
+const journalFormSchema = {
   subject: [required],
   activity: [required],
   content: [required]
 };
 
-const validate = values => validateForm(values, noteFormSchema);
+const validate = values => validateForm(values, journalFormSchema);
 
-const StudentNoteForm = ({ values, handleSubmit, initialValues, handleChange }) => {
+const StudentJournalForm = ({ values, handleSubmit, initialValues, handleChange }) => {
   return (
-    <Form name="note" onSubmit={handleSubmit}>
+    <Form name="journal" onSubmit={handleSubmit}>
       <Row>
         <Col xs={2}>
-          <Label>{initialValues.id === null ? 'Add note' : 'Edit note'}</Label>
+          <Label>{initialValues.id === null ? 'Add journal' : 'Edit journal'}</Label>
         </Col>
         <Col xs={8}>
           <Field name="subject" component={RenderField} type="text" value={values.subject} onChange={handleChange} />
@@ -35,7 +35,7 @@ const StudentNoteForm = ({ values, handleSubmit, initialValues, handleChange }) 
   );
 };
 
-StudentNoteForm.propTypes = {
+StudentJournalForm.propTypes = {
   handleSubmit: PropTypes.func,
   handleChange: PropTypes.func,
   initialValues: PropTypes.object,
@@ -46,19 +46,19 @@ StudentNoteForm.propTypes = {
   changeContent: PropTypes.func
 };
 
-const StudentNoteFormWithFormik = withFormik({
+const StudentJournalFormWithFormik = withFormik({
   mapPropsToValues: props => ({
-    subject: (props.note && props.note.subject) || '',
-    activity: (props.note && props.note.activity) || '',
-    content: (props.note && props.note.content) || ''
+    subject: (props.journal && props.journal.subject) || '',
+    activity: (props.journal && props.journal.activity) || '',
+    content: (props.journal && props.journal.content) || ''
   }),
   async handleSubmit(values, { resetForm, props: { onSubmit } }) {
     await onSubmit(values);
     resetForm({ content: '' });
   },
   validate: values => validate(values),
-  displayName: 'NoteForm', // helps with React DevTools,
+  displayName: 'JournalForm', // helps with React DevTools,
   enableReinitialize: true
 });
 
-export default StudentNoteFormWithFormik(StudentNoteForm);
+export default StudentJournalFormWithFormik(StudentJournalForm);

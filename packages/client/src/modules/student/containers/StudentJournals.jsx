@@ -3,32 +3,32 @@ import PropTypes from 'prop-types';
 import { graphql, compose } from 'react-apollo';
 import update from 'immutability-helper';
 
-import StudentNotesView from '../components/StudentNotesView';
+import StudentJournalsView from '../components/StudentJournalsView';
 
-import ADD_COMMENT from '../graphql/AddNote.graphql';
-import EDIT_COMMENT from '../graphql/EditNote.graphql';
-import DELETE_COMMENT from '../graphql/DeleteNote.graphql';
-import COMMENT_SUBSCRIPTION from '../graphql/NoteSubscription.graphql';
-import ADD_COMMENT_CLIENT from '../graphql/AddNote.client.graphql';
-import COMMENT_QUERY_CLIENT from '../graphql/NoteQuery.client.graphql';
+import ADD_COMMENT from '../graphql/AddJournal.graphql';
+import EDIT_COMMENT from '../graphql/EditJournal.graphql';
+import DELETE_COMMENT from '../graphql/DeleteJournal.graphql';
+import COMMENT_SUBSCRIPTION from '../graphql/JournalSubscription.graphql';
+import ADD_COMMENT_CLIENT from '../graphql/AddJournal.client.graphql';
+import COMMENT_QUERY_CLIENT from '../graphql/JournalQuery.client.graphql';
 
-function AddNote(prev, node) {
+function AddJournal(prev, node) {
   // ignore if duplicate
-  if (node.id !== null && prev.student.notes.some(note => node.id !== null && node.id === note.id)) {
+  if (node.id !== null && prev.student.journals.some(journal => node.id !== null && node.id === journal.id)) {
     return prev;
   }
 
   return update(prev, {
     student: {
-      notes: {
+      journals: {
         $push: [node]
       }
     }
   });
 }
 
-function DeleteNote(prev, id) {
-  const index = prev.student.notes.findIndex(x => x.id === id);
+function DeleteJournal(prev, id) {
+  const index = prev.student.journals.findIndex(x => x.id === id);
 
   // ignore if not found
   if (index < 0) {
@@ -37,19 +37,19 @@ function DeleteNote(prev, id) {
 
   return update(prev, {
     student: {
-      notes: {
+      journals: {
         $splice: [[index, 1]]
       }
     }
   });
 }
 
-class StudentNotes extends React.Component {
+class StudentJournals extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
-    notes: PropTypes.array.isRequired,
-    note: PropTypes.object.isRequired,
-    onNoteSelect: PropTypes.func.isRequired,
+    journals: PropTypes.array.isRequired,
+    journal: PropTypes.object.isRequired,
+    onJournalSelect: PropTypes.func.isRequired,
     subscribeToMore: PropTypes.func.isRequired
   };
 
@@ -66,12 +66,12 @@ class StudentNotes extends React.Component {
 
     // Subscribe or re-subscribe
     if (!this.subscription) {
-      this.subscribeToNoteList(nextProps.studentId);
+      this.subscribeToJournalList(nextProps.studentId);
     }
   }
 
   componentWillUnmount() {
-    this.props.onNoteSelect({
+    this.props.onJournalSelect({
       id: null,
       subject: '',
       activity: '',
@@ -84,19 +84,19 @@ class StudentNotes extends React.Component {
     }
   }
 
-  subscribeToNoteList = studentId => {
+  subscribeToJournalList = studentId => {
     const { subscribeToMore } = this.props;
 
     this.subscription = subscribeToMore({
       document: COMMENT_SUBSCRIPTION,
       variables: { studentId },
-      updateQuery: (prev, { subscriptionData: { data: { noteUpdated: { mutation, id, node } } } }) => {
+      updateQuery: (prev, { subscriptionData: { data: { journalUpdated: { mutation, id, node } } } }) => {
         let newResult = prev;
 
         if (mutation === 'CREATED') {
-          newResult = AddNote(prev, node);
+          newResult = AddJournal(prev, node);
         } else if (mutation === 'DELETED') {
-          newResult = DeleteNote(prev, id);
+          newResult = DeleteJournal(prev, id);
         }
 
         return newResult;
@@ -105,29 +105,29 @@ class StudentNotes extends React.Component {
   };
 
   render() {
-    return <StudentNotesView {...this.props} />;
+    return <StudentJournalsView {...this.props} />;
   }
 }
 
-const StudentNotesWithApollo = compose(
+const StudentJournalsWithApollo = compose(
   graphql(ADD_COMMENT, {
     props: ({ mutate }) => ({
-      addNote: (subject, activity, content, studentId) =>
+      addJournal: (subject, activity, content, studentId) =>
         mutate({
           variables: { input: { subject, activity, content, studentId } },
           optimisticResponse: {
             __typename: 'Mutation',
-            addNote: {
-              __typename: 'Note',
+            addJournal: {
+              __typename: 'Journal',
               id: null,
               content: content
             }
           },
           updateQueries: {
-            student: (prev, { mutationResult: { data: { addNote } } }) => {
+            student: (prev, { mutationResult: { data: { addJournal } } }) => {
               if (prev.student) {
-                prev.student.notes = prev.student.notes.filter(note => note.id);
-                return AddNote(prev, addNote);
+                prev.student.journals = prev.student.journals.filter(journal => journal.id);
+                return AddJournal(prev, addJournal);
               }
             }
           }
@@ -136,13 +136,13 @@ const StudentNotesWithApollo = compose(
   }),
   graphql(EDIT_COMMENT, {
     props: ({ ownProps: { studentId }, mutate }) => ({
-      editNote: (id, subject, activity, content) =>
+      editJournal: (id, subject, activity, content) =>
         mutate({
           variables: { input: { id, studentId, subject, activity, content } },
           optimisticResponse: {
             __typename: 'Mutation',
-            editNote: {
-              __typename: 'Note',
+            editJournal: {
+              __typename: 'Journal',
               id: id,
               subject: subject,
               activity: activity,
@@ -154,20 +154,20 @@ const StudentNotesWithApollo = compose(
   }),
   graphql(DELETE_COMMENT, {
     props: ({ ownProps: { studentId }, mutate }) => ({
-      deleteNote: id =>
+      deleteJournal: id =>
         mutate({
           variables: { input: { id, studentId } },
           optimisticResponse: {
             __typename: 'Mutation',
-            deleteNote: {
-              __typename: 'Note',
+            deleteJournal: {
+              __typename: 'Journal',
               id: id
             }
           },
           updateQueries: {
-            student: (prev, { mutationResult: { data: { deleteNote } } }) => {
+            student: (prev, { mutationResult: { data: { deleteJournal } } }) => {
               if (prev.student) {
-                return DeleteNote(prev, deleteNote.id);
+                return DeleteJournal(prev, deleteJournal.id);
               }
             }
           }
@@ -176,14 +176,14 @@ const StudentNotesWithApollo = compose(
   }),
   graphql(ADD_COMMENT_CLIENT, {
     props: ({ mutate }) => ({
-      onNoteSelect: note => {
-        mutate({ variables: { note: note } });
+      onJournalSelect: journal => {
+        mutate({ variables: { journal: journal } });
       }
     })
   }),
   graphql(COMMENT_QUERY_CLIENT, {
-    props: ({ data: { note } }) => ({ note })
+    props: ({ data: { journal } }) => ({ journal })
   })
-)(StudentNotes);
+)(StudentJournals);
 
-export default StudentNotesWithApollo;
+export default StudentJournalsWithApollo;

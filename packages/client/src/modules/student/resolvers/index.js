@@ -1,9 +1,9 @@
-import NOTE_QUERY_CLIENT from '../graphql/NoteQuery.client.graphql';
+import JOURNAL_QUERY_CLIENT from '../graphql/JournalQuery.client.graphql';
 
-const TYPE_NAME = 'NoteState';
+const TYPE_NAME = 'JournalState';
 
 const defaults = {
-  note: {
+  journal: {
     id: null,
     content: '',
     __typename: TYPE_NAME
@@ -12,20 +12,20 @@ const defaults = {
 
 const resolvers = {
   Query: {
-    noteState: (_, args, { cache }) => {
-      const { note: { note } } = cache.readQuery({ query: NOTE_QUERY_CLIENT });
+    journalState: (_, args, { cache }) => {
+      const { journal: { journal } } = cache.readQuery({ query: JOURNAL_QUERY_CLIENT });
       return {
-        note: note,
+        journal: journal,
         __typename: TYPE_NAME
       };
     }
   },
   Mutation: {
-    onNoteSelect: async (_, { note }, { cache }) => {
+    onJournalSelect: async (_, { journal }, { cache }) => {
       await cache.writeData({
         data: {
-          note: {
-            ...note,
+          journal: {
+            ...journal,
             __typename: TYPE_NAME
           }
         }

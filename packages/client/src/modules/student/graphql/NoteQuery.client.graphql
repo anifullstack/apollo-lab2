@@ -1,6 +1,0 @@
-#import "./Note.graphql"
-query noteState {
-    note @client {
-        ...NoteInfo
-    }
-}

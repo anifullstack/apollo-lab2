@@ -5,11 +5,11 @@ type Student {
     firstName: String!
     lastName: String!
     content: String!
-    notes: [Note]
+    journals: [Journal]
 }
 
-# Note
-type Note {
+# Journal
+type Journal {
     id: Int!
     subject: String
     activity: String
@@ -49,12 +49,12 @@ extend type Mutation {
     deleteStudent(id: Int!): Student
     # Edit a student
     editStudent(input: EditStudentInput!): Student
-    # Add note to student
-    addNote(input: AddNoteInput!): Note
-    # Delete a note
-    deleteNote(input: DeleteNoteInput!): Note
-    # Edit a note
-    editNote(input: EditNoteInput!): Note
+    # Add journal to student
+    addJournal(input: AddJournalInput!): Journal
+    # Delete a journal
+    deleteJournal(input: DeleteJournalInput!): Journal
+    # Edit a journal
+    editJournal(input: EditJournalInput!): Journal
 }
 
 # Input for addStudent Mutation
@@ -74,29 +74,29 @@ input EditStudentInput {
     content: String!
 }
 
-# Input for addNote Mutation
-input AddNoteInput {
+# Input for addJournal Mutation
+input AddJournalInput {
     subject: String!
     activity: String!
     content: String
-    # Needed for noteUpdated Subscription filter
+    # Needed for journalUpdated Subscription filter
     studentId: Int!
 }
 
-# Input for editNote Mutation
-input DeleteNoteInput {
+# Input for editJournal Mutation
+input DeleteJournalInput {
     id: Int!
-    # Needed for noteUpdated Subscription filter
+    # Needed for journalUpdated Subscription filter
     studentId: Int!
 }
 
-# Input for deleteNote Mutation
-input EditNoteInput {
+# Input for deleteJournal Mutation
+input EditJournalInput {
     id: Int!
     subject: String!
     activity: String!
     content: String
-    # Needed for noteUpdated Subscription filter
+    # Needed for journalUpdated Subscription filter
     studentId: Int!
 }
 
@@ -105,8 +105,8 @@ extend type Subscription {
     studentUpdated(id: Int!): Student
     # Subscription for student list
     studentsUpdated(endCursor: Int!): UpdateStudentPayload
-    # Subscription for notes
-    noteUpdated(studentId: Int!): UpdateNotePayload
+    # Subscription for journals
+    journalUpdated(studentId: Int!): UpdateJournalPayload
 }
 
 # Payload for studentsUpdated Subscription
@@ -116,10 +116,10 @@ type UpdateStudentPayload {
     node: Student
 }
 
-# Payload for noteUpdated Subscription
-type UpdateNotePayload {
+# Payload for journalUpdated Subscription
+type UpdateJournalPayload {
     mutation: String!
     id: Int
     studentId: Int!
-    node: Note
+    node: Journal
 }

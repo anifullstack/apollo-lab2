@@ -18,6 +18,10 @@ exports.up = function(knex, Promise) {
           .references('id')
           .inTable('student')
           .onDelete('CASCADE');
+        table.date('activityDate');
+        table.string('subject');
+        table.string('activity');
+        table.string('status');
         table.string('content');
         table.timestamps(false, true);
       })

@@ -1,5 +1,6 @@
 export default {
-  name: 'v0.0.0.8',
+  name: 'Montessori Kids',
+  version: 'v0.0.0.8',
   logging: {
     debugSQL: false,
     apolloLogging: true

@@ -22,7 +22,7 @@ const PageLayout = ({ children, navBar }) => {
         <Container id="content">{children}</Container>
       </section>
       <Footer>
-        <div className="text-center">&copy; 2017. {settings.app.name}.</div>
+        <div className="text-center">{settings.app.version}.</div>
       </Footer>
     </section>
   );

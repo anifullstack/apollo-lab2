@@ -52,16 +52,6 @@ export default class StudentList extends React.PureComponent {
     } else {
       const columns = [
         {
-          title: 'Title',
-          dataIndex: 'title',
-          key: 'title',
-          render: (text, record) => (
-            <Link className="student-link" to={`/student/${record.id}`}>
-              {text}
-            </Link>
-          )
-        },
-        {
           title: 'First Name',
           dataIndex: 'firstName',
           key: 'firstName',

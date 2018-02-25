@@ -10,4 +10,4 @@ import './favicon';
 
 import Feature from './connector';
 
-export default new Feature(student, post);
+export default new Feature(student);

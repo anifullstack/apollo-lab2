@@ -11,7 +11,7 @@ export async function seed(knex, Promise) {
           title: `Karma title ${ii + 1}`,
           content: `Karma content ${ii + 1}`
         });
-      console.log('006_karma', karma);
+      
     })
   );
 }

@@ -11,6 +11,7 @@ import Feature from '../connector';
 
 export default new Feature({
   route: [
+    <Route exact path="/" component={Student} />,
     <Route exact path="/students" component={Student} />,
     <Route exact path="/student/:id" component={StudentEdit} />
   ],

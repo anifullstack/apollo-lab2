@@ -1,4 +1,6 @@
 import { truncateTables } from '../../sql/helpers';
+import casual from 'casual';
+
 
 export async function seed(knex, Promise) {
   await truncateTables(knex, Promise, ['student', 'comment']);
@@ -9,8 +11,8 @@ export async function seed(knex, Promise) {
         .returning('id')
         .insert({
           title: `Student title ${ii + 1}`,
-          firstName: `Student firstName ${ii + 1}`,
-          lastName: `Student lastName ${ii + 1}`,
+          firstName: `${casual.first_name}`,
+          lastName: `${casual.last_name}`,
           content: `Student content ${ii + 1}`
         });
 
